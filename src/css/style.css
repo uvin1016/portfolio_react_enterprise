@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+ul, ol, li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+header {
+  width: 100%; }
+  header .inner {
+    width: 1180px;
+    height: 70px;
+    margin: 0 auto;
+    position: relative; }
+    header .inner h1 {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      line-height: 32px; }
+      header .inner h1 a {
+        font: 28px/1 "Signika";
+        color: #222; }
+    header .inner #gnb {
+      width: fit-content;
+      position: absolute;
+      bottom: 12px;
+      right: 167px; }
+      header .inner #gnb li {
+        float: left; }
+        header .inner #gnb li a {
+          display: inline-block;
+          padding: 10px 20px;
+          font: 16px/1 "Signika";
+          color: #222; }
+    header .inner #util {
+      float: right;
+      margin-top: 20px; }
+      header .inner #util li {
+        float: left; }
+        header .inner #util li a {
+          display: inline-block;
+          padding: 13px 5px;
+          font: 300 14px/1 "Signika";
+          color: #222; }
+
+footer {
+  width: 100%; }
+  footer .inner {
+    width: 1180px;
+    margin: 0 auto; }
+    footer .inner p {
+      padding: 15px 0;
+      font: 500 12px/1 'arial';
+      color: #222;
+      text-align: center; }
+
+.content {
+  padding: 150px 0;
+  min-height: 500px; }
+  .content .inner {
+    width: 1180px;
+    margin: 0 auto; }
+    .content .inner h1 {
+      font: 30px/1 'arial';
+      color: #222; }
+
+/*# sourceMappingURL=style.css.map */

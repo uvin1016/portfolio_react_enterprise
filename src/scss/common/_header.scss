@@ -1,0 +1,57 @@
+header {
+    width: 100%;
+    // border-bottom: 1px solid #ddd;
+    
+    .inner {
+        width: 1180px;
+        height: 70px;
+        margin: 0 auto;
+        position: relative;
+        
+        h1 {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            line-height: 32px;
+
+            a {
+                font: 28px/1 "Signika";
+                color: #222;
+            }
+        }
+
+        #gnb {
+            width: fit-content;
+            position: absolute;
+            bottom: 12px;
+            right: 167px;
+
+            li {
+                float: left;
+
+                a {
+                    display: inline-block;
+                    padding: 10px 20px;
+                    font: 16px/1 "Signika";
+                    color: #222;
+                }
+            }
+        }
+
+        #util {
+            float: right;
+            margin-top: 20px;
+            
+            li {
+                float: left;
+
+                a {
+                    display: inline-block;
+                    padding: 13px 5px;
+                    font: 300 14px/1 "Signika";
+                    color: #222;
+                }
+            }
+        }
+    }
+}

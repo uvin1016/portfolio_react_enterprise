@@ -1,0 +1,19 @@
+@charset 'UTF-8';
+
+// font
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap');
+
+// reset
+@import 'reset';
+
+// common
+@import 'common/header';
+@import 'common/footer';
+
+// sub
+@import 'sub/layout';
+@import 'sub/department';
+@import 'sub/gallery';
+@import 'sub/community';
+@import 'sub/location';
+@import 'sub/join';
