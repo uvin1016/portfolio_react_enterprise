@@ -1,0 +1,71 @@
+.community {
+    .inner {
+        article {
+            width: 100%;
+            padding: 15px;
+            border-top: 1px solid #222;
+            cursor: pointer;
+            transition: .3s;
+
+            &:last-child {
+                border-bottom: 1px solid #222;
+            }
+
+            .num {
+                display: inline-block;
+                width: 50px;
+                margin-right: 50px;
+                vertical-align: middle;
+                text-align: center;
+                font: 500 30px/45px 'Signika';
+                color: #222;
+                transition: .3s;
+            }
+
+            .wrap {
+                display: inline-block;
+                vertical-align: middle;
+
+
+                h2 {
+                    font: 500 20px/1 'Signika';
+                    color: #222;
+                    transition: .3s;
+                }
+
+                .txtWrap {
+                    margin-top: 5px;
+
+                    >span {
+                        display: inline-block;
+                        vertical-align: middle;
+                        font: 300 15px/1 'Signika';
+                        color: #666;
+                        margin-right: 10px;
+                        transition: .3s;
+                    }
+                }
+            }
+
+            &:hover {
+                background-color: teal;
+                
+                .num {
+                    color: #fff;
+                }
+
+                .wrap {
+                    h2 {
+                        color: #fff;
+                    }
+
+                    .txtWrap {
+                        span{
+                            color: rgba(255,255,255,0.6);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

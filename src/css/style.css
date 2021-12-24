@@ -67,6 +67,49 @@ footer {
     margin: 0 auto; }
     .content .inner h1 {
       font: 30px/1 'arial';
-      color: #222; }
+      color: #222;
+      margin-bottom: 30px; }
+
+.community .inner article {
+  width: 100%;
+  padding: 15px;
+  border-top: 1px solid #222;
+  cursor: pointer;
+  transition: .3s; }
+  .community .inner article:last-child {
+    border-bottom: 1px solid #222; }
+  .community .inner article .num {
+    display: inline-block;
+    width: 50px;
+    margin-right: 50px;
+    vertical-align: middle;
+    text-align: center;
+    font: 500 30px/45px 'Signika';
+    color: #222;
+    transition: .3s; }
+  .community .inner article .wrap {
+    display: inline-block;
+    vertical-align: middle; }
+    .community .inner article .wrap h2 {
+      font: 500 20px/1 'Signika';
+      color: #222;
+      transition: .3s; }
+    .community .inner article .wrap .txtWrap {
+      margin-top: 5px; }
+      .community .inner article .wrap .txtWrap > span {
+        display: inline-block;
+        vertical-align: middle;
+        font: 300 15px/1 'Signika';
+        color: #666;
+        margin-right: 10px;
+        transition: .3s; }
+  .community .inner article:hover {
+    background-color: teal; }
+    .community .inner article:hover .num {
+      color: #fff; }
+    .community .inner article:hover .wrap h2 {
+      color: #fff; }
+    .community .inner article:hover .wrap .txtWrap span {
+      color: rgba(255, 255, 255, 0.6); }
 
 /*# sourceMappingURL=style.css.map */
