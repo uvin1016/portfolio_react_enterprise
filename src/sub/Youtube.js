@@ -25,14 +25,24 @@ function Youtube(){
                 <div className="vidList" ref={vidList}>
                     {
                         vids.map((vid,index)=>{
+                            let title = vid.snippet.title;
+                            if(title.length > 25){
+                                title = title.substr(0,25)+"...";
+                            }
+
+                            let con = vid.snippet.description;
+                            if(con.length > 60){
+                                con = con.substr(0,60)+"...";
+                            }
+
                             return (
                                 <article key={index}>
                                     <a href={vid.snippet.resourceId.videoId} className="pic">
                                         <img src={vid.snippet.thumbnails.high.url} />
                                     </a>
                                     <div className="con">
-                                        <h2>{vid.snippet.title}</h2>
-                                        <p>{vid.snippet.description}</p>
+                                        <h2>{title}</h2>
+                                        <p>{con}</p>
                                     </div>
                                 </article>
                             )
