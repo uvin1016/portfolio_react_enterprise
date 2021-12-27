@@ -76,7 +76,7 @@ footer {
     width: 100%;
     opacity: 0;
     position: relative;
-    transform: translateY(100px);
+    transform: translateY(200px);
     transition: 1s; }
     .gallery .inner .imgWrap.on {
       opacity: 1;
@@ -146,12 +146,12 @@ footer {
     transition: 1s; }
     .youtube .inner .vidList article:nth-of-type(3n) {
       margin-right: 0; }
-    .youtube .inner .vidList article a {
+    .youtube .inner .vidList article > a {
       display: block;
       width: 100%;
       height: 300px;
       overflow: hidden; }
-      .youtube .inner .vidList article a img {
+      .youtube .inner .vidList article > a img {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -169,7 +169,7 @@ footer {
         color: #666; }
     .youtube .inner .vidList article:hover {
       box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1); }
-      .youtube .inner .vidList article:hover a > img {
+      .youtube .inner .vidList article:hover > a > img {
         filter: grayscale(0); }
 
 .community .inner article {
