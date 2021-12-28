@@ -100,6 +100,7 @@ function Gallery(){
 
     function btnActive(btn){
         const galleryBtn = document.querySelectorAll(".gallery .inner .btns button");
+        
         for(let btn of galleryBtn){
             btn.classList.remove("on");
         }

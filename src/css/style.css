@@ -70,6 +70,10 @@ footer {
       color: #222;
       margin-bottom: 30px; }
 
+@media screen and (max-width: 1179px) {
+  .content .inner {
+    width: 100%;
+    padding: 0 40px; } }
 .gallery .inner {
   min-height: 500px;
   position: relative; }
@@ -140,6 +144,25 @@ footer {
           transform: translateY(0%);
           opacity: 1; }
 
+@media screen and (max-width: 1179px) {
+  .gallery .inner .imgWrap ul li {
+    width: 33.333%; } }
+@media screen and (max-width: 779px) {
+  .gallery .inner .imgWrap ul li {
+    width: 50%; } }
+@media screen and (max-width: 479px) {
+  .gallery .inner h1 {
+    padding-left: 0;
+    margin-bottom: 15px; }
+  .gallery .inner .btns {
+    position: unset;
+    margin-bottom: 10px; }
+    .gallery .inner .btns button {
+      margin-left: 0;
+      margin-right: 15px; }
+  .gallery .inner .imgWrap ul li {
+    width: 100%;
+    padding: 10px 0; } }
 .youtube .inner .vidList {
   width: 100%;
   margin-top: 30px; }
