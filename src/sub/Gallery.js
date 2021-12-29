@@ -11,10 +11,16 @@ const masonryOptions = {
 function Gallery(){
     let [imgs,setImgs] = useState([]);
     let [enableClick, setEnableClick] = useState(true);
+    let [interest, setInterest] = useState(true);
+    let [architecture, setArchitecture] = useState(true);
+    let [landscape, setLandscape] = useState(true);
     let tags = useRef(null);
     let list = useRef(null);
 
     useEffect(()=>{
+        setInterest(true);
+        setArchitecture(false);
+        setLandscape(false);
         getFlickr({
             type: "interest",
             count: 12
@@ -29,8 +35,11 @@ function Gallery(){
 
                 <div className="btns">
                     <button className="on" onClick={(e)=>{
-                        if(enableClick){
+                        if(enableClick && !interest){
                             setEnableClick(false);
+                            setInterest(true);
+                            setArchitecture(false);
+                            setLandscape(false);
                             list.current.classList.remove("on");
                             btnActive(e.target);
                             getFlickr({
@@ -41,8 +50,11 @@ function Gallery(){
                     }}>Interest</button>
 
                     <button onClick={(e)=>{
-                        if(enableClick){
+                        if(enableClick && !architecture){
                             setEnableClick(false);
+                            setInterest(false);
+                            setArchitecture(true);
+                            setLandscape(false);
                             list.current.classList.remove("on");
                             btnActive(e.target);
                             getFlickr({
@@ -53,8 +65,11 @@ function Gallery(){
                     }}>Architecture</button>
 
                     <button onClick={(e)=>{
-                        if(enableClick){
+                        if(enableClick && !landscape){
                             setEnableClick(false);
+                            setInterest(false);
+                            setArchitecture(false);
+                            setLandscape(true);
                             list.current.classList.remove("on");
                             btnActive(e.target);
                             getFlickr({
@@ -70,6 +85,9 @@ function Gallery(){
                         if(e.key !== "Enter") return;
                         if(enableClick){
                             setEnableClick(false);
+                            setInterest(false);
+                            setArchitecture(false);
+                            setLandscape(false);
                             list.current.classList.remove("on");
                             let tagsValue = tags.current.value;
                             tags.current.value = "";
@@ -83,6 +101,9 @@ function Gallery(){
                     <button onClick={()=>{
                         if(enableClick){
                             setEnableClick(false);
+                            setInterest(false);
+                            setArchitecture(false);
+                            setLandscape(false);
                             list.current.classList.remove("on");
                             let tagsValue = tags.current.value;
                             tags.current.value = "";
@@ -152,10 +173,13 @@ function Gallery(){
         await axios.get(url).then(json=>{
             setImgs(json.data.photos.photo);
         },1000);
-        setEnableClick(true);
-
+        
         setTimeout(()=>{
             list.current.classList.add("on");
+            
+            setTimeout(()=>{
+                setEnableClick(true);
+            },1000);
         },500);
     }
 
