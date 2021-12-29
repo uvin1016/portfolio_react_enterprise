@@ -9,26 +9,17 @@ const masonryOptions = {
 }
 
 function Gallery(){
-    const baseURL = "https://www.flickr.com/services/rest/?";
-    const key = "04c5ace5347f338643f5a46006aa1910";
-    const userId = "194310676@N02";
-    const method1 = "flickr.interestingness.getList";
-    const method2 = "flickr.people.getPhotos";
-    const method3 = "flickr.favorites.getList";
-    const count = 12;
-    
-
-    const url = `${baseURL}method=${method1}&api_key=${key}&per_page=${count}&format=json&nojsoncallback=1`;
-    const url2 = `${baseURL}method=${method2}&api_key=${key}&user_id=${userId}&per_page=${count}&format=json&nojsoncallback=1`;
-    const url3 = `${baseURL}method=${method3}&api_key=${key}&user_id=${userId}&per_page=${count}&format=json&nojsoncallback=1`;
-
     let [imgs,setImgs] = useState([]);
+    let [enableClick, setEnableClick] = useState(true);
+    let tags = useRef(null);
     let list = useRef(null);
 
     useEffect(()=>{
-        getFlickr(url);
+        getFlickr({
+            type: "interest",
+            count: 12
+        });
     },[]);
-
 
 
     return (
@@ -38,22 +29,70 @@ function Gallery(){
 
                 <div className="btns">
                     <button className="on" onClick={(e)=>{
-                        list.current.classList.remove("on");
-                        btnActive(e.target);
-                        getFlickr(url);
+                        if(enableClick){
+                            setEnableClick(false);
+                            list.current.classList.remove("on");
+                            btnActive(e.target);
+                            getFlickr({
+                                type: "interest",
+                                count: 12
+                            });
+                        }
                     }}>Interest</button>
 
                     <button onClick={(e)=>{
-                        list.current.classList.remove("on");
-                        btnActive(e.target);
-                        getFlickr(url2);
+                        if(enableClick){
+                            setEnableClick(false);
+                            list.current.classList.remove("on");
+                            btnActive(e.target);
+                            getFlickr({
+                                type: "architecture",
+                                count: 12
+                            });
+                        }
                     }}>Architecture</button>
 
                     <button onClick={(e)=>{
-                        list.current.classList.remove("on");
-                        btnActive(e.target);
-                        getFlickr(url3);
+                        if(enableClick){
+                            setEnableClick(false);
+                            list.current.classList.remove("on");
+                            btnActive(e.target);
+                            getFlickr({
+                                type: "landscape",
+                                count: 12
+                            });
+                        }
                     }}>Landscape</button>
+                </div>
+
+                <div className="searchBox">
+                    <input type="text" ref={tags} onKeyPress={e=>{
+                        if(e.key !== "Enter") return;
+                        if(enableClick){
+                            setEnableClick(false);
+                            list.current.classList.remove("on");
+                            let tagsValue = tags.current.value;
+                            tags.current.value = "";
+                            getFlickr({
+                                type: "search",
+                                count: 12,
+                                tags: `${tagsValue}`
+                            });
+                        }
+                    }} />
+                    <button onClick={()=>{
+                        if(enableClick){
+                            setEnableClick(false);
+                            list.current.classList.remove("on");
+                            let tagsValue = tags.current.value;
+                            tags.current.value = "";
+                            getFlickr({
+                                type: "search",
+                                count: 12,
+                                tags: `${tagsValue}`
+                            });
+                        }
+                    }}>Search</button>
                 </div>
 
                 <div className="imgWrap" ref={list}>
@@ -88,10 +127,32 @@ function Gallery(){
         </section>
     )
 
-    async function getFlickr(url){
+    async function getFlickr(opt){
+        let url = "";
+        const baseURL = "https://www.flickr.com/services/rest/?";
+        const key = "04c5ace5347f338643f5a46006aa1910";
+        const userId = "194310676@N02";
+        const method1 = "flickr.interestingness.getList";
+        const method2 = "flickr.people.getPhotos";
+        const method3 = "flickr.favorites.getList";
+        const method4 = "flickr.photos.search";
+
+        if(opt.type === "interest"){
+            url = `${baseURL}method=${method1}&api_key=${key}&per_page=${opt.count}&format=json&nojsoncallback=1`;
+        }else if(opt.type === "architecture"){
+            url = `${baseURL}method=${method2}&api_key=${key}&user_id=${userId}&per_page=${opt.count}&format=json&nojsoncallback=1`;
+        }else if(opt.type === "landscape"){
+            url = `${baseURL}method=${method3}&api_key=${key}&user_id=${userId}&per_page=${opt.count}&format=json&nojsoncallback=1`;
+        }else if(opt.type === "search"){
+            url = `${baseURL}method=${method4}&api_key=${key}&per_page=${opt.count}&format=json&nojsoncallback=1&tags=${opt.tags}`;
+        }else{
+            console.error("opt type을 interest/architecture/landscape/search로 변경하세요.");
+        }
+
         await axios.get(url).then(json=>{
             setImgs(json.data.photos.photo);
         },1000);
+        setEnableClick(true);
 
         setTimeout(()=>{
             list.current.classList.add("on");

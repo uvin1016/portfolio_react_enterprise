@@ -147,7 +147,7 @@ footer {
 @media screen and (max-width: 1179px) {
   .gallery .inner .imgWrap ul li {
     width: 33.333%; } }
-@media screen and (max-width: 779px) {
+@media screen and (max-width: 749px) {
   .gallery .inner .imgWrap ul li {
     width: 50%; } }
 @media screen and (max-width: 479px) {
