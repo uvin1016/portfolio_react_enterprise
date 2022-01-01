@@ -1,8 +1,8 @@
 .gallery{
     .inner {
-        min-height: 500px;
+        min-height: 600px;
         position: relative;
-        
+
         .btns {
             position: absolute;
             top: 8px;
@@ -54,6 +54,28 @@
             }
         }
 
+        .loadLine {
+            width: 300px;
+            height: 3px;
+            position: absolute;
+            top: 300px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255,255,255,0.1);
+
+            &::before {
+                content: '';
+                display: block;
+                width: 0px;
+                height: 3px;
+                background: linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,1));
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                animation: lineWidth 3s ease 1s;
+            }
+        }
 
         .imgWrap {
             width: 100%;
@@ -165,9 +187,18 @@
     }
 }
 
-@media screen and (max-width: 1179px) {
+@media screen and (max-width: 1200px) {
     .gallery{
         .inner {
+        
+            .btns {
+                left: 150px;
+            }
+
+            .searchBox {
+                right: 40px;
+            }
+
             .imgWrap {
                 ul {
                     li {
@@ -183,7 +214,44 @@
 @media screen and (max-width: 749px) {
     .gallery{
         .inner {
+            h1 {
+                margin-bottom: 20px;
+            }
+
+            &::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+
+            .btns {
+                float: left;
+                position: unset;
+                margin-bottom: 10px;
+                height: 28px;
+                
+                button {
+                    display: inline-block;
+                    vertical-align: sub;
+                    margin-left: 0;
+                    margin-right: 15px;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            .searchBox {
+                float: right;
+                width: fit-content;
+                position: unset;
+                margin-bottom: 10px;
+            }
+
             .imgWrap {
+                margin-top: 70px;
+
                 ul {
                     li {
                         width: 50%;
@@ -203,17 +271,24 @@
                 margin-bottom: 15px;
             }
 
-            .btns {
-                position: unset;
-                margin-bottom: 10px;
-                
-                button {
-                    margin-left: 0;
-                    margin-right: 15px;
+            .loadLine {
+                width: 200px;
+            }
+
+            .searchBox {
+                width: 100%;
+
+                >input[type=text]{
+                    width: calc(100% - 51px);
+                }
+                >button {
+                    width: 51px;
                 }
             }
 
             .imgWrap {
+                margin-top: 100px;
+
                 ul {
                     li {
                         width: 100%;
@@ -224,4 +299,10 @@
             }
         }
     }
+}
+
+@keyframes lineWidth {
+    0% {width: 0%;}
+    60% {width: 100%;}
+    100% {width: 100%;}
 }

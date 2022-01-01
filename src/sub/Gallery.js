@@ -17,6 +17,7 @@ function Gallery(){
     let [landscape, setLandscape] = useState(true);
     let [isPop, setIsPop] = useState(false);
     let [index, setIndex] = useState(0);
+    let [loading, setLoading] = useState(false);
     let tags = useRef(null);
     let list = useRef(null);
 
@@ -41,11 +42,12 @@ function Gallery(){
                 <div className="btns">
                     <button className="on" onClick={e=>{
                         if(enableClick && !interest){
+                            list.current.classList.remove("on");
                             setEnableClick(false);
+                            setLoading(true);
                             setInterest(true);
                             setArchitecture(false);
                             setLandscape(false);
-                            list.current.classList.remove("on");
                             btnActive(e.target);
                             getFlickr({
                                 type: "interest",
@@ -56,11 +58,12 @@ function Gallery(){
 
                     <button onClick={e=>{
                         if(enableClick && !architecture){
+                            list.current.classList.remove("on");
                             setEnableClick(false);
+                            setLoading(true);
                             setInterest(false);
                             setArchitecture(true);
                             setLandscape(false);
-                            list.current.classList.remove("on");
                             btnActive(e.target);
                             getFlickr({
                                 type: "architecture",
@@ -71,11 +74,12 @@ function Gallery(){
 
                     <button onClick={e=>{
                         if(enableClick && !landscape){
+                            list.current.classList.remove("on");
                             setEnableClick(false);
+                            setLoading(true);
                             setInterest(false);
                             setArchitecture(false);
                             setLandscape(true);
-                            list.current.classList.remove("on");
                             btnActive(e.target);
                             getFlickr({
                                 type: "landscape",
@@ -90,13 +94,14 @@ function Gallery(){
                     <input type="text" ref={tags} onKeyPress={e=>{
                         if(e.key !== "Enter") return;
                         if(enableClick){
-                            setEnableClick(false);
-                            setInterest(false);
-                            setArchitecture(false);
-                            setLandscape(false);
                             list.current.classList.remove("on");
                             let tagsValue = tags.current.value;
                             tags.current.value = "";
+                            setEnableClick(false);
+                            setLoading(true);
+                            setInterest(false);
+                            setArchitecture(false);
+                            setLandscape(false);
                             getFlickr({
                                 type: "search",
                                 count: 12,
@@ -106,13 +111,14 @@ function Gallery(){
                     }} />
                     <button onClick={()=>{
                         if(enableClick){
-                            setEnableClick(false);
-                            setInterest(false);
-                            setArchitecture(false);
-                            setLandscape(false);
                             list.current.classList.remove("on");
                             let tagsValue = tags.current.value;
                             tags.current.value = "";
+                            setEnableClick(false);
+                            setLoading(true);
+                            setInterest(false);
+                            setArchitecture(false);
+                            setLandscape(false);
                             getFlickr({
                                 type: "search",
                                 count: 12,
@@ -121,6 +127,9 @@ function Gallery(){
                         }
                     }}>Search</button>
                 </div>
+
+                {/* 로딩 */}
+                { loading ? <Loading /> : "" }
 
                 {/* 컨텐츠 */}
                 <div className="imgWrap" ref={list}>
@@ -169,6 +178,7 @@ function Gallery(){
         const method2 = "flickr.people.getPhotos";
         const method3 = "flickr.favorites.getList";
         const method4 = "flickr.photos.search";
+        
 
         if(opt.type === "interest"){
             url = `${baseURL}method=${method1}&api_key=${key}&per_page=${opt.count}&format=json&nojsoncallback=1`;
@@ -182,17 +192,20 @@ function Gallery(){
             console.error("opt.type을 interest/architecture/landscape/search로 변경하세요.");
         }
 
+        
+
         await axios.get(url).then(json=>{
             setImgs(json.data.photos.photo);
-        },1000);
-        
+        });
+
         setTimeout(()=>{
             list.current.classList.add("on");
-            
+            setLoading(false);
+
             setTimeout(()=>{
                 setEnableClick(true);
-            },1000);
-        },500);
+            },3000);
+        },3000);
     }
 
     function btnActive(btn){
@@ -202,6 +215,12 @@ function Gallery(){
             btn.classList.remove("on");
         }
         btn.classList.add("on");
+    }
+
+    function Loading(){
+        return (
+            <div className="loadLine"></div>
+        )
     }
 
     function Pop(){
