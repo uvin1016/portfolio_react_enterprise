@@ -7,6 +7,7 @@ const masonryOptions = {
     gutter: 0,
     itemSelector: ".items"
 }
+const body = document.querySelector("body");
 
 function Gallery(){
     let [imgs,setImgs] = useState([]);
@@ -14,6 +15,8 @@ function Gallery(){
     let [interest, setInterest] = useState(true);
     let [architecture, setArchitecture] = useState(true);
     let [landscape, setLandscape] = useState(true);
+    let [isPop, setIsPop] = useState(false);
+    let [index, setIndex] = useState(0);
     let tags = useRef(null);
     let list = useRef(null);
 
@@ -28,13 +31,15 @@ function Gallery(){
     },[]);
 
 
+
     return (
         <section className="content gallery">
             <div className="inner">
                 <h1>Gallery</h1>
 
+                {/* 카테고리 버튼 */}
                 <div className="btns">
-                    <button className="on" onClick={(e)=>{
+                    <button className="on" onClick={e=>{
                         if(enableClick && !interest){
                             setEnableClick(false);
                             setInterest(true);
@@ -49,7 +54,7 @@ function Gallery(){
                         }
                     }}>Interest</button>
 
-                    <button onClick={(e)=>{
+                    <button onClick={e=>{
                         if(enableClick && !architecture){
                             setEnableClick(false);
                             setInterest(false);
@@ -64,7 +69,7 @@ function Gallery(){
                         }
                     }}>Architecture</button>
 
-                    <button onClick={(e)=>{
+                    <button onClick={e=>{
                         if(enableClick && !landscape){
                             setEnableClick(false);
                             setInterest(false);
@@ -80,6 +85,7 @@ function Gallery(){
                     }}>Landscape</button>
                 </div>
 
+                {/* 검색창 */}
                 <div className="searchBox">
                     <input type="text" ref={tags} onKeyPress={e=>{
                         if(e.key !== "Enter") return;
@@ -116,6 +122,7 @@ function Gallery(){
                     }}>Search</button>
                 </div>
 
+                {/* 컨텐츠 */}
                 <div className="imgWrap" ref={list}>
                     <Masonry
                         className={"frame"}
@@ -130,7 +137,11 @@ function Gallery(){
 
                                 return(
                                     <li key={index} className="items">
-                                        <a href={imgSrc} >
+                                        <a href="#" onClick={e=>{
+                                            e.preventDefault();
+                                            setIndex(index);
+                                            setIsPop(true);
+                                        }}>
                                             <img src={imgSrc} />
 
                                             <div className="txtBox">
@@ -145,6 +156,7 @@ function Gallery(){
                     </Masonry>
                 </div>
             </div>
+            { isPop ? <Pop /> : "" }
         </section>
     )
 
@@ -167,7 +179,7 @@ function Gallery(){
         }else if(opt.type === "search"){
             url = `${baseURL}method=${method4}&api_key=${key}&per_page=${opt.count}&format=json&nojsoncallback=1&tags=${opt.tags}`;
         }else{
-            console.error("opt type을 interest/architecture/landscape/search로 변경하세요.");
+            console.error("opt.type을 interest/architecture/landscape/search로 변경하세요.");
         }
 
         await axios.get(url).then(json=>{
@@ -190,6 +202,29 @@ function Gallery(){
             btn.classList.remove("on");
         }
         btn.classList.add("on");
+    }
+
+    function Pop(){
+        let imgSrc = `https://live.staticflickr.com/${imgs[index].server}/${imgs[index].id}_${imgs[index].secret}_b.jpg`;
+
+        useEffect(()=>{
+            body.style.overflow = "hidden";
+    
+            return ()=>{
+                body.style.overflow = "auto";
+            }
+        },[]);
+
+        return (
+            <aside className="pop">
+                <div className="pic">
+                    <img src={imgSrc} />
+                </div>
+                <span className="close" onClick={()=>{
+                    setIsPop(false);
+                }}>Close</span>
+            </aside>
+        )
     }
 }
 

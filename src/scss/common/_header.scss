@@ -1,6 +1,9 @@
 header {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    // border-bottom: 1px solid #ddd;
+    // border-bottom: 1px solid rgba(255,255,255,0.15);
     
     .inner {
         width: 1180px;
@@ -16,7 +19,7 @@ header {
 
             a {
                 font: 28px/1 "Signika";
-                color: #222;
+                color: #fff;
             }
         }
 
@@ -33,7 +36,7 @@ header {
                     display: inline-block;
                     padding: 10px 20px;
                     font: 16px/1 "Signika";
-                    color: #222;
+                    color: #888;
                 }
             }
         }
@@ -49,7 +52,7 @@ header {
                     display: inline-block;
                     padding: 13px 5px;
                     font: 300 14px/1 "Signika";
-                    color: #222;
+                    color: #888;
                 }
             }
         }
