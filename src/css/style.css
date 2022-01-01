@@ -54,6 +54,15 @@ header {
           font: 300 14px/1 "Signika";
           color: #888; }
 
+@media screen and (max-width: 1200px) {
+  header .inner {
+    width: 100%;
+    padding: 0 40px; }
+    header .inner h1 {
+      left: 40px; } }
+@media screen and (max-width: 940px) {
+  header .inner #gnb {
+    display: none; } }
 footer {
   width: 100%; }
   footer .inner {
@@ -195,19 +204,23 @@ footer {
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.9);
-  padding: 2vw 5vw; }
+  padding: 100px 40px; }
   .gallery .pop .pic {
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    position: relative; }
     .gallery .pop .pic img {
       width: 100%;
-      height: 90%;
-      margin-top: 3%;
-      object-fit: contain; }
+      height: 100%;
+      object-fit: contain;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
   .gallery .pop .close {
     position: absolute;
-    top: 2vw;
-    right: 5vw;
+    top: 30px;
+    right: 40px;
     font: 400 20px/1 'Signika';
     color: #fff;
     cursor: pointer; }
@@ -247,7 +260,7 @@ footer {
     margin-top: 70px; }
     .gallery .inner .imgWrap ul li {
       width: 50%; } }
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 520px) {
   .gallery .inner h1 {
     padding-left: 0;
     margin-bottom: 15px; }

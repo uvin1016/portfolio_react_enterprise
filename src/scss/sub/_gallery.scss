@@ -162,24 +162,28 @@
         top: 0;
         left: 0;
         background: rgba(0,0,0,0.9);
-        padding: 2vw 5vw;
-
+        padding: 100px 40px;
+        
         .pic {
             width: 100%;
             height: 100%;
+            position: relative;
 
             img {
                 width: 100%;
-                height: 90%;
-                margin-top: 3%;
+                height: 100%;
                 object-fit: contain;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
             }
         }
 
         .close {
             position: absolute;
-            top: 2vw;
-            right: 5vw;
+            top: 30px;
+            right: 40px;
             font: 400 20px/1 'Signika';
             color: #fff;
             cursor: pointer;
@@ -263,7 +267,7 @@
     }
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 520px) {
     .gallery{
         .inner {
             h1 {
