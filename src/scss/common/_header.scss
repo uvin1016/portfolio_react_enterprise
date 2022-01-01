@@ -56,6 +56,10 @@ header {
                 }
             }
         }
+
+        #menu {
+            display: none;
+        }
     }
 }
 
@@ -77,6 +81,10 @@ header {
     header {
         .inner {
             #gnb {
+                display: none;
+            }
+
+            #util {
                 display: none;
             }
         }
