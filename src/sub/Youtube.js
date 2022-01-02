@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 
 function Youtube(){
     const key = "AIzaSyCRti1Hev4P1VLwTGimHcEE9oVkw1FXnuY";
-    const playListId = "PLyH7cHtJQfIAMTzgscSaZd-5rJzUC0uUH";
+    const playListId = "PLyH7cHtJQfID-30WGfJosDP-z2ynkgBso";
     const num = 12;
     const url =`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playListId}&maxResults=${num}`;
 
@@ -31,12 +31,14 @@ function Youtube(){
 
                             return (
                                 <article key={index}>
+                                    <p className="num">{(index < 9) ? '/' + '0' + (index + 1) : '/' + (index + 1)}</p>
                                     <a href={vid.snippet.resourceId.videoId} className="pic">
                                         <img src={vid.snippet.thumbnails.high.url} />
                                     </a>
                                     <div className="con">
                                         <h2>{(tit_len > 40) ? title = title.substr(0,40)+"..." : title}</h2>
-                                        <p>{(con_len > 140) ? con = con.substr(0,140)+"..." : con}</p>
+                                        <p>{(con_len > 200) ? con = con.substr(0,200)+"..." : con}</p>
+                                        <button>Play</button>
                                     </div>
                                 </article>
                             )

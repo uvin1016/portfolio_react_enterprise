@@ -200,8 +200,8 @@ function Gallery(){
 
             setTimeout(()=>{
                 setEnableClick(true);
-            },3000);
-        },3000);
+            },2000);
+        },2000);
     }
 
     function btnActive(btn){
