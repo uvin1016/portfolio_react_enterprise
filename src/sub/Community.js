@@ -5,9 +5,11 @@ function Community(){
     let [posts,setPosts] = useState([]);
     let len = posts.length;
 
+    const baseURL = process.env.PUBLIC_URL;
+
     useEffect(()=>{
         axios
-        .get('./dbs/board.json')
+        .get(`${baseURL}/dbs/board.json`)
         .then((data)=>{
             setPosts(data.data.data);
         });
