@@ -306,7 +306,6 @@ footer {
       font: 400 40px/1 "Playfair Display";
       color: rgba(255, 255, 255, 0.9); }
     .youtube .inner .vidList article .pic {
-      display: block;
       width: 550px;
       height: 300px;
       margin: 0 100px; }

@@ -8,6 +8,8 @@ function Youtube(){
     const url =`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playListId}&maxResults=${num}`;
 
     let [vids,setVids] = useState([]);
+    let [isPop,setIsPop] = useState(false);
+    let [index,setIndex] = useState(0);
     let vidList = useRef(null);
 
     useEffect(()=>{
@@ -32,22 +34,41 @@ function Youtube(){
                             return (
                                 <article key={index}>
                                     <p className="num">{(index < 9) ? '/' + '0' + (index + 1) : '/' + (index + 1)}</p>
-                                    <a href={vid.snippet.resourceId.videoId} className="pic">
+                                    <div className="pic" onClick={()=>{
+                                        setIsPop(true);
+                                        setIndex(index);
+                                    }}>
                                         <img src={vid.snippet.thumbnails.high.url} />
-                                    </a>
+                                    </div>
                                     <div className="con">
                                         <h2>{(tit_len > 30) ? title = title.substr(0,30)+"..." : title}</h2>
                                         <p>{(con_len > 150) ? con = con.substr(0,150)+"..." : con}</p>
-                                        <button>Play</button>
+                                        <button onClick={()=>{
+                                            setIsPop(true);
+                                            setIndex(index);
+                                        }}>Play</button>
                                     </div>
                                 </article>
                             )
                         })
                     }
                 </div>
+
+                {isPop ? <Pop /> : null}
             </div>
         </section>
     )
+
+    function Pop(){
+        return(
+            <aside className="pop">
+                <iframe src={"https://www.youtube.com/embed/"+vids[index].snippet.resourceId.videoId} allowFullScreen></iframe>
+                <span onClick={()=>{
+                    setIsPop(false);
+                }}>Close</span>
+            </aside>
+        )
+    }
 }
 
 export default Youtube;
