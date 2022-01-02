@@ -31,8 +31,6 @@ function Gallery(){
         });
     },[]);
 
-
-
     return (
         <section className="content gallery">
             <div className="inner">
@@ -191,8 +189,6 @@ function Gallery(){
         }else{
             console.error("opt.type을 interest/architecture/landscape/search로 변경하세요.");
         }
-
-        
 
         await axios.get(url).then(json=>{
             setImgs(json.data.photos.photo);

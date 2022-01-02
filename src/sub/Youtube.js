@@ -8,7 +8,6 @@ function Youtube(){
     const url =`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playListId}&maxResults=${num}`;
 
     let [vids,setVids] = useState([]);
-
     let vidList = useRef(null);
 
     useEffect(()=>{
@@ -26,14 +25,9 @@ function Youtube(){
                     {
                         vids.map((vid,index)=>{
                             let title = vid.snippet.title;
-                            if(title.length > 25){
-                                title = title.substr(0,25)+"...";
-                            }
-
+                            let tit_len = title.length;
                             let con = vid.snippet.description;
-                            if(con.length > 60){
-                                con = con.substr(0,60)+"...";
-                            }
+                            let con_len = con.length;
 
                             return (
                                 <article key={index}>
@@ -41,8 +35,8 @@ function Youtube(){
                                         <img src={vid.snippet.thumbnails.high.url} />
                                     </a>
                                     <div className="con">
-                                        <h2>{title}</h2>
-                                        <p>{con}</p>
+                                        <h2>{(tit_len > 40) ? title = title.substr(0,40)+"..." : title}</h2>
+                                        <p>{(con_len > 140) ? con = con.substr(0,140)+"..." : con}</p>
                                     </div>
                                 </article>
                             )
