@@ -40,7 +40,9 @@ function Youtube(){
                                         setIsPop(true);
                                         setIndex(index);
                                     }}>
-                                        <img src={vid.snippet.thumbnails.high.url} />
+                                        <div className="inner">
+                                            <img src={vid.snippet.thumbnails.high.url} />
+                                        </div>
                                     </div>
                                     <div className="con">
                                         <h2>{(tit_len > 30) ? title = title.substr(0,30)+"..." : title}</h2>
