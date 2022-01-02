@@ -53,17 +53,19 @@ function Youtube(){
                         })
                     }
                 </div>
-
-                {isPop ? <Pop /> : null}
             </div>
+
+            {isPop ? <Pop /> : null}
         </section>
     )
 
     function Pop(){
         return(
             <aside className="pop">
-                <iframe src={"https://www.youtube.com/embed/"+vids[index].snippet.resourceId.videoId} allowFullScreen></iframe>
-                <span onClick={()=>{
+                <div className="inner">
+                    <iframe src={"https://www.youtube.com/embed/"+vids[index].snippet.resourceId.videoId} allowFullScreen></iframe>
+                </div>
+                <span className="close" onClick={()=>{
                     setIsPop(false);
                 }}>Close</span>
             </aside>

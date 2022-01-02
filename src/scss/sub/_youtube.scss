@@ -20,6 +20,7 @@
                     width: 550px;
                     height: 300px;
                     margin: 0 100px;
+                    cursor: pointer;
 
                     img {
                         width: 550px;
@@ -75,6 +76,47 @@
                         }
                     }
                 }
+            }
+        }
+    }
+
+    .pop {
+        width: 100%;
+        padding: 30vw 15vw;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: rgba(0,0,0,0.9);
+
+        >.inner {
+            width: 100%;
+            padding-top: 56.25%;
+            position: relative;
+            
+            iframe {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                width: 100%;
+                height: 100%;
+                outline: none;
+                border: none;
+            }
+        }  
+
+        .close {
+            font: 400 24px/1 "Signika";
+            color: #888;
+            position: absolute;
+            top: 28vw;
+            right: 15vw;
+            cursor: pointer;
+            transition: .5s;
+
+            &:hover {
+                color: #fff;
             }
         }
     }
@@ -144,6 +186,15 @@
                 }
             }
         }
+
+        .pop {
+            padding: 35vw 10vw;  
+    
+            .close {
+                top: 30vw;
+                right: 10vw;
+            }
+        }
     }
 }
 
@@ -152,12 +203,32 @@
         .inner {
             .vidList {
                 article {
+                    .pic {
+                        width: calc(100% - 60px);
+                        height: 280px;
+                        margin: 0;
+                        padding: 0 80px;
+    
+                        img {
+                            width: 100%;
+                        }
+                    }
+
                     .con {
                         button {
                             display: none;
                         }
                     }
                 }
+            }
+        }
+
+        .pop {
+            padding: 40vw 10vw;  
+    
+            .close {
+                top: 34vw;
+                right: 10vw;
             }
         }
     }
@@ -170,9 +241,10 @@
                 article {
                     .pic {
                         width: 100%;
-                        height: 250px;
-                        margin-left: 50px;
+                        height: 350px;
+                        margin-left: 0px;
                         padding: 0;
+                        margin-top: 30px;
     
                         img {
                             width: 100%;
@@ -182,10 +254,19 @@
                     .con {
                         width: 100%;
                         margin-top: 30px;
-                        padding-left: 100px;
+                        padding-left: 0px;
                         padding-right: 0;
                     }
                 }
+            }
+        }
+
+        .pop {
+            padding: 50vw 10vw;  
+    
+            .close {
+                top: 43vw;
+                right: 10vw;
             }
         }
     }
@@ -201,8 +282,6 @@
                     }
                     .pic {
                         height: 300px;
-                        margin-left: 0;
-                        margin-top: 30px;
 
                         img {
                             width: 100%;
@@ -213,6 +292,15 @@
                         padding-left: 0;
                     }
                 }
+            }
+        }
+
+        .pop {
+            padding: 75vw 10vw;  
+    
+            .close {
+                top: 68vw;
+                right: 10vw;
             }
         }
     }
@@ -243,6 +331,15 @@
                 }
             }
         }
+
+        .pop {
+            padding: 110vw 10vw;  
+    
+            .close {
+                top: 100vw;
+                right: 10vw;
+            }
+        }
     }
 }
 
@@ -257,6 +354,15 @@
                         height: 150px;
                     }
                 }
+            }
+        }
+
+        .pop {
+            padding: 150vw 10vw;  
+    
+            .close {
+                top: 140vw;
+                right: 10vw;
             }
         }
     }
