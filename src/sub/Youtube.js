@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useEffect, useRef, useState } from "react";
 
+const body = document.querySelector("body");
+
 function Youtube(){
     const key = "AIzaSyCRti1Hev4P1VLwTGimHcEE9oVkw1FXnuY";
     const playListId = "PLyH7cHtJQfID-30WGfJosDP-z2ynkgBso";
@@ -60,6 +62,14 @@ function Youtube(){
     )
 
     function Pop(){
+        useEffect(()=>{
+            body.style.overflow = "hidden";
+
+            return ()=>{
+                body.style.overflow = "auto";
+            }
+        })
+        
         return(
             <aside className="pop">
                 <div className="inner">
