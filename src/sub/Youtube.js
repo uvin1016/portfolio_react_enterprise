@@ -36,8 +36,8 @@ function Youtube(){
                                         <img src={vid.snippet.thumbnails.high.url} />
                                     </a>
                                     <div className="con">
-                                        <h2>{(tit_len > 40) ? title = title.substr(0,40)+"..." : title}</h2>
-                                        <p>{(con_len > 200) ? con = con.substr(0,200)+"..." : con}</p>
+                                        <h2>{(tit_len > 30) ? title = title.substr(0,30)+"..." : title}</h2>
+                                        <p>{(con_len > 150) ? con = con.substr(0,150)+"..." : con}</p>
                                         <button>Play</button>
                                     </div>
                                 </article>

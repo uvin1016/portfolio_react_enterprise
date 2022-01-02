@@ -18,12 +18,12 @@
 
                 .pic {
                     display: block;
-                    width: 100%;
+                    width: 550px;
                     height: 300px;
                     margin: 0 100px;
 
                     img {
-                        width: 100%;
+                        width: 550px;
                         height: 100%;
                         object-fit: cover;
                         filter: grayscale(100%);
@@ -74,6 +74,188 @@
                             transform: translate(-3px,-3px);
                             box-shadow: 10px 10px 20px rgba(255,255,255,0.1);
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .youtube {
+        .inner {
+            .vidList {
+                article {
+
+                    .pic {
+                        width: 450px;
+                        height: 250px;
+                        margin: 0 50px;
+    
+                        img {
+                            width: 450px;
+                        }
+                    }
+    
+                    .con {
+                        margin-right: 0;
+    
+                        h2 {
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .youtube {
+        .inner {
+            .vidList {
+                article {
+                    flex-wrap: wrap;
+                    justify-content: start;
+
+                    .pic {
+                        width: calc(100% - 60px);
+                        height: 350px;
+                        margin: 0;
+                        padding: 0 80px;
+    
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    .con {
+                        width: 100%;
+                        margin-top: 30px;
+                        padding-left: 135px;
+                        padding-right: 80px;
+
+                        button {
+                            left: unset;
+                            right: 80px;
+                            bottom: unset;
+                            top: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .youtube {
+        .inner {
+            .vidList {
+                article {
+                    .con {
+                        button {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .youtube {
+        .inner {
+            .vidList {
+                article {
+                    .pic {
+                        width: 100%;
+                        height: 250px;
+                        margin-left: 50px;
+                        padding: 0;
+    
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    .con {
+                        width: 100%;
+                        margin-top: 30px;
+                        padding-left: 100px;
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .youtube {
+        .inner {
+            .vidList {
+                article {
+                    .num {
+                        width: 100%;
+                    }
+                    .pic {
+                        height: 300px;
+                        margin-left: 0;
+                        margin-top: 30px;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    .con {
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 496px) {
+    .youtube {
+        .inner {
+            .vidList {
+                article {
+                    .num {
+                        font: 400 35px/1 "Playfair Display";
+                    }
+                    .pic {
+                        height: 210px;
+                    }
+
+                    .con {
+
+                        h2 {
+                            font: 400 24px/1.2 "Signika";
+                        }
+    
+                        >p {
+                            font: 300 14px/1.6 "Signika";
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .youtube {
+        .inner {
+            .vidList {
+                article {
+                    padding: 30px 0px;
+
+                    .pic {
+                        height: 150px;
                     }
                 }
             }
