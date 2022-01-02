@@ -35,7 +35,7 @@ function Youtube(){
 
                             return (
                                 <article key={index}>
-                                    <p className="num">{(index < 9) ? '/' + '0' + (index + 1) : '/' + (index + 1)}</p>
+                                    <p className="num">{(index < 9) ? '0' + (index + 1) + '.' : (index + 1) + '.'}</p>
                                     <div className="pic" onClick={()=>{
                                         setIsPop(true);
                                         setIndex(index);

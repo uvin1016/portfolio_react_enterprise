@@ -18,6 +18,7 @@ function Header(){
                     <li><a href="#">Search</a></li>
                     <li><NavLink activeStyle={active} exact to="/join">Join</NavLink></li>
                 </ul>
+                <button className="menu"></button>
             </div>
         </header>
     )
