@@ -11,10 +11,11 @@
             display: flex;
             justify-content: left;
             overflow: hidden;
+            margin-bottom: 100px;
             
             >.marqueeBox {
                 display: flex;
-                animation: marquee 20s linear infinite running;
+                animation: marquee 23s linear infinite running;
 
                 span{
                     display: block;
