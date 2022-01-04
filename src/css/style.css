@@ -30,7 +30,7 @@ header {
       left: 0;
       line-height: 32px; }
       header .inner h1 a {
-        font: 500 28px/1 "Spline Sans";
+        font: 400 28px/1 "Spline Sans";
         color: #fff; }
     header .inner #gnb {
       width: fit-content;
@@ -116,14 +116,31 @@ footer {
     width: 1180px;
     margin: 0 auto; }
     .content > .inner h1 {
-      font: 300 28px/1 'Spline Sans';
-      color: #fff;
-      margin-bottom: 50px; }
+      width: 100%;
+      display: flex;
+      justify-content: left;
+      overflow: hidden; }
+      .content > .inner h1 > .marqueeBox {
+        display: flex;
+        animation: marquee 20s linear infinite running; }
+        .content > .inner h1 > .marqueeBox span {
+          display: block;
+          font: 300 100px/1 'Spline Sans';
+          color: #fff;
+          margin: 0 10px; }
 
 @media screen and (max-width: 1200px) {
   .content > .inner {
     width: 100%;
     padding: 0 40px; } }
+@keyframes marquee {
+  0% {
+    transform: translateX(0%); }
+  100% {
+    transform: translateX(-100%); } }
+.department .inner h1 > .marqueeBox {
+  animation: marquee 30s linear infinite running; }
+
 .gallery .inner {
   min-height: 600px;
   position: relative; }
@@ -509,6 +526,8 @@ footer {
     .youtube .pop .close {
       top: 140vw;
       right: 10vw; } }
+.community .inner h1 > .marqueeBox {
+  animation: marquee 30s linear infinite running; }
 .community .inner article {
   width: 100%;
   padding: 25px 15px;

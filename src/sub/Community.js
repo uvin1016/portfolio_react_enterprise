@@ -18,7 +18,28 @@ function Community(){
     return (
         <section className="content community">
             <div className="inner">
-                <h1>Community</h1>
+                <h1>
+                    <div className="marqueeBox">
+                        <span>COMMUNITY</span>
+                        <span>COMMUNITY</span>
+                        <span>COMMUNITY</span>
+                        <span>COMMUNITY</span>
+                        <span>COMMUNITY</span>
+                        <span>COMMUNITY</span>
+                        <span>COMMUNITY</span>
+                        <span>COMMUNITY</span>
+                    </div>
+                    <div className="marqueeBox">
+                        <span>COMMUNITY</span>
+                        <span>COMMUNITY</span>
+                        <span>COMMUNITY</span>
+                        <span>COMMUNITY</span>
+                        <span>COMMUNITY</span>
+                        <span>COMMUNITY</span>
+                        <span>COMMUNITY</span>
+                        <span>COMMUNITY</span>
+                    </div>
+                </h1>
                 {
                     posts.slice(0).reverse().map((post,index)=>{
                         return (

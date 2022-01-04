@@ -1,9 +1,7 @@
 function Main(){
     return (
         <section className="content main">
-            <div className="inner">
-                <h1>MAIN</h1>
-            </div>
+            <div className="inner"></div>
         </section>
     )
 }

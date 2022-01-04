@@ -28,14 +28,35 @@ function Gallery(){
         setLandscape(false);
         getFlickr({
             type: "interest",
-            count: 12
+            count: 16
         });
     },[]);
 
     return (
         <section className="content gallery">
             <div className="inner">
-                <h1>Gallery</h1>
+                <h1>
+                    <div className="marqueeBox">
+                        <span>GALLERY</span>
+                        <span>GALLERY</span>
+                        <span>GALLERY</span>
+                        <span>GALLERY</span>
+                        <span>GALLERY</span>
+                        <span>GALLERY</span>
+                        <span>GALLERY</span>
+                        <span>GALLERY</span>
+                    </div>
+                    <div className="marqueeBox">
+                        <span>GALLERY</span>
+                        <span>GALLERY</span>
+                        <span>GALLERY</span>
+                        <span>GALLERY</span>
+                        <span>GALLERY</span>
+                        <span>GALLERY</span>
+                        <span>GALLERY</span>
+                        <span>GALLERY</span>
+                    </div>
+                </h1>
 
                 {/* 카테고리 버튼 */}
                 <div className="btns">
@@ -50,7 +71,7 @@ function Gallery(){
                             btnActive(e.target);
                             getFlickr({
                                 type: "interest",
-                                count: 12
+                                count: 16
                             });
                         }
                     }}>Interest</button>
@@ -66,7 +87,7 @@ function Gallery(){
                             btnActive(e.target);
                             getFlickr({
                                 type: "architecture",
-                                count: 12
+                                count: 16
                             });
                         }
                     }}>Architecture</button>
@@ -82,7 +103,7 @@ function Gallery(){
                             btnActive(e.target);
                             getFlickr({
                                 type: "landscape",
-                                count: 12
+                                count: 16
                             });
                         }
                     }}>Landscape</button>
@@ -103,7 +124,7 @@ function Gallery(){
                             setLandscape(false);
                             getFlickr({
                                 type: "search",
-                                count: 12,
+                                count: 16,
                                 tags: `${tagsValue}`
                             });
                         }
@@ -120,7 +141,7 @@ function Gallery(){
                             setLandscape(false);
                             getFlickr({
                                 type: "search",
-                                count: 12,
+                                count: 16,
                                 tags: `${tagsValue}`
                             });
                         }

@@ -1,5 +1,11 @@
 .community {
     .inner {
+        h1 {
+            >.marqueeBox {
+                animation: marquee 30s linear infinite running;
+            }
+        }
+
         article {
             width: 100%;
             padding: 25px 15px;

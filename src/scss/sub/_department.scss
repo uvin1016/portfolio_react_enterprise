@@ -1,0 +1,9 @@
+.department {
+    .inner {
+        h1 {
+            >.marqueeBox {
+                animation: marquee 30s linear infinite running;
+            }
+        }
+    }
+}

@@ -7,9 +7,23 @@
         margin: 0 auto;
 
         h1 {
-            font: 300 28px/1 'Spline Sans';
-            color: #fff;
-            margin-bottom: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: left;
+            overflow: hidden;
+            
+            >.marqueeBox {
+                display: flex;
+                animation: marquee 20s linear infinite running;
+
+                span{
+                    display: block;
+                    font: 300 100px/1 'Spline Sans';
+                    color: #fff;
+                    margin: 0 10px
+                }
+            }
+
         }
     }
 }
@@ -21,4 +35,9 @@
             padding: 0 40px;
         }
     }
+}
+
+@keyframes marquee {
+    0% {transform: translateX(0%);}
+    100% {transform: translateX(-100%);}
 }

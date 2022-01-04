@@ -24,7 +24,28 @@ function Youtube(){
     return (
         <section className="content youtube">
             <div className="inner">
-                <h1>Youtube</h1>
+                <h1>
+                    <div className="marqueeBox">
+                        <span>YOUTUBE</span>
+                        <span>YOUTUBE</span>
+                        <span>YOUTUBE</span>
+                        <span>YOUTUBE</span>
+                        <span>YOUTUBE</span>
+                        <span>YOUTUBE</span>
+                        <span>YOUTUBE</span>
+                        <span>YOUTUBE</span>
+                    </div>
+                    <div className="marqueeBox">
+                        <span>YOUTUBE</span>
+                        <span>YOUTUBE</span>
+                        <span>YOUTUBE</span>
+                        <span>YOUTUBE</span>
+                        <span>YOUTUBE</span>
+                        <span>YOUTUBE</span>
+                        <span>YOUTUBE</span>
+                        <span>YOUTUBE</span>
+                    </div>
+                </h1>
                 <div className="vidList" ref={vidList}>
                     {
                         vids.map((vid,index)=>{
