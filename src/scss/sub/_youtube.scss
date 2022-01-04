@@ -12,8 +12,9 @@
                 border-bottom: 1px solid #888;
 
                 .num {
-                    font: 400 40px/1 "Playfair Display";
+                    font: 400 28px/1 "Dancing Script";
                     color: rgba(255,255,255,0.9);
+                    letter-spacing: 2px;
                 }
 
                 .pic {
@@ -48,18 +49,18 @@
                     position: relative;
 
                     h2 {
-                        font: 400 30px/1.2 "Signika";
+                        font: 400 30px/1.2 "Spline Sans";
                         color: rgba(255,255,255,0.9);
                         margin-bottom: 30px;
                     }
 
                     >p {
-                        font: 300 14px/1.6 "Signika";
+                        font: 300 14px/1.6 "Spline Sans";
                         color: rgba(255,255,255,0.7);
                     }
 
                     >button {
-                        font: 400 16px/1 "Signika";
+                        font: 400 16px/1 "Spline Sans";
                         color: #888;
                         padding: 8px 16px;
                         border: 1px solid #888;
@@ -112,7 +113,7 @@
         }  
 
         .close {
-            font: 400 24px/1 "Signika";
+            font: 400 24px/1 "Spline Sans";
             color: #888;
             position: absolute;
             top: 27vw;
@@ -308,15 +309,15 @@
             .vidList {
                 article {
                     .num {
-                        font: 400 35px/1 "Playfair Display";
+                        font: 400 35px/1 "Spline Sans";
                     }
                     .con {
                         h2 {
-                            font: 400 24px/1.2 "Signika";
+                            font: 400 24px/1.2 "Spline Sans";
                         }
     
                         >p {
-                            font: 300 14px/1.6 "Signika";
+                            font: 300 14px/1.6 "Spline Sans";
                         }
                     }
                 }

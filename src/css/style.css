@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -30,7 +30,7 @@ header {
       left: 0;
       line-height: 32px; }
       header .inner h1 a {
-        font: 28px/1 "Signika";
+        font: 500 28px/1 "Spline Sans";
         color: #fff; }
     header .inner #gnb {
       width: fit-content;
@@ -42,7 +42,7 @@ header {
         header .inner #gnb li a {
           display: inline-block;
           padding: 10px 20px;
-          font: 16px/1 "Signika";
+          font: 16px/1 "Spline Sans";
           color: #888; }
     header .inner #util {
       float: right;
@@ -52,7 +52,7 @@ header {
         header .inner #util li a {
           display: inline-block;
           padding: 13px 5px;
-          font: 300 14px/1 "Signika";
+          font: 300 14px/1 "Spline Sans";
           color: #888; }
     header .inner .menu {
       display: none; }
@@ -73,7 +73,7 @@ header {
     width: 30px;
     height: 13px;
     position: relative;
-    font: 300 16px/1 'arial';
+    font: 300 16px/1 'Spline Sans';
     color: #fff;
     float: right;
     margin-top: 29px;
@@ -101,7 +101,7 @@ footer {
     margin: 0 auto; }
     footer .inner p {
       padding: 15px 0;
-      font: 500 12px/1 'arial';
+      font: 500 12px/1 'Spline Sans';
       color: #888;
       text-align: center; }
 
@@ -116,7 +116,7 @@ footer {
     width: 1180px;
     margin: 0 auto; }
     .content > .inner h1 {
-      font: 28px/1 'arial';
+      font: 300 28px/1 'Spline Sans';
       color: #fff;
       margin-bottom: 50px; }
 
@@ -135,7 +135,7 @@ footer {
       border: none;
       background: transparent;
       margin-left: 15px;
-      font: 300 14px/1 'Signika';
+      font: 300 14px/1 'Spline Sans';
       color: #888;
       cursor: pointer;
       transition: .5s; }
@@ -151,10 +151,10 @@ footer {
       padding: 5px;
       background: transparent;
       outline: transparent;
-      font: 300 14px/1 'Signika';
+      font: 300 14px/1 'Spline Sans';
       color: #fff; }
     .gallery .inner .searchBox > button {
-      font: 300 14px/1 'Signika';
+      font: 300 14px/1 'Spline Sans';
       color: #888;
       border: none;
       background: transparent;
@@ -221,11 +221,11 @@ footer {
           opacity: 0;
           transition: .5s; }
           .gallery .inner .imgWrap ul li > a .txtBox h2 {
-            font: 400 16px/1 'Signika';
+            font: 400 16px/1 'Spline Sans';
             color: #fff;
             margin-bottom: 8px; }
           .gallery .inner .imgWrap ul li > a .txtBox p {
-            font: 300 14px/1 'Signika';
+            font: 300 14px/1 'Spline Sans';
             color: rgba(255, 255, 255, 0.7); }
         .gallery .inner .imgWrap ul li > a:hover img {
           filter: grayscale(0%); }
@@ -256,7 +256,7 @@ footer {
     position: absolute;
     top: 30px;
     right: 40px;
-    font: 400 20px/1 'Signika';
+    font: 400 20px/1 'Spline Sans';
     color: #fff;
     cursor: pointer; }
 
@@ -329,8 +329,9 @@ footer {
     padding: 50px 0;
     border-bottom: 1px solid #888; }
     .youtube .inner .vidList article .num {
-      font: 400 40px/1 "Playfair Display";
-      color: rgba(255, 255, 255, 0.9); }
+      font: 400 28px/1 "Dancing Script";
+      color: rgba(255, 255, 255, 0.9);
+      letter-spacing: 2px; }
     .youtube .inner .vidList article .pic {
       width: 550px;
       height: 300px;
@@ -352,14 +353,14 @@ footer {
       margin-right: 50px;
       position: relative; }
       .youtube .inner .vidList article .con h2 {
-        font: 400 30px/1.2 "Signika";
+        font: 400 30px/1.2 "Spline Sans";
         color: rgba(255, 255, 255, 0.9);
         margin-bottom: 30px; }
       .youtube .inner .vidList article .con > p {
-        font: 300 14px/1.6 "Signika";
+        font: 300 14px/1.6 "Spline Sans";
         color: rgba(255, 255, 255, 0.7); }
       .youtube .inner .vidList article .con > button {
-        font: 400 16px/1 "Signika";
+        font: 400 16px/1 "Spline Sans";
         color: #888;
         padding: 8px 16px;
         border: 1px solid #888;
@@ -399,7 +400,7 @@ footer {
       outline: none;
       border: none; }
   .youtube .pop .close {
-    font: 400 24px/1 "Signika";
+    font: 400 24px/1 "Spline Sans";
     color: #888;
     position: absolute;
     top: 27vw;
@@ -490,11 +491,11 @@ footer {
       right: 10vw; } }
 @media screen and (max-width: 496px) {
   .youtube .inner .vidList article .num {
-    font: 400 35px/1 "Playfair Display"; }
+    font: 400 35px/1 "Spline Sans"; }
   .youtube .inner .vidList article .con h2 {
-    font: 400 24px/1.2 "Signika"; }
+    font: 400 24px/1.2 "Spline Sans"; }
   .youtube .inner .vidList article .con > p {
-    font: 300 14px/1.6 "Signika"; }
+    font: 300 14px/1.6 "Spline Sans"; }
   .youtube .pop {
     padding: 110vw 10vw; }
     .youtube .pop .close {
@@ -522,22 +523,23 @@ footer {
     margin-right: 50px;
     vertical-align: middle;
     text-align: center;
-    font: 400 40px/45px 'Signika';
+    font: 400 28px/45px 'Dancing Script';
     color: #888;
     transition: .3s; }
   .community .inner article .wrap {
     display: inline-block;
     vertical-align: middle; }
     .community .inner article .wrap h2 {
-      font: 500 20px/1 'Signika';
+      font: 400 20px/1 'Spline Sans';
       color: #fff;
+      letter-spacing: 1px;
       transition: .3s; }
     .community .inner article .wrap .txtWrap {
       margin-top: 5px; }
       .community .inner article .wrap .txtWrap > span {
         display: inline-block;
         vertical-align: middle;
-        font: 300 15px/1 'Signika';
+        font: 300 15px/1 'Spline Sans';
         color: rgba(255, 255, 255, 0.7);
         margin-right: 10px;
         transition: .3s; }

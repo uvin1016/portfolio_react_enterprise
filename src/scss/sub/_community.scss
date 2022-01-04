@@ -17,7 +17,7 @@
                 margin-right: 50px;
                 vertical-align: middle;
                 text-align: center;
-                font: 400 40px/45px 'Signika';
+                font: 400 28px/45px 'Dancing Script';
                 color: #888;
                 transition: .3s;
             }
@@ -28,8 +28,9 @@
 
 
                 h2 {
-                    font: 500 20px/1 'Signika';
+                    font: 400 20px/1 'Spline Sans';
                     color: #fff;
+                    letter-spacing: 1px;
                     transition: .3s;
                 }
 
@@ -39,7 +40,7 @@
                     >span {
                         display: inline-block;
                         vertical-align: middle;
-                        font: 300 15px/1 'Signika';
+                        font: 300 15px/1 'Spline Sans';
                         color: rgba(255,255,255,0.7);
                         margin-right: 10px;
                         transition: .3s;

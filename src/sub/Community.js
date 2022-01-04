@@ -23,13 +23,12 @@ function Community(){
                     posts.slice(0).reverse().map((post,index)=>{
                         return (
                             <article key={index}>
-                                <p className="num">{len - index}</p>
+                                <p className="num">{((len - index) < 10) ? '0' + (len - index) + '.' : (len - index) + '.'}</p>
                                 <div className="wrap">
                                     <h2>{post.title}</h2>
                                     <div className="txtWrap">
                                         <span>{post.writer}</span>
                                         <span>{post.date}</span>
-                                        <span>{post.like}</span>
                                     </div>
                                 </div>
                             </article>
