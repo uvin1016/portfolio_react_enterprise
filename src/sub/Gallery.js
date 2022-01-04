@@ -23,6 +23,7 @@ function Gallery(){
 
     useEffect(()=>{
         setInterest(true);
+        setLoading(true);
         setArchitecture(false);
         setLandscape(false);
         getFlickr({
