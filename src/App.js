@@ -16,12 +16,12 @@ function App() {
       <Header />
 
       <Route exact path="/" component={Main} />
-      <Route exact path="/department" component={Department} />
-      <Route exact path="/community" component={Community} />
-      <Route exact path="/gallery" component={Gallery} />
-      <Route exact path="/youtube" component={Youtube} />
-      <Route exact path="/location" component={Location} />
-      <Route exact path="/join" component={Join} />
+      <Route path="/department" component={Department} />
+      <Route path="/community" component={Community} />
+      <Route path="/gallery" component={Gallery} />
+      <Route path="/youtube" component={Youtube} />
+      <Route path="/location" component={Location} />
+      <Route path="/join" component={Join} />
 
       <Footer />
     </div>
