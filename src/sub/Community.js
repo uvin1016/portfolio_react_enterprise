@@ -23,58 +23,82 @@ function Community(){
                     <p>And Question</p>
                 </h1>
 
-                <div className="btns">
-                    <button className="on">Notice</button>
-                    <button>FAQ</button>
+                <div className="faqWrap">
+                    <article>
+                        <h3>Q1</h3>
+                        <p>Lorem dolor sit amet<br /> consectetur</p>
+                    </article>
+                    <article>
+                        <h3>Q2</h3>
+                        <p>Lorem ipsum amet<br /> consectetur adipisicing</p>
+                    </article>
+                    <article></article>
+                    <article></article>
+                    <article>
+                        <h3>Q3</h3>
+                        <p>Lorem ipsum dolor sit amet<br /> adipisicing</p>
+                    </article>
+                    <article>
+                        <h3>Q4</h3>
+                        <p>Dolor sit amet<br /> consectetur adipisicing</p>
+                    </article>
                 </div>
 
-                <div className="searchBox">
-                    <input type="text" />
-                    <button>Search</button>
-                </div>
+                <div className="boardWrap">
+                    <div className="btns">
+                        <button className="on">Notice</button>
+                        <button>Q&#38;A</button>
+                    </div>
 
-                <div className="noticeWrap">
-                    {
-                        posts.slice(0).reverse().map((post,index)=>{
-                            return (
-                                <article key={index}>
-                                    <p className="num">{((len - index) < 10) ? '0' + (len - index) + '.' : (len - index) + '.'}</p>
-                                    <div className="wrap">
-                                        <h2>{post.title}</h2>
-                                        <div className="txtWrap">
-                                            <span>{post.writer}</span>
-                                            <span>{post.date}</span>
+                    <div className="searchBox">
+                        <input type="text" />
+                        <button>Search</button>
+                    </div>
+
+                    <div className="notice">
+                        {
+                            posts.slice(0).reverse().map((post,index)=>{
+                                return (
+                                    <article key={index}>
+                                        <p className="num">{((len - index) < 10) ? '0' + (len - index) + '.' : (len - index) + '.'}</p>
+                                        <div className="wrap">
+                                            <h2>{post.title}</h2>
+                                            <div className="txtWrap">
+                                                <span>{post.writer}</span>
+                                                <span>{post.date}</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </article>
-                            )
-                        })
-                    }
-                </div>
-                <div className="pagination">
-                    <a href="#" className="prev" onClick={e=>{
-                        e.preventDefault();
-                    }}><i className="las la-angle-double-left"></i></a>
-                    <p className="num">
-                        <a href="#" className="on" onClick={e=>{
+                                    </article>
+                                )
+                            })
+                        }
+                    </div>
+
+                    <div className="pagination">
+                        <a href="#" className="prev" onClick={e=>{
                             e.preventDefault();
-                        }}>1</a>
-                        <a href="#" onClick={e=>{
+                        }}><i className="las la-angle-double-left"></i></a>
+                        <p className="num">
+                            <a href="#" className="on" onClick={e=>{
+                                e.preventDefault();
+                            }}>1</a>
+                            <a href="#" onClick={e=>{
+                                e.preventDefault();
+                            }}>2</a>
+                            <a href="#" onClick={e=>{
+                                e.preventDefault();
+                            }}>3</a>
+                            <a href="#" onClick={e=>{
+                                e.preventDefault();
+                            }}>4</a>
+                            <a href="#" onClick={e=>{
+                                e.preventDefault();
+                            }}>5</a>
+                        </p>
+                        <a href="#" className="next" onClick={e=>{
                             e.preventDefault();
-                        }}>2</a>
-                        <a href="#" onClick={e=>{
-                            e.preventDefault();
-                        }}>3</a>
-                        <a href="#" onClick={e=>{
-                            e.preventDefault();
-                        }}>4</a>
-                        <a href="#" onClick={e=>{
-                            e.preventDefault();
-                        }}>5</a>
-                    </p>
-                    <a href="#" className="next" onClick={e=>{
-                        e.preventDefault();
-                    }}><i className="las la-angle-double-right"></i></a>
+                        }}><i className="las la-angle-double-right"></i></a>
+                    </div>
                 </div>
             </div>
         </section>

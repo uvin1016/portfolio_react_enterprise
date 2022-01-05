@@ -2,168 +2,219 @@
     .inner {
         position: relative;
 
-        h1 {
-            >.marqueeBox {
-                animation: marquee 30s linear infinite running;
-            }
-        }
+        .faqWrap {
+            display: grid;
+            width: 100%;
+            grid-template-columns: repeat(3,1fr);
+            margin-bottom: 100px;
 
-        .btns {
-            position: absolute;
-            top: 265px;
-            left: 0px;
-
-            button {
-                border: none;
-                background: transparent;
-                margin-right: 15px;
-                font: 300 14px/1 'Spline Sans';
-                color: #888;
+            >article {
+                position: relative;
+                height: 300px;
+                padding: 30px;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
                 cursor: pointer;
-                transition: .5s;
+                border: 1px solid rgba(255,255,255,0.1);
 
-                &.on, &:hover {
+                h3 {
+                    font: 500 90px/1 "Dancing Script";
                     color: #fff;
                 }
-            }
-        }
 
-        .searchBox {
-            position: absolute;
-            top: 252px;
-            right: 0;
-            border-bottom: 1px solid #888;
+                p {
+                    font: 300 14px/1.2 'Spline Sans';
+                    color: #fff;
+                    letter-spacing: 1px;
+                }
 
-            >input[type=text]{
-                border: none;
-                padding: 5px;
-                background: transparent;
-                outline: transparent;
-                font: 300 14px/1 'Spline Sans';
-                color: #fff;
-            }
-
-            >button {
-                font: 300 14px/1 'Spline Sans';
-                color: #888;
-                border: none;
-                background: transparent;
-                padding: 5px;
-                cursor: pointer;
-                transition: .5s;
+                &::before {
+                    content: '';
+                    display: block;
+                    background-color: #d25d1e;
+                    width: 0%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                    transition: 1s;
+                }
 
                 &:hover {
-                    color: #fff;
+                    width: 100%;
+                    height: 100%;
+
+                    &::before {
+                        width: 100%;
+                    }
                 }
             }
         }
+// 'Dancing Script'
 
-        .noticeWrap {
-            width: 100%;
-            padding-top: 10px;
+        .boardWrap {
+            position: relative;
+            padding-top: 37px;
+
+            .btns {
+                position: absolute;
+                top: 7px;
+                left: 0px;
     
-            article {
-                width: 100%;
-                padding: 25px 15px;
-                border-top: 1px solid #888;
-                cursor: pointer;
-                transition: .3s;
-    
-                &:last-child {
-                    border-bottom: 1px solid #888;
-                }
-    
-                .num {
-                    display: inline-block;
-                    width: 50px;
-                    margin-right: 50px;
-                    vertical-align: middle;
-                    text-align: center;
-                    font: 400 28px/45px 'Dancing Script';
+                button {
+                    border: none;
+                    background: transparent;
+                    margin-right: 15px;
+                    font: 300 14px/1 'Spline Sans';
                     color: #888;
-                    transition: .3s;
+                    cursor: pointer;
+                    transition: .5s;
+    
+                    &.on, &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+    
+            .searchBox {
+                position: absolute;
+                top: 0;
+                right: 0;
+                border-bottom: 1px solid #888;
+    
+                >input[type=text]{
+                    border: none;
+                    padding: 5px;
+                    background: transparent;
+                    outline: transparent;
+                    font: 300 14px/1 'Spline Sans';
+                    color: #fff;
                 }
     
-                .wrap {
-                    display: inline-block;
-                    vertical-align: middle;
+                >button {
+                    font: 300 14px/1 'Spline Sans';
+                    color: #888;
+                    border: none;
+                    background: transparent;
+                    padding: 5px;
+                    cursor: pointer;
+                    transition: .5s;
     
-    
-                    h2 {
-                        font: 400 20px/1 'Spline Sans';
+                    &:hover {
                         color: #fff;
-                        letter-spacing: 1px;
+                    }
+                }
+            }
+    
+            .notice {
+                width: 100%;
+                padding-top: 10px;
+        
+                article {
+                    width: 100%;
+                    padding: 25px 15px;
+                    border-top: 1px solid #888;
+                    cursor: pointer;
+                    transition: .3s;
+        
+                    &:last-child {
+                        border-bottom: 1px solid #888;
+                    }
+        
+                    .num {
+                        display: inline-block;
+                        width: 50px;
+                        margin-right: 50px;
+                        vertical-align: middle;
+                        text-align: center;
+                        font: 400 28px/45px 'Dancing Script';
+                        color: #888;
                         transition: .3s;
                     }
-    
-                    .txtWrap {
-                        margin-top: 5px;
-    
-                        >span {
-                            display: inline-block;
-                            vertical-align: middle;
-                            font: 300 15px/1 'Spline Sans';
-                            color: rgba(255,255,255,0.7);
-                            margin-right: 10px;
+        
+                    .wrap {
+                        display: inline-block;
+                        vertical-align: middle;
+        
+        
+                        h2 {
+                            font: 400 20px/1 'Spline Sans';
+                            color: #fff;
+                            letter-spacing: 1px;
                             transition: .3s;
                         }
-                    }
-                }
-    
-                &:hover {
-                    .num {
-                        color: #fff;
-                    }
-    
-                    .wrap {
-                        h2 {
-                            color: #fff;
-                            transform: translateX(10px);
-                        }
-    
+        
                         .txtWrap {
-                            span{
+                            margin-top: 5px;
+        
+                            >span {
+                                display: inline-block;
+                                vertical-align: middle;
+                                font: 300 15px/1 'Spline Sans';
+                                color: rgba(255,255,255,0.7);
+                                margin-right: 10px;
+                                transition: .3s;
+                            }
+                        }
+                    }
+        
+                    &:hover {
+                        .num {
+                            color: #fff;
+                        }
+        
+                        .wrap {
+                            h2 {
+                                color: #fff;
                                 transform: translateX(10px);
-                                transition-delay: .2s;
+                            }
+        
+                            .txtWrap {
+                                span{
+                                    transform: translateX(10px);
+                                    transition-delay: .2s;
+                                }
                             }
                         }
                     }
                 }
             }
-        }
-
-        .pagination {
-            width: fit-content;
-            margin: 30px auto;
-
-            >a {
-                display: inline-block;
-                vertical-align: center;
-                padding: 3px 10px;
-
-                i {
-                    font-size: 20px;
-                    color: #fff;
-                }
-            }
-
-            .num {
-                display: inline-block;
-                vertical-align: center;
-                
+    
+            .pagination {
+                width: fit-content;
+                margin: 30px auto;
+    
                 >a {
                     display: inline-block;
                     vertical-align: center;
-                    font: 300 18px/24px 'Spline Sans';
-                    color: #888;
-                    padding: 0px 9px;
-                    margin: 0 10px;
-                    border: 1px solid #888;
-                    transition: .5s;
-
-                    &:hover,&.on {
+                    padding: 3px 10px;
+    
+                    i {
+                        font-size: 20px;
                         color: #fff;
-                        border: 1px solid #fff;
+                    }
+                }
+    
+                .num {
+                    display: inline-block;
+                    vertical-align: center;
+                    
+                    >a {
+                        display: inline-block;
+                        vertical-align: center;
+                        font: 300 18px/24px 'Spline Sans';
+                        color: #888;
+                        padding: 0px 9px;
+                        margin: 0 10px;
+                        border: 1px solid #888;
+                        transition: .5s;
+    
+                        &:hover,&.on {
+                            color: #fff;
+                            border: 1px solid #fff;
+                        }
                     }
                 }
             }

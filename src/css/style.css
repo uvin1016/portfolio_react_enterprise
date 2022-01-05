@@ -523,113 +523,151 @@ footer {
       right: 10vw; } }
 .community .inner {
   position: relative; }
-  .community .inner h1 > .marqueeBox {
-    animation: marquee 30s linear infinite running; }
-  .community .inner .btns {
-    position: absolute;
-    top: 265px;
-    left: 0px; }
-    .community .inner .btns button {
-      border: none;
-      background: transparent;
-      margin-right: 15px;
-      font: 300 14px/1 'Spline Sans';
-      color: #888;
-      cursor: pointer;
-      transition: .5s; }
-      .community .inner .btns button.on, .community .inner .btns button:hover {
-        color: #fff; }
-  .community .inner .searchBox {
-    position: absolute;
-    top: 252px;
-    right: 0;
-    border-bottom: 1px solid #888; }
-    .community .inner .searchBox > input[type=text] {
-      border: none;
-      padding: 5px;
-      background: transparent;
-      outline: transparent;
-      font: 300 14px/1 'Spline Sans';
-      color: #fff; }
-    .community .inner .searchBox > button {
-      font: 300 14px/1 'Spline Sans';
-      color: #888;
-      border: none;
-      background: transparent;
-      padding: 5px;
-      cursor: pointer;
-      transition: .5s; }
-      .community .inner .searchBox > button:hover {
-        color: #fff; }
-  .community .inner .noticeWrap {
+  .community .inner .faqWrap {
+    display: grid;
     width: 100%;
-    padding-top: 10px; }
-    .community .inner .noticeWrap article {
-      width: 100%;
-      padding: 25px 15px;
-      border-top: 1px solid #888;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 100px; }
+    .community .inner .faqWrap > article {
+      position: relative;
+      height: 300px;
+      padding: 30px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
       cursor: pointer;
-      transition: .3s; }
-      .community .inner .noticeWrap article:last-child {
-        border-bottom: 1px solid #888; }
-      .community .inner .noticeWrap article .num {
-        display: inline-block;
-        width: 50px;
-        margin-right: 50px;
-        vertical-align: middle;
-        text-align: center;
-        font: 400 28px/45px 'Dancing Script';
-        color: #888;
-        transition: .3s; }
-      .community .inner .noticeWrap article .wrap {
-        display: inline-block;
-        vertical-align: middle; }
-        .community .inner .noticeWrap article .wrap h2 {
-          font: 400 20px/1 'Spline Sans';
-          color: #fff;
-          letter-spacing: 1px;
-          transition: .3s; }
-        .community .inner .noticeWrap article .wrap .txtWrap {
-          margin-top: 5px; }
-          .community .inner .noticeWrap article .wrap .txtWrap > span {
-            display: inline-block;
-            vertical-align: middle;
-            font: 300 15px/1 'Spline Sans';
-            color: rgba(255, 255, 255, 0.7);
-            margin-right: 10px;
-            transition: .3s; }
-      .community .inner .noticeWrap article:hover .num {
+      border: 1px solid rgba(255, 255, 255, 0.1); }
+      .community .inner .faqWrap > article h3 {
+        font: 500 90px/1 "Dancing Script";
         color: #fff; }
-      .community .inner .noticeWrap article:hover .wrap h2 {
+      .community .inner .faqWrap > article p {
+        font: 300 14px/1.2 'Spline Sans';
         color: #fff;
-        transform: translateX(10px); }
-      .community .inner .noticeWrap article:hover .wrap .txtWrap span {
-        transform: translateX(10px);
-        transition-delay: .2s; }
-  .community .inner .pagination {
-    width: fit-content;
-    margin: 30px auto; }
-    .community .inner .pagination > a {
-      display: inline-block;
-      vertical-align: center;
-      padding: 3px 10px; }
-      .community .inner .pagination > a i {
-        font-size: 20px;
+        letter-spacing: 1px; }
+      .community .inner .faqWrap > article::before {
+        content: '';
+        display: block;
+        background-color: #d25d1e;
+        width: 0%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: 1s; }
+      .community .inner .faqWrap > article:hover {
+        width: 100%;
+        height: 100%; }
+        .community .inner .faqWrap > article:hover::before {
+          width: 100%; }
+  .community .inner .boardWrap {
+    position: relative;
+    padding-top: 37px; }
+    .community .inner .boardWrap .btns {
+      position: absolute;
+      top: 7px;
+      left: 0px; }
+      .community .inner .boardWrap .btns button {
+        border: none;
+        background: transparent;
+        margin-right: 15px;
+        font: 300 14px/1 'Spline Sans';
+        color: #888;
+        cursor: pointer;
+        transition: .5s; }
+        .community .inner .boardWrap .btns button.on, .community .inner .boardWrap .btns button:hover {
+          color: #fff; }
+    .community .inner .boardWrap .searchBox {
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-bottom: 1px solid #888; }
+      .community .inner .boardWrap .searchBox > input[type=text] {
+        border: none;
+        padding: 5px;
+        background: transparent;
+        outline: transparent;
+        font: 300 14px/1 'Spline Sans';
         color: #fff; }
-    .community .inner .pagination .num {
-      display: inline-block;
-      vertical-align: center; }
-      .community .inner .pagination .num > a {
+      .community .inner .boardWrap .searchBox > button {
+        font: 300 14px/1 'Spline Sans';
+        color: #888;
+        border: none;
+        background: transparent;
+        padding: 5px;
+        cursor: pointer;
+        transition: .5s; }
+        .community .inner .boardWrap .searchBox > button:hover {
+          color: #fff; }
+    .community .inner .boardWrap .notice {
+      width: 100%;
+      padding-top: 10px; }
+      .community .inner .boardWrap .notice article {
+        width: 100%;
+        padding: 25px 15px;
+        border-top: 1px solid #888;
+        cursor: pointer;
+        transition: .3s; }
+        .community .inner .boardWrap .notice article:last-child {
+          border-bottom: 1px solid #888; }
+        .community .inner .boardWrap .notice article .num {
+          display: inline-block;
+          width: 50px;
+          margin-right: 50px;
+          vertical-align: middle;
+          text-align: center;
+          font: 400 28px/45px 'Dancing Script';
+          color: #888;
+          transition: .3s; }
+        .community .inner .boardWrap .notice article .wrap {
+          display: inline-block;
+          vertical-align: middle; }
+          .community .inner .boardWrap .notice article .wrap h2 {
+            font: 400 20px/1 'Spline Sans';
+            color: #fff;
+            letter-spacing: 1px;
+            transition: .3s; }
+          .community .inner .boardWrap .notice article .wrap .txtWrap {
+            margin-top: 5px; }
+            .community .inner .boardWrap .notice article .wrap .txtWrap > span {
+              display: inline-block;
+              vertical-align: middle;
+              font: 300 15px/1 'Spline Sans';
+              color: rgba(255, 255, 255, 0.7);
+              margin-right: 10px;
+              transition: .3s; }
+        .community .inner .boardWrap .notice article:hover .num {
+          color: #fff; }
+        .community .inner .boardWrap .notice article:hover .wrap h2 {
+          color: #fff;
+          transform: translateX(10px); }
+        .community .inner .boardWrap .notice article:hover .wrap .txtWrap span {
+          transform: translateX(10px);
+          transition-delay: .2s; }
+    .community .inner .boardWrap .pagination {
+      width: fit-content;
+      margin: 30px auto; }
+      .community .inner .boardWrap .pagination > a {
         display: inline-block;
         vertical-align: center;
-        font: 300 18px/24px 'Spline Sans';
-        color: #888;
-        padding: 0px 9px;
-        margin: 0 10px;
-        border: 1px solid #888;
-        transition: .5s; }
-        .community .inner .pagination .num > a:hover, .community .inner .pagination .num > a.on {
-          color: #fff;
-          border: 1px solid #fff; }
+        padding: 3px 10px; }
+        .community .inner .boardWrap .pagination > a i {
+          font-size: 20px;
+          color: #fff; }
+      .community .inner .boardWrap .pagination .num {
+        display: inline-block;
+        vertical-align: center; }
+        .community .inner .boardWrap .pagination .num > a {
+          display: inline-block;
+          vertical-align: center;
+          font: 300 18px/24px 'Spline Sans';
+          color: #888;
+          padding: 0px 9px;
+          margin: 0 10px;
+          border: 1px solid #888;
+          transition: .5s; }
+          .community .inner .boardWrap .pagination .num > a:hover, .community .inner .boardWrap .pagination .num > a.on {
+            color: #fff;
+            border: 1px solid #fff; }
 
 /*# sourceMappingURL=style.css.map */
