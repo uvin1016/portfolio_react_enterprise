@@ -3,26 +3,8 @@ function Location(){
         <section className="content location">
             <div className="inner">
                 <h1>
-                    <div className="marqueeBox">
-                        <span>LOCATION</span>
-                        <span>LOCATION</span>
-                        <span>LOCATION</span>
-                        <span>LOCATION</span>
-                        <span>LOCATION</span>
-                        <span>LOCATION</span>
-                        <span>LOCATION</span>
-                        <span>LOCATION</span>
-                    </div>
-                    <div className="marqueeBox">
-                        <span>LOCATION</span>
-                        <span>LOCATION</span>
-                        <span>LOCATION</span>
-                        <span>LOCATION</span>
-                        <span>LOCATION</span>
-                        <span>LOCATION</span>
-                        <span>LOCATION</span>
-                        <span>LOCATION</span>
-                    </div>
+                    <p>Let's Be</p>
+                    <p>Together</p>
                 </h1>
             </div>
         </section>

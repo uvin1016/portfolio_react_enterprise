@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -117,18 +118,11 @@ footer {
     margin: 0 auto; }
     .content > .inner h1 {
       width: 100%;
-      display: flex;
-      justify-content: left;
-      overflow: hidden;
+      font: 400 100px/1 'Playfair Display';
+      color: #fff;
       margin-bottom: 100px; }
-      .content > .inner h1 > .marqueeBox {
-        display: flex;
-        animation: marquee 23s linear infinite running; }
-        .content > .inner h1 > .marqueeBox span {
-          display: block;
-          font: 300 100px/1 'Spline Sans';
-          color: #fff;
-          margin: 0 10px; }
+      .content > .inner h1 p:nth-of-type(2) {
+        margin-left: 100px; }
 
 @media screen and (max-width: 1200px) {
   .content > .inner {
@@ -147,7 +141,7 @@ footer {
   position: relative; }
   .gallery .inner .btns {
     position: absolute;
-    top: 160px;
+    top: 265px;
     left: 0px; }
     .gallery .inner .btns button {
       border: none;
@@ -161,7 +155,7 @@ footer {
         color: #fff; }
   .gallery .inner .searchBox {
     position: absolute;
-    top: 153px;
+    top: 252px;
     right: 0;
     border-bottom: 1px solid #888; }
     .gallery .inner .searchBox > input[type=text] {
@@ -185,7 +179,7 @@ footer {
     width: 300px;
     height: 3px;
     position: absolute;
-    top: 400px;
+    top: 500px;
     left: 50%;
     transform: translateX(-50%);
     background: rgba(255, 255, 255, 0.1); }
@@ -527,49 +521,115 @@ footer {
     .youtube .pop .close {
       top: 140vw;
       right: 10vw; } }
-.community .inner h1 > .marqueeBox {
-  animation: marquee 30s linear infinite running; }
-.community .inner article {
-  width: 100%;
-  padding: 25px 15px;
-  border-top: 1px solid #888;
-  cursor: pointer;
-  transition: .3s; }
-  .community .inner article:last-child {
+.community .inner {
+  position: relative; }
+  .community .inner h1 > .marqueeBox {
+    animation: marquee 30s linear infinite running; }
+  .community .inner .btns {
+    position: absolute;
+    top: 265px;
+    left: 0px; }
+    .community .inner .btns button {
+      border: none;
+      background: transparent;
+      margin-right: 15px;
+      font: 300 14px/1 'Spline Sans';
+      color: #888;
+      cursor: pointer;
+      transition: .5s; }
+      .community .inner .btns button.on, .community .inner .btns button:hover {
+        color: #fff; }
+  .community .inner .searchBox {
+    position: absolute;
+    top: 252px;
+    right: 0;
     border-bottom: 1px solid #888; }
-  .community .inner article .num {
-    display: inline-block;
-    width: 50px;
-    margin-right: 50px;
-    vertical-align: middle;
-    text-align: center;
-    font: 400 28px/45px 'Dancing Script';
-    color: #888;
-    transition: .3s; }
-  .community .inner article .wrap {
-    display: inline-block;
-    vertical-align: middle; }
-    .community .inner article .wrap h2 {
-      font: 400 20px/1 'Spline Sans';
-      color: #fff;
-      letter-spacing: 1px;
+    .community .inner .searchBox > input[type=text] {
+      border: none;
+      padding: 5px;
+      background: transparent;
+      outline: transparent;
+      font: 300 14px/1 'Spline Sans';
+      color: #fff; }
+    .community .inner .searchBox > button {
+      font: 300 14px/1 'Spline Sans';
+      color: #888;
+      border: none;
+      background: transparent;
+      padding: 5px;
+      cursor: pointer;
+      transition: .5s; }
+      .community .inner .searchBox > button:hover {
+        color: #fff; }
+  .community .inner .noticeWrap {
+    width: 100%;
+    padding-top: 10px; }
+    .community .inner .noticeWrap article {
+      width: 100%;
+      padding: 25px 15px;
+      border-top: 1px solid #888;
+      cursor: pointer;
       transition: .3s; }
-    .community .inner article .wrap .txtWrap {
-      margin-top: 5px; }
-      .community .inner article .wrap .txtWrap > span {
+      .community .inner .noticeWrap article:last-child {
+        border-bottom: 1px solid #888; }
+      .community .inner .noticeWrap article .num {
         display: inline-block;
+        width: 50px;
+        margin-right: 50px;
         vertical-align: middle;
-        font: 300 15px/1 'Spline Sans';
-        color: rgba(255, 255, 255, 0.7);
-        margin-right: 10px;
+        text-align: center;
+        font: 400 28px/45px 'Dancing Script';
+        color: #888;
         transition: .3s; }
-  .community .inner article:hover .num {
-    color: #fff; }
-  .community .inner article:hover .wrap h2 {
-    color: #fff;
-    transform: translateX(10px); }
-  .community .inner article:hover .wrap .txtWrap span {
-    transform: translateX(10px);
-    transition-delay: .2s; }
+      .community .inner .noticeWrap article .wrap {
+        display: inline-block;
+        vertical-align: middle; }
+        .community .inner .noticeWrap article .wrap h2 {
+          font: 400 20px/1 'Spline Sans';
+          color: #fff;
+          letter-spacing: 1px;
+          transition: .3s; }
+        .community .inner .noticeWrap article .wrap .txtWrap {
+          margin-top: 5px; }
+          .community .inner .noticeWrap article .wrap .txtWrap > span {
+            display: inline-block;
+            vertical-align: middle;
+            font: 300 15px/1 'Spline Sans';
+            color: rgba(255, 255, 255, 0.7);
+            margin-right: 10px;
+            transition: .3s; }
+      .community .inner .noticeWrap article:hover .num {
+        color: #fff; }
+      .community .inner .noticeWrap article:hover .wrap h2 {
+        color: #fff;
+        transform: translateX(10px); }
+      .community .inner .noticeWrap article:hover .wrap .txtWrap span {
+        transform: translateX(10px);
+        transition-delay: .2s; }
+  .community .inner .pagination {
+    width: fit-content;
+    margin: 30px auto; }
+    .community .inner .pagination > a {
+      display: inline-block;
+      vertical-align: center;
+      padding: 3px 10px; }
+      .community .inner .pagination > a i {
+        font-size: 20px;
+        color: #fff; }
+    .community .inner .pagination .num {
+      display: inline-block;
+      vertical-align: center; }
+      .community .inner .pagination .num > a {
+        display: inline-block;
+        vertical-align: center;
+        font: 300 18px/24px 'Spline Sans';
+        color: #888;
+        padding: 0px 9px;
+        margin: 0 10px;
+        border: 1px solid #888;
+        transition: .5s; }
+        .community .inner .pagination .num > a:hover, .community .inner .pagination .num > a.on {
+          color: #fff;
+          border: 1px solid #fff; }
 
 /*# sourceMappingURL=style.css.map */

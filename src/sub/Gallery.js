@@ -36,26 +36,8 @@ function Gallery(){
         <section className="content gallery">
             <div className="inner">
                 <h1>
-                    <div className="marqueeBox">
-                        <span>GALLERY</span>
-                        <span>GALLERY</span>
-                        <span>GALLERY</span>
-                        <span>GALLERY</span>
-                        <span>GALLERY</span>
-                        <span>GALLERY</span>
-                        <span>GALLERY</span>
-                        <span>GALLERY</span>
-                    </div>
-                    <div className="marqueeBox">
-                        <span>GALLERY</span>
-                        <span>GALLERY</span>
-                        <span>GALLERY</span>
-                        <span>GALLERY</span>
-                        <span>GALLERY</span>
-                        <span>GALLERY</span>
-                        <span>GALLERY</span>
-                        <span>GALLERY</span>
-                    </div>
+                    <p>Make</p>
+                    <p>Good Works</p>
                 </h1>
 
                 {/* 카테고리 버튼 */}

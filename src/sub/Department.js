@@ -3,26 +3,8 @@ function Department(){
         <section className="content department">
             <div className="inner">
                 <h1>
-                    <div className="marqueeBox">
-                        <span>DEPARTMENT</span>
-                        <span>DEPARTMENT</span>
-                        <span>DEPARTMENT</span>
-                        <span>DEPARTMENT</span>
-                        <span>DEPARTMENT</span>
-                        <span>DEPARTMENT</span>
-                        <span>DEPARTMENT</span>
-                        <span>DEPARTMENT</span>
-                    </div>
-                    <div className="marqueeBox">
-                        <span>DEPARTMENT</span>
-                        <span>DEPARTMENT</span>
-                        <span>DEPARTMENT</span>
-                        <span>DEPARTMENT</span>
-                        <span>DEPARTMENT</span>
-                        <span>DEPARTMENT</span>
-                        <span>DEPARTMENT</span>
-                        <span>DEPARTMENT</span>
-                    </div>
+                    <p>Who</p>
+                    <p>We Are</p>
                 </h1>
             </div>
         </section>

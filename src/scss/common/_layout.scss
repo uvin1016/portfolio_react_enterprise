@@ -8,23 +8,13 @@
 
         h1 {
             width: 100%;
-            display: flex;
-            justify-content: left;
-            overflow: hidden;
+            font: 400 100px/1 'Playfair Display';
+            color: #fff;
             margin-bottom: 100px;
-            
-            >.marqueeBox {
-                display: flex;
-                animation: marquee 23s linear infinite running;
 
-                span{
-                    display: block;
-                    font: 300 100px/1 'Spline Sans';
-                    color: #fff;
-                    margin: 0 10px
-                }
+            p:nth-of-type(2){
+                margin-left: 100px;
             }
-
         }
     }
 }

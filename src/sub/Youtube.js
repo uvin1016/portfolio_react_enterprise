@@ -25,26 +25,8 @@ function Youtube(){
         <section className="content youtube">
             <div className="inner">
                 <h1>
-                    <div className="marqueeBox">
-                        <span>YOUTUBE</span>
-                        <span>YOUTUBE</span>
-                        <span>YOUTUBE</span>
-                        <span>YOUTUBE</span>
-                        <span>YOUTUBE</span>
-                        <span>YOUTUBE</span>
-                        <span>YOUTUBE</span>
-                        <span>YOUTUBE</span>
-                    </div>
-                    <div className="marqueeBox">
-                        <span>YOUTUBE</span>
-                        <span>YOUTUBE</span>
-                        <span>YOUTUBE</span>
-                        <span>YOUTUBE</span>
-                        <span>YOUTUBE</span>
-                        <span>YOUTUBE</span>
-                        <span>YOUTUBE</span>
-                        <span>YOUTUBE</span>
-                    </div>
+                    <p>Creatures</p>
+                    <p>Of Interest</p>
                 </h1>
                 <div className="vidList" ref={vidList}>
                     {
