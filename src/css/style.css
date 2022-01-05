@@ -537,6 +537,13 @@ footer {
       flex-direction: column;
       cursor: pointer;
       border: 1px solid rgba(255, 255, 255, 0.1); }
+      .community .inner .faqWrap > article > img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
       .community .inner .faqWrap > article h3 {
         font: 500 90px/1 "Dancing Script";
         color: #fff; }
