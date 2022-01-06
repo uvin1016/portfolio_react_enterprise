@@ -5,5 +5,132 @@
                 animation: marquee 30s linear infinite running;
             }
         }
+
+        .awards {
+            width: 100%;
+            margin-bottom: 100px;
+
+            h2 {
+                font: 400 14px/1 'Spline Sans';
+                color: #fff;
+                margin-bottom: 20px;
+            }
+
+            ul {
+                width: 100%;
+                border-top: 1px solid rgba(255,255,255,0.7);
+
+                li {
+                    padding: 20px 0px;
+                    border-bottom: 1px solid rgba(255,255,255,0.7);
+                    cursor: pointer;
+
+                    &::after{
+                        content: '';
+                        display: block;
+                        clear: both;
+                    }
+
+                    h3 {
+                        float: left;
+                        font: 500 18px/1 'Spline Sans';
+                        color: rgba(255,255,255,0.7);
+                        transition: .5s;
+                    }
+
+                    span {
+                        float: right;
+                        font: 400 16px/1 'Playfair Display';
+                        color: rgba(255,255,255,0.7);
+                        transition: .5s;
+                    }
+
+                    &:hover {
+                        h3 {
+                            color: #d25d1e;
+                            transform: translateX(10px);
+                        }
+                        span {
+                            color: #fff;
+                            transform: translateX(-10px);
+                        }
+                    }
+                }
+            }
+        }
+
+        .members {
+            h2 {
+                font: 400 14px/1 'Spline Sans';
+                color: #fff;
+                margin-bottom: 20px;
+            }
+
+            >.inner {
+                width: 100%;
+                border-top: 1px solid rgba(255,255,255,0.7);
+                border-bottom: 1px solid rgba(255,255,255,0.7);
+                display: grid;
+                grid-column-gap: 20px;
+                grid-template-columns: repeat(4,1fr);
+                padding-top: 30px;
+
+                article {
+                    cursor: pointer;
+                    margin-bottom: 20px;
+
+                    .pic {
+                        width: 100%;
+                        height: 400px;
+                        
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            filter: grayscale(100%);
+                            transition: 1s;
+                        }
+                    }
+
+                    .txt {
+                        width: 100%;
+                        padding: 20px 10px;
+
+                        &::after {
+                            content: '';
+                            display: block;
+                            clear: both;
+                        }
+
+                        >span {
+                            display: block;
+                            text-align: right;
+                            font: 300 14px/1 'Spline Sans';
+                            color: #888;
+                            margin-bottom: 10px;
+                        }
+
+                        >p {
+                            text-align: right;
+                            font: 400 18px/1 'Spline Sans';
+                            color: #888;
+                            transition: 0.5s;
+                        }
+                    }
+
+                    &:hover {
+                        .pic img {
+                            filter: grayscale(0);
+                        }
+
+                        .txt {
+                            >p {
+                                color: #d25d1e;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
