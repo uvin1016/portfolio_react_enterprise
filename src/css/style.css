@@ -128,6 +128,49 @@ footer {
   .content > .inner {
     width: 100%;
     padding: 0 40px; } }
+.main {
+  padding: 0; }
+  .main .inner .visual {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden; }
+    .main .inner .visual h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font: 400 200px/1 'Playfair Display'; }
+      .main .inner .visual h1 span {
+        display: inline-block;
+        font: 300 55px/1 'Spline Sans'; }
+    .main .inner .visual figure {
+      width: 600px;
+      height: 1100px;
+      border-radius: 300px;
+      position: absolute;
+      top: 100px;
+      right: 0px;
+      overflow: hidden;
+      z-index: -1;
+      transition: 1s; }
+      .main .inner .visual figure::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.2);
+        position: absolute;
+        top: 0;
+        left: 0; }
+      .main .inner .visual figure.on {
+        top: -180px; }
+      .main .inner .visual figure video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: relative; }
+
 .department .inner .awards {
   width: 100%;
   margin-bottom: 100px; }
@@ -254,7 +297,7 @@ footer {
   position: relative; }
   .gallery .inner .btns {
     position: absolute;
-    top: 265px;
+    top: 295px;
     left: 0px; }
     .gallery .inner .btns button {
       border: none;
@@ -268,7 +311,7 @@ footer {
         color: #fff; }
   .gallery .inner .searchBox {
     position: absolute;
-    top: 252px;
+    top: 290px;
     right: 0;
     border-bottom: 1px solid #888; }
     .gallery .inner .searchBox > input[type=text] {
@@ -312,6 +355,7 @@ footer {
     opacity: 0;
     position: relative;
     transform: translateY(200px);
+    margin-top: 135px;
     transition: 1s; }
     .gallery .inner .imgWrap.on {
       opacity: 1;
@@ -394,49 +438,62 @@ footer {
     width: 33.333%; } }
 @media screen and (max-width: 749px) {
   .gallery .inner h1 {
-    margin-bottom: 50px; }
-  .gallery .inner::after {
-    content: "";
-    display: block;
-    clear: both; }
-  .gallery .inner .btns {
-    float: left;
-    position: unset;
-    margin-bottom: 10px;
-    height: 28px; }
-    .gallery .inner .btns button {
-      display: inline-block;
-      vertical-align: sub;
-      margin-left: 0;
-      margin-right: 15px; }
-      .gallery .inner .btns button:last-child {
-        margin-right: 0; }
+    font: 400 90px/1 'Playfair Display';
+    margin-bottom: 100px; }
   .gallery .inner .searchBox {
-    float: right;
-    width: fit-content;
-    position: unset;
-    margin-bottom: 10px; }
+    margin-bottom: 15px; }
   .gallery .inner .imgWrap {
-    margin-top: 95px; }
+    margin-top: 155px; } }
+@media screen and (max-width: 683px) {
+  .gallery .inner h1 {
+    font: 400 70px/1 'Playfair Display';
+    margin-bottom: 100px; }
+  .gallery .inner .imgWrap {
+    margin-top: 195px; }
+    .gallery .inner .imgWrap ul li {
+      width: 50%; } }
+@media screen and (max-width: 575px) {
+  .gallery .inner h1 {
+    font: 400 60px/1 'Playfair Display';
+    padding-left: 0; }
+    .gallery .inner h1 p:nth-of-type(2) {
+      margin-left: 50px; }
+  .gallery .inner .btns {
+    top: 240px; }
+  .gallery .inner .searchBox {
+    top: 235px; }
+  .gallery .inner .imgWrap {
+    margin-top: 155px; }
     .gallery .inner .imgWrap ul li {
       width: 50%; } }
 @media screen and (max-width: 540px) {
-  .gallery .inner h1 {
-    padding-left: 0;
-    margin-bottom: 40px; }
   .gallery .inner .loadLine {
     width: 200px; }
+  .gallery .inner .btns {
+    position: unset;
+    margin-bottom: 10px; }
   .gallery .inner .searchBox {
-    width: 100%; }
+    width: 100%;
+    position: unset; }
     .gallery .inner .searchBox > input[type=text] {
       width: calc(100% - 51px); }
     .gallery .inner .searchBox > button {
       width: 51px; }
   .gallery .inner .imgWrap {
-    margin-top: 125px; }
+    margin-top: 25px; }
     .gallery .inner .imgWrap ul li {
       width: 100%;
       padding: 10px 0; } }
+@media screen and (max-width: 521px) {
+  .gallery .inner h1 {
+    font: 400 50px/1 'Playfair Display'; } }
+@media screen and (max-width: 417px) {
+  .gallery .inner h1 {
+    font: 400 35px/1 'Playfair Display'; }
+    .gallery .inner h1 p:nth-of-type(2) {
+      margin-left: 25px; }
+  .gallery .inner .btns button {
+    margin-right: 8px; } }
 @keyframes lineWidth {
   0% {
     width: 0%; }
@@ -589,6 +646,10 @@ footer {
       top: 34vw;
       right: 10vw; } }
 @media screen and (max-width: 769px) {
+  .youtube .inner h1 {
+    font: 400 70px/1 'Playfair Display'; }
+    .youtube .inner h1 p:nth-of-type(2) {
+      margin-left: 50px; }
   .youtube .inner .vidList article .pic {
     width: 100%;
     margin-left: 0px;
@@ -615,8 +676,12 @@ footer {
       top: 68vw;
       right: 10vw; } }
 @media screen and (max-width: 496px) {
+  .youtube .inner h1 {
+    font: 400 50px/1 'Playfair Display'; }
+    .youtube .inner h1 p:nth-of-type(2) {
+      margin-left: 50px; }
   .youtube .inner .vidList article .num {
-    font: 400 35px/1 "Spline Sans"; }
+    font: 400 35px/1 "Dancing Script"; }
   .youtube .inner .vidList article .con h2 {
     font: 400 24px/1.2 "Spline Sans"; }
   .youtube .inner .vidList article .con > p {
@@ -626,6 +691,11 @@ footer {
     .youtube .pop .close {
       top: 100vw;
       right: 10vw; } }
+@media screen and (max-width: 388px) {
+  .youtube .inner h1 {
+    font: 400 40px/1 'Playfair Display'; }
+    .youtube .inner h1 p:nth-of-type(2) {
+      margin-left: 25px; } }
 @media screen and (max-width: 376px) {
   .youtube .inner .vidList article {
     padding: 30px 0px; }

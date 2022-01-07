@@ -1,0 +1,60 @@
+.main {
+    padding: 0;
+
+    .inner {
+        .visual {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+
+            h1 {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                font: 400 200px/1 'Playfair Display';
+
+                span {
+                    display: inline-block;
+                    font: 300 55px/1 'Spline Sans';
+                }
+            }
+
+            figure {
+                width: 600px;
+                height: 1100px;
+                border-radius: 300px;
+                position: absolute;
+                top: 100px;
+                right: 0px;
+                overflow: hidden;
+                z-index: -1;
+                transition: 1s;
+
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0,0,0,0.2);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                &.on {
+                    top: -180px;
+                }
+
+                video {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    position: relative;
+
+                }
+            }
+        }
+    }
+}

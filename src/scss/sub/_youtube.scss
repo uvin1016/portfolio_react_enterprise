@@ -246,6 +246,14 @@
 @media screen and (max-width: 769px) {
     .youtube {
         .inner {
+            h1 {
+                font: 400 70px/1 'Playfair Display';
+    
+                p:nth-of-type(2){
+                    margin-left: 50px;
+                }
+            }
+
             .vidList {
                 article {
                     .pic {
@@ -306,10 +314,18 @@
 @media screen and (max-width: 496px) {
     .youtube {
         .inner {
+            h1 {
+                font: 400 50px/1 'Playfair Display';
+    
+                p:nth-of-type(2){
+                    margin-left: 50px;
+                }
+            }
+
             .vidList {
                 article {
                     .num {
-                        font: 400 35px/1 "Spline Sans";
+                        font: 400 35px/1 "Dancing Script";
                     }
                     .con {
                         h2 {
@@ -330,6 +346,20 @@
             .close {
                 top: 100vw;
                 right: 10vw;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 388px) {
+    .youtube {
+        .inner {
+            h1 {
+                font: 400 40px/1 'Playfair Display';
+    
+                p:nth-of-type(2){
+                    margin-left: 25px;
+                }
             }
         }
     }
