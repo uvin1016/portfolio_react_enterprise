@@ -24,28 +24,31 @@ function Community(){
                 </h1>
 
                 <div className="faqWrap">
-                    <article>
-                        <h3>Q1</h3>
-                        <p>Lorem dolor sit amet<br /> consectetur</p>
-                    </article>
-                    <article>
-                        <h3>Q2</h3>
-                        <p>Lorem ipsum amet<br /> consectetur adipisicing</p>
-                    </article>
-                    <article>
-                        <img src={`${baseURL}/img/faq1.jpg`} alt="faq이미지1" />
-                    </article>
-                    <article>
-                        <img src={`${baseURL}/img/faq2.jpg`} alt="faq이미지2" />
-                    </article>
-                    <article>
-                        <h3>Q3</h3>
-                        <p>Lorem ipsum dolor sit amet<br /> adipisicing</p>
-                    </article>
-                    <article>
-                        <h3>Q4</h3>
-                        <p>Dolor sit amet<br /> consectetur adipisicing</p>
-                    </article>
+                    <h2>FaQ</h2>
+                    <div className="inner">
+                        <article>
+                            <h3>Q1</h3>
+                            <p>Lorem dolor sit amet<br /> consectetur</p>
+                        </article>
+                        <article>
+                            <h3>Q2</h3>
+                            <p>Lorem ipsum amet<br /> consectetur adipisicing</p>
+                        </article>
+                        <article>
+                            <img src={`${baseURL}/img/faq1.jpg`} alt="faq이미지1" />
+                        </article>
+                        <article>
+                            <img src={`${baseURL}/img/faq2.jpg`} alt="faq이미지2" />
+                        </article>
+                        <article>
+                            <h3>Q3</h3>
+                            <p>Lorem ipsum dolor sit amet<br /> adipisicing</p>
+                        </article>
+                        <article>
+                            <h3>Q4</h3>
+                            <p>Dolor sit amet<br /> consectetur adipisicing</p>
+                        </article>
+                    </div>
                 </div>
 
                 <div className="boardWrap">

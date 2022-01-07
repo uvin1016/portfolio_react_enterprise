@@ -128,13 +128,6 @@ footer {
   .content > .inner {
     width: 100%;
     padding: 0 40px; } }
-@keyframes marquee {
-  0% {
-    transform: translateX(0%); }
-  100% {
-    transform: translateX(-100%); } }
-.department .inner h1 > .marqueeBox {
-  animation: marquee 30s linear infinite running; }
 .department .inner .awards {
   width: 100%;
   margin-bottom: 100px; }
@@ -216,6 +209,46 @@ footer {
     .department .inner .members > .inner article:hover .txt > p {
       color: #d25d1e; }
 
+@media screen and (max-width: 1200px) {
+  .department .inner .members > .inner {
+    grid-template-columns: repeat(3, 1fr); }
+    .department .inner .members > .inner article .pic {
+      height: 350px; } }
+@media screen and (max-width: 769px) {
+  .department .inner .members > .inner {
+    grid-template-columns: repeat(2, 1fr); }
+    .department .inner .members > .inner article .pic {
+      height: 350px; } }
+@media screen and (max-width: 549px) {
+  .department .inner h1 {
+    font: 400 80px/1 'Playfair Display'; }
+    .department .inner h1 p:nth-of-type(2) {
+      margin-left: 50px; }
+  .department .inner .awards ul li h3 {
+    float: none;
+    margin-bottom: 8px; }
+  .department .inner .awards ul li span {
+    display: block;
+    font: 400 14px/1 'Playfair Display';
+    color: rgba(255, 255, 255, 0.4);
+    transition-delay: .2s;
+    float: none; }
+  .department .inner .awards ul li:hover span {
+    transform: translateX(10px); }
+  .department .inner .members > .inner {
+    grid-template-columns: repeat(1, 1fr); }
+    .department .inner .members > .inner article .pic {
+      height: 350px; } }
+@media screen and (max-width: 397px) {
+  .department .inner h1 {
+    font: 400 55px/1 'Playfair Display'; }
+  .department .inner .members > .inner article .pic {
+    height: 300px; } }
+@media screen and (max-width: 358px) {
+  .department .inner .awards ul li h3 {
+    font: 400 16px/1 'Spline Sans'; }
+  .department .inner .members > .inner article .pic {
+    height: 300px; } }
 .gallery .inner {
   min-height: 600px;
   position: relative; }
@@ -311,13 +344,13 @@ footer {
           padding: 20px 10px;
           z-index: 1;
           opacity: 0;
-          transition: .5s; }
+          transition: .8s ease; }
           .gallery .inner .imgWrap ul li > a .txtBox h2 {
             font: 400 16px/1 'Spline Sans';
-            color: #fff;
+            color: #d25d1e;
             margin-bottom: 8px; }
           .gallery .inner .imgWrap ul li > a .txtBox p {
-            font: 300 14px/1 'Spline Sans';
+            font: 300 12px/1 'Spline Sans';
             color: rgba(255, 255, 255, 0.7); }
         .gallery .inner .imgWrap ul li > a:hover img {
           filter: grayscale(0%); }
@@ -603,12 +636,16 @@ footer {
       right: 10vw; } }
 .community .inner {
   position: relative; }
-  .community .inner .faqWrap {
+  .community .inner .faqWrap h2 {
+    font: 400 14px/1 'Spline Sans';
+    color: #fff;
+    margin-bottom: 20px; }
+  .community .inner .faqWrap > .inner {
     display: grid;
     width: 100%;
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 100px; }
-    .community .inner .faqWrap > article {
+    .community .inner .faqWrap > .inner > article {
       position: relative;
       height: 300px;
       padding: 30px;
@@ -617,21 +654,21 @@ footer {
       flex-direction: column;
       cursor: pointer;
       border: 1px solid rgba(255, 255, 255, 0.1); }
-      .community .inner .faqWrap > article > img {
+      .community .inner .faqWrap > .inner > article > img {
         position: absolute;
         left: 0;
         top: 0;
         width: 100%;
         height: 100%;
         object-fit: cover; }
-      .community .inner .faqWrap > article h3 {
+      .community .inner .faqWrap > .inner > article h3 {
         font: 500 90px/1 "Dancing Script";
         color: #fff; }
-      .community .inner .faqWrap > article p {
+      .community .inner .faqWrap > .inner > article p {
         font: 300 14px/1.2 'Spline Sans';
         color: #fff;
         letter-spacing: 1px; }
-      .community .inner .faqWrap > article::before {
+      .community .inner .faqWrap > .inner > article::before {
         content: '';
         display: block;
         background-color: #d25d1e;
@@ -642,10 +679,10 @@ footer {
         left: 0;
         z-index: -1;
         transition: 1s; }
-      .community .inner .faqWrap > article:hover {
+      .community .inner .faqWrap > .inner > article:hover {
         width: 100%;
         height: 100%; }
-        .community .inner .faqWrap > article:hover::before {
+        .community .inner .faqWrap > .inner > article:hover::before {
           width: 100%; }
   .community .inner .boardWrap {
     position: relative;

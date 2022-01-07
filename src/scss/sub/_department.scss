@@ -1,11 +1,5 @@
 .department {
     .inner {
-        h1 {
-            >.marqueeBox {
-                animation: marquee 30s linear infinite running;
-            }
-        }
-
         .awards {
             width: 100%;
             margin-bottom: 100px;
@@ -127,6 +121,136 @@
                             >p {
                                 color: #d25d1e;
                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .department {
+        .inner {
+            .members {
+                >.inner {
+                    grid-template-columns: repeat(3,1fr);
+
+                    article {
+                        .pic {
+                            height: 350px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .department {
+        .inner {
+            .members {
+                >.inner {
+                    grid-template-columns: repeat(2,1fr);
+
+                    article {
+                        .pic {
+                            height: 350px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 549px) {
+    .department {
+        .inner {
+            h1 {
+                font: 400 80px/1 'Playfair Display';
+
+                p:nth-of-type(2){
+                    margin-left: 50px;
+                }
+            }
+
+            .awards {
+                ul {
+                    li {
+                        h3 {
+                            float: none;
+                            margin-bottom: 8px;
+                        }
+    
+                        span {
+                            display: block;
+                            font: 400 14px/1 'Playfair Display';
+                            color: rgba(255,255,255,0.4);
+                            transition-delay: .2s;
+                            float: none;
+                        }
+    
+                        &:hover {
+                            span {
+                                transform: translateX(10px);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .members {
+                >.inner {
+                    grid-template-columns: repeat(1,1fr);
+
+                    article {
+                        .pic {
+                            height: 350px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 397px) {
+    .department {
+        .inner {
+            h1 {
+                font: 400 55px/1 'Playfair Display';
+            }
+            .members {
+                >.inner {
+                    article {
+                        .pic {
+                            height: 300px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 358px) {
+    .department {
+        .inner {
+            .awards {
+                ul {
+                    li {
+                        h3 {
+                            font: 400 16px/1 'Spline Sans';
+                        }
+                    }
+                }
+            }
+            .members {
+                >.inner {
+                    article {
+                        .pic {
+                            height: 300px;
                         }
                     }
                 }
