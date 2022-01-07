@@ -69,7 +69,6 @@
                 }
             }
         }
-// 'Dancing Script'
 
         .boardWrap {
             position: relative;
@@ -157,7 +156,7 @@
         
         
                         h2 {
-                            font: 400 20px/1 'Spline Sans';
+                            font: 400 20px/1.3 'Spline Sans';
                             color: #fff;
                             letter-spacing: 1px;
                             transition: .3s;
@@ -234,6 +233,171 @@
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 865px) {
+    .community {
+        .inner {
+            .faqWrap {
+                >.inner {
+                    >article {
+                        h3 {
+                            font: 500 70px/1 "Dancing Script";
+                        }
+                    }
+                }
+            }
+    
+            .boardWrap {
+                .notice {
+                    article {
+                        .num {
+                            margin-right: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 845px) {
+    .community {
+        .inner {
+            h1 {
+                font: 400 80px/1 'Playfair Display';
+            }
+
+            .boardWrap {
+                .notice {
+                    article {
+                        .num {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 686px) {
+    .community {
+        .inner {
+            h1 {
+                font: 400 60px/1 'Playfair Display';
+
+                p:nth-of-type(2){
+                    margin-left: 50px;
+                }
+            }
+
+            .faqWrap {
+                >.inner {
+                    grid-template-columns: repeat(2,1fr);
+
+                    >article {
+                        &:nth-of-type(4) {
+                            order: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 564px) {
+    .community {
+        .inner {
+            h1 {
+                font: 400 60px/1 'Playfair Display';
+            }
+
+            .faqWrap {
+                >.inner {
+                    >article {
+                        padding: 30px 15px;
+        
+                        h3 {
+                            font: 500 60px/1 "Dancing Script";
+                        }
+        
+                        p {
+                            font: 300 14px/1.2 'Spline Sans';
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .community {
+        .inner {
+            .faqWrap {
+                >.inner {
+                    grid-template-columns: repeat(1,1fr);
+        
+                    >article {
+                        &:hover {
+                            height: 300px;
+                        }
+                    }
+                }
+            }
+
+            .boardWrap {
+                .btns {
+                    position: unset;
+                    margin-bottom: 10px;
+                }
+        
+                .searchBox {
+                    position: unset;
+                    margin-bottom: 20px;
+        
+                    >input[type=text]{
+                        width: calc(100% - 54px);
+                    }
+        
+                    >button {
+                        width: 54px;
+                    }
+                }
+        
+                .pagination {
+                    >a {
+                        padding: 3px 5px;
+        
+                        i {
+                            font-size: 18px;
+                        }
+                    }
+        
+                    .num {
+                        vertical-align: top;
+                        
+                        >a {
+                            padding: 0px 6px;
+                            margin: 0 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 389px) {
+    .community {
+        .inner {
+            h1 {
+                font: 400 40px/1 'Playfair Display';
             }
         }
     }

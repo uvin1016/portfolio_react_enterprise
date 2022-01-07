@@ -747,7 +747,7 @@ footer {
           display: inline-block;
           vertical-align: middle; }
           .community .inner .boardWrap .notice article .wrap h2 {
-            font: 400 20px/1 'Spline Sans';
+            font: 400 20px/1.3 'Spline Sans';
             color: #fff;
             letter-spacing: 1px;
             transition: .3s; }
@@ -793,5 +793,61 @@ footer {
           .community .inner .boardWrap .pagination .num > a:hover, .community .inner .boardWrap .pagination .num > a.on {
             color: #fff;
             border: 1px solid #fff; }
+
+@media screen and (max-width: 865px) {
+  .community .inner .faqWrap > .inner > article h3 {
+    font: 500 70px/1 "Dancing Script"; }
+  .community .inner .boardWrap .notice article .num {
+    margin-right: 30px; } }
+@media screen and (max-width: 845px) {
+  .community .inner h1 {
+    font: 400 80px/1 'Playfair Display'; }
+  .community .inner .boardWrap .notice article .num {
+    display: none; } }
+@media screen and (max-width: 686px) {
+  .community .inner h1 {
+    font: 400 60px/1 'Playfair Display'; }
+    .community .inner h1 p:nth-of-type(2) {
+      margin-left: 50px; }
+  .community .inner .faqWrap > .inner {
+    grid-template-columns: repeat(2, 1fr); }
+    .community .inner .faqWrap > .inner > article:nth-of-type(4) {
+      order: 1; } }
+@media screen and (max-width: 564px) {
+  .community .inner h1 {
+    font: 400 60px/1 'Playfair Display'; }
+  .community .inner .faqWrap > .inner > article {
+    padding: 30px 15px; }
+    .community .inner .faqWrap > .inner > article h3 {
+      font: 500 60px/1 "Dancing Script"; }
+    .community .inner .faqWrap > .inner > article p {
+      font: 300 14px/1.2 'Spline Sans'; } }
+@media screen and (max-width: 420px) {
+  .community .inner .faqWrap > .inner {
+    grid-template-columns: repeat(1, 1fr); }
+    .community .inner .faqWrap > .inner > article:hover {
+      height: 300px; }
+  .community .inner .boardWrap .btns {
+    position: unset;
+    margin-bottom: 10px; }
+  .community .inner .boardWrap .searchBox {
+    position: unset;
+    margin-bottom: 20px; }
+    .community .inner .boardWrap .searchBox > input[type=text] {
+      width: calc(100% - 54px); }
+    .community .inner .boardWrap .searchBox > button {
+      width: 54px; }
+  .community .inner .boardWrap .pagination > a {
+    padding: 3px 5px; }
+    .community .inner .boardWrap .pagination > a i {
+      font-size: 18px; }
+  .community .inner .boardWrap .pagination .num {
+    vertical-align: top; }
+    .community .inner .boardWrap .pagination .num > a {
+      padding: 0px 6px;
+      margin: 0 5px; } }
+@media screen and (max-width: 389px) {
+  .community .inner h1 {
+    font: 400 40px/1 'Playfair Display'; } }
 
 /*# sourceMappingURL=style.css.map */
