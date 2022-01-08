@@ -6,14 +6,14 @@
             width: 100%;
             height: 100vh;
             position: relative;
-            overflow: hidden;
 
             h1 {
                 position: absolute;
                 top: 50%;
-                left: 50%;
-                transform: translate(-50%,-50%);
+                left: 0;
+                transform: translateY(-50%);
                 font: 400 200px/1 'Playfair Display';
+                color: #fff;
 
                 span {
                     display: inline-block;
@@ -54,6 +54,212 @@
                     position: relative;
 
                 }
+            }
+        }
+
+        .about {
+            width: 100%;
+            padding: 180px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            >h1 {
+                width: 50%;
+                font: 400 70px/1 'Playfair Display';
+                color: #fff;
+                margin-bottom: 50px;
+            }
+
+            >p {
+                width: 50%;
+                font: 300 16px/1.3 'Spline Sans';
+                color: #fff;
+                letter-spacing: 1px;
+            }
+
+            .imgWrap {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                
+                .pic {
+                    width: 45%;
+                    height: 600px;
+                    position: relative;
+                    cursor: pointer;
+
+                    img {
+                        height: 100%;
+                        object-fit: contain;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: 1;
+                    }
+
+                    .text {
+                        width: 100%;
+                        padding: 20px 0;
+                        transform: translateY(560px);
+                        opacity: 0;
+                        transition: 0.5s ease-in;
+                        
+
+                        h2 {
+                            font: 400 18px/1 'Spline Sans';
+                            color: #d25d1e;
+                            margin-bottom: 10px;
+                        }
+
+                        span {
+                            font: 300 14px/1 'Spline Sans';
+                            color: #888;
+                        }
+                    }
+
+                    &:hover {
+                        .text {
+                            opacity: 1;
+                            transform: translateY(610px);
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .project {
+            width: 100%;
+            padding: 50px 0 180px;
+            position: relative;
+            overflow: hidden;
+
+            h1 {
+                font: 400 70px/1 'Playfair Display';
+                color: #fff;
+                margin-bottom: 50px;
+            }
+
+            .btns {
+                position: absolute;
+                bottom: 180px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 2;
+
+                button {
+                    background-color: transparent;
+                    border: none;
+                    outline: none;
+                    margin: 0 20px;
+                    cursor: pointer;
+                    transition: .5s;
+
+                    i {
+                        font-size: 40px;
+                        color: rgba(255,255,255,0.5);
+                        transition: .5s;
+                    }
+
+                    &:hover {
+                        i {
+                            color: #d25d1e;
+                        }
+                    }
+
+                    &:nth-of-type(1):hover {
+                        transform: translateX(-10px);
+                    }
+
+                    &:nth-of-type(2):hover {
+                        transform: translateX(10px);
+                    }
+                }
+            }
+
+            .container {
+                width: 140vw;
+                padding-bottom: 100px;
+                transform: translateX(-415px);
+                overflow: hidden;
+
+                article {
+                    display: inline-block;
+                    vertical-align: middle;
+                    position: relative;
+                    width: 600px;
+                    height: 300px;
+                    margin-right: 50px;
+                    border-radius: 150px;
+                    overflow: hidden;
+                    filter: contrast(0.5) brightness(1.5);
+                    transition: 1s;
+
+                    .pic {
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+
+                        img {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            object-fit: cover;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    >.text {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+                        opacity: 0;
+
+                        h2 {
+                            text-align: center;
+                            font: 400 24px/1 'Playfair Display';
+                            color: #fff;
+                            margin-top: 280px;
+                            margin-bottom: 20px;
+                        }
+
+                        p {
+                            width: fit-content;
+                            font: 300 14px/1.4 'Spline Sans';
+                            color: rgba(255,255,255,0.8);
+                            letter-spacing: 1px;
+                            margin: 0 auto;
+                        }
+                    }
+
+                    &.on {
+                        width: 700px;
+                        height: 400px;
+                        border-radius: 200px;
+                        filter: contrast(1) brightness(1);
+                        box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+
+                        >.text {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .music {
+            width: 100%;
+            padding: 50px 0 180px;
+
+            h1 {
+                font: 400 70px/1 'Playfair Display';
+                color: #fff;
+                margin-bottom: 50px;
             }
         }
     }
