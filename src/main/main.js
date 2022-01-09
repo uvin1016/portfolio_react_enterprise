@@ -1,9 +1,12 @@
-import { useEffect } from "react";
-import { useRef } from "react/cjs/react.development";
+import { useEffect , useRef, useState} from "react";
 
 function Main(){
     const baseURL = process.env.PUBLIC_URL;
     const frame = useRef(null);
+    const list = useRef(null);
+    const album = ['Black','Earth','Forest','Future','Shoshanim','Snowy'];
+    
+    
 
     useEffect(()=>{
         window.addEventListener("scroll",()=>{
@@ -95,63 +98,29 @@ function Main(){
 
                 <div className="music">
                     <h1>music</h1>
-                    
+
                     <div className="container">
-                        <article>
-                            <div className="pic"></div>
-                            <div className="txt">
-                                <h2>ARTIST</h2>
-                                <h3>MUSIC TITLE</h3>
-                                <p>Hip Hop</p>
-                                <p>Rap</p>
-                            </div>
-                        </article>
-                        <article>
-                            <div className="pic"></div>
-                            <div className="txt">
-                                <h2>ARTIST</h2>
-                                <h3>MUSIC TITLE</h3>
-                                <p>Hip Hop</p>
-                                <p>Rap</p>
-                                <p>Classical Music</p>
-                            </div>
-                        </article>
-                        <article>
-                            <div className="pic"></div>
-                            <div className="txt">
-                                <h2>ARTIST</h2>
-                                <h3>MUSIC TITLE</h3>
-                                <p>Hip Hop</p>
-                                <p>K-Pop</p>
-                            </div>
-                        </article>
-                        <article>
-                            <div className="pic"></div>
-                            <div className="txt">
-                                <h2>ARTIST</h2>
-                                <h3>MUSIC TITLE</h3>
-                                <p>Rock Music</p>
-                                <p>Rap</p>
-                            </div>
-                        </article>
-                        <article>
-                            <div className="pic"></div>
-                            <div className="txt">
-                                <h2>ARTIST</h2>
-                                <h3>MUSIC TITLE</h3>
-                                <p>Hip Hop</p>
-                                <p>Rap</p>
-                            </div>
-                        </article>
-                        <article>
-                            <div className="pic"></div>
-                            <div className="txt">
-                                <h2>ARTIST</h2>
-                                <h3>MUSIC TITLE</h3>
-                                <p>Hip Hop</p>
-                                <p>Rap</p>
-                            </div>
-                        </article>
+                        {
+                            album.map((music,index)=>{
+                                return (
+                                    <article key={index} ref={list}>
+                                        <div className="pic">
+                                            <img src={`${baseURL}/img/${music}.jpg`} alt={`${music}이미지`} />
+                                        </div>
+                                        <div className="txt">
+                                            <h2>{music}</h2>
+                                            <h3>Artist</h3>
+                                            <p>music jenre</p>
+                                            <p>music jenre</p>
+                                            <div className="btn" onClick={e=>{
+                                                picPlay(e);
+                                                btnPlay(e);
+                                            }}><button><audio src={`${baseURL}/music/${music}.mp3`}></audio></button></div>
+                                        </div>
+                                    </article>
+                                )
+                            })
+                        }
                     </div>
                 </div>
             </div>
@@ -166,6 +135,26 @@ function Main(){
             frame.current.classList.remove("on");
         }
     }
+
+    function picPlay(e){
+        const pictures = document.querySelectorAll(".music .container article .pic");
+
+        for(let item of pictures){
+            item.classList.remove("play");
+        }
+        e.currentTarget.closest("article").querySelector(".pic").classList.add("play");
+    }
+
+    function btnPlay(e){
+        const btns = document.querySelectorAll(".music .container article .txt .btn");
+
+        for(let item of btns){
+            item.classList.remove("play");
+        }
+        e.currentTarget.closest("article").querySelector(".btn").classList.add("play");
+    }
+
+
 }
 
 export default Main;
