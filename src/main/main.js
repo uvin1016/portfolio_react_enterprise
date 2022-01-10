@@ -17,7 +17,6 @@ SwiperCore.use([Pagination,Navigation]);
 
 function Main(){
     const baseURL = process.env.PUBLIC_URL;
-    const frame = useRef(null);
     const album = ['Black','Earth','Forest','Future','Shoshanim','Snowy'];
     
     
@@ -39,7 +38,7 @@ function Main(){
             <div className="inner">
                 <div className="visual">
                     <h1>Investment<br />Group <span>CHRISTY<br />MONRAY</span></h1>
-                    <figure ref={frame}>
+                    <figure>
                         <video src={`${baseURL}/vid/Waves.mp4`} autoPlay muted loop></video>
                     </figure>
                 </div>
@@ -141,11 +140,13 @@ function Main(){
     )
 
     function vidMove (){
+        const frame = document.querySelector('.visual figure');
         const scrollValue = window.scrollY || window.pageYOffset;
+        
         if(scrollValue > 0){
-            frame.current.classList.add("on");
+            frame.classList.add("on");
         }else{
-            frame.current.classList.remove("on");
+            frame.classList.remove("on");
         }
     }
 
