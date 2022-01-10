@@ -1,4 +1,19 @@
-import { useEffect , useRef, useState} from "react";
+import { useEffect , useRef} from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+// import Swiper core and required modules
+import SwiperCore, {
+    Pagination,Navigation
+} from 'swiper';
+
+// install Swiper modules
+SwiperCore.use([Pagination,Navigation]);
+
 
 function Main(){
     const baseURL = process.env.PUBLIC_URL;
@@ -57,13 +72,8 @@ function Main(){
                 <div className="project">
                     <h1>Project</h1>
 
-                    <div className="btns">
-                        <button className="prev"><i className="las la-arrow-left"></i></button>
-                        <button className="next"><i className="las la-arrow-right"></i></button>
-                    </div>
-
-                    <div className="container">
-                        <article>
+                    <Swiper slidesPerView={'auto'} spaceBetween={30} loop={true} centeredSlides={true} roundLengths={true} navigation={true} className="mySwiper">
+                        <SwiperSlide>
                             <div className="pic">
                                 <img src={`${baseURL}/img/project.jpg`} alt="프로젝트이미지1" />
                             </div>
@@ -71,9 +81,9 @@ function Main(){
                                 <h2>artist</h2>
                                 <p>Lorem ipsum dolor sit amet<br/> consectetur adipisicing elit.</p>
                             </div>
-                        </article>
+                        </SwiperSlide>
 
-                        <article className="on">
+                        <SwiperSlide>
                             <div className="pic">
                                 <img src={`${baseURL}/img/project2.jpg`} alt="프로젝트이미지2" />
                             </div>
@@ -81,9 +91,9 @@ function Main(){
                                 <h2>artist</h2>
                                 <p>Lorem ipsum dolor sit amet<br/> consectetur adipisicing elit.</p>
                             </div>
-                        </article>
+                        </SwiperSlide>
 
-                        <article>
+                        <SwiperSlide>
                             <div className="pic">
                                 <img src={`${baseURL}/img/project3.jpg`} alt="프로젝트이미지3" />
                             </div>
@@ -91,8 +101,8 @@ function Main(){
                                 <h2>artist</h2>
                                 <p>Lorem ipsum dolor sit amet<br/> consectetur adipisicing elit.</p>
                             </div>
-                        </article>
-                    </div>
+                        </SwiperSlide>
+                    </Swiper>
                 </div>
 
                 <div className="music">
