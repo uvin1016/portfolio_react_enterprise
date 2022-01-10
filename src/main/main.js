@@ -72,7 +72,10 @@ function Main(){
                 <div className="project">
                     <h1>Project</h1>
 
-                    <Swiper slidesPerView={'auto'} spaceBetween={30} loop={true} centeredSlides={true} roundLengths={true} navigation={true} className="mySwiper">
+                    <Swiper slidesPerView={'auto'} spaceBetween={50} loop={true} loopedSlides={2} centeredSlides={true}  navigation={true} breakpoints={
+                        {320: {slidesPerView: 1, spaceBetween: 0}},
+                        {1200: {slidesPerView: 'auto'}}
+                        } className="mySwiper">
                         <SwiperSlide>
                             <div className="pic">
                                 <img src={`${baseURL}/img/project.jpg`} alt="프로젝트이미지1" />
