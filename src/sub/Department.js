@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useState } from "react/cjs/react.development";
+import { useEffect, useState } from "react";
 
 function Department(){
     const [members, setMembers] = useState([]);

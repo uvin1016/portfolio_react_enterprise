@@ -1,4 +1,4 @@
-import { useEffect , useRef} from "react";
+import { useEffect} from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
