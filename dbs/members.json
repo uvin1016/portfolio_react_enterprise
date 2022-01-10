@@ -1,0 +1,44 @@
+{   
+    "data": [
+        {
+            "img": "/img/member1.jpg",
+            "name": "Jayson",
+            "position": "CEO"
+        },
+        {
+            "img": "/img/member2.jpg",
+            "name": "Grogan",
+            "position": "CDO"
+        },
+        {
+            "img": "/img/member3.jpg",
+            "name": "Shamoon",
+            "position": "CFO"
+        },
+        {
+            "img": "/img/member4.jpg",
+            "name": "Rhoads",
+            "position": "Manager"
+        },
+        {
+            "img": "/img/member5.jpg",
+            "name": "Eamest",
+            "position": "Manager"
+        },
+        {
+            "img": "/img/member6.jpg",
+            "name": "Taylor",
+            "position": "Manager"
+        },
+        {
+            "img": "/img/member7.jpg",
+            "name": "Kyle",
+            "position": "Staff"
+        },
+        {
+            "img": "/img/member8.jpg",
+            "name": "Avilan",
+            "position": "Staff"
+        }
+    ]
+}
