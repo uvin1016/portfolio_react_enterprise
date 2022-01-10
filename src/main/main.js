@@ -3,7 +3,6 @@ import { useEffect , useRef, useState} from "react";
 function Main(){
     const baseURL = process.env.PUBLIC_URL;
     const frame = useRef(null);
-    const list = useRef(null);
     const album = ['Black','Earth','Forest','Future','Shoshanim','Snowy'];
     
     
@@ -102,8 +101,9 @@ function Main(){
                     <div className="container">
                         {
                             album.map((music,index)=>{
+                                
                                 return (
-                                    <article key={index} ref={list}>
+                                    <article key={index}>
                                         <div className="pic">
                                             <img src={`${baseURL}/img/${music}.jpg`} alt={`${music}이미지`} />
                                         </div>
@@ -113,9 +113,9 @@ function Main(){
                                             <p>music jenre</p>
                                             <p>music jenre</p>
                                             <div className="btn" onClick={e=>{
-                                                picPlay(e);
-                                                btnPlay(e);
-                                            }}><button><audio src={`${baseURL}/music/${music}.mp3`}></audio></button></div>
+                                                playAlbum(e);
+                                            }}><button></button></div>
+                                            <audio src={`${baseURL}/music/${music}.mp3`}></audio>
                                         </div>
                                     </article>
                                 )
@@ -136,22 +136,19 @@ function Main(){
         }
     }
 
-    function picPlay(e){
-        const pictures = document.querySelectorAll(".music .container article .pic");
+    function playAlbum(e){
+        let isActivePic = e.currentTarget.closest('article').querySelector('.pic').classList.contains('play');
+        let isActiveBtn = e.currentTarget.closest('article').querySelector('.btn').classList.contains('play');
 
-        for(let item of pictures){
-            item.classList.remove("play");
+        if(isActiveBtn && isActivePic) {
+            e.currentTarget.closest('article').querySelector('.pic').classList.remove('play');
+            e.currentTarget.closest('article').querySelector('.btn').classList.remove('play');
+            e.currentTarget.closest('article').querySelector('audio').pause();
+        }else{
+            e.currentTarget.closest('article').querySelector('.pic').classList.add('play');
+            e.currentTarget.closest('article').querySelector('.btn').classList.add('play');
+            e.currentTarget.closest('article').querySelector('audio').play();
         }
-        e.currentTarget.closest("article").querySelector(".pic").classList.add("play");
-    }
-
-    function btnPlay(e){
-        const btns = document.querySelectorAll(".music .container article .txt .btn");
-
-        for(let item of btns){
-            item.classList.remove("play");
-        }
-        e.currentTarget.closest("article").querySelector(".btn").classList.add("play");
     }
 
 
