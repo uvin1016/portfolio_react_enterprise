@@ -39,10 +39,15 @@ function Department(){
                                     <article key={index}>
                                         <div className="pic">
                                             <img src={`${baseURL}`+member.img} />
-                                        </div>
-                                        <div className="txt">
-                                            <span>{member.position}</span>
-                                            <p>{member.name}</p>
+                                            <div className="txt">
+                                                <span>{member.position}</span>
+                                                <p>{member.name}</p>
+                                                <div className="sns">
+                                                    <a href="#"><i className="lab la-facebook"></i></a>
+                                                    <a href="#"><i className="lab la-instagram"></i></a>
+                                                    <a href="#"><i className="lab la-twitter"></i></a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </article>
                                 )

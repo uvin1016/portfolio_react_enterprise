@@ -67,7 +67,7 @@
                 display: grid;
                 grid-column-gap: 20px;
                 grid-template-columns: repeat(4,1fr);
-                padding-top: 30px;
+                padding-top: 20px;
 
                 article {
                     cursor: pointer;
@@ -76,6 +76,7 @@
                     .pic {
                         width: 100%;
                         height: 400px;
+                        position: relative;
                         
                         img {
                             width: 100%;
@@ -84,44 +85,91 @@
                             filter: grayscale(100%);
                             transition: 1s;
                         }
-                    }
-
-                    .txt {
-                        width: 100%;
-                        padding: 20px 10px;
-
-                        &::after {
-                            content: '';
-                            display: block;
-                            clear: both;
-                        }
-
-                        >span {
-                            display: block;
-                            text-align: right;
-                            font: 300 14px/1 'Spline Sans';
-                            color: #888;
-                            margin-bottom: 10px;
-                        }
-
-                        >p {
-                            text-align: right;
-                            font: 400 18px/1 'Spline Sans';
-                            color: #888;
-                            transition: 0.5s;
-                        }
-                    }
-
-                    &:hover {
-                        .pic img {
-                            filter: grayscale(0);
-                        }
 
                         .txt {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%,-50%);
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: end;
+                            align-items: center;
+                            width: 100%;
+                            height: 100%;
+                            background: linear-gradient(to top, rgba(0,0,0,0.8),rgba(0,0,0,0));
+                            padding-bottom: 20px;
+                            opacity: 0;
+    
+                            >span {
+                                font: 300 14px/1 'Spline Sans';
+                                color: #fff;
+                                margin-bottom: 10px;
+                                opacity: 0;
+                                transform: translateY(10px);
+                                transition: all 0.2s linear 0s;
+                            }
+    
                             >p {
-                                color: #d25d1e;
+                                font: 400 18px/1 'Spline Sans';
+                                color: #fff;
+                                margin-bottom: 10px;
+                                opacity: 0;
+                                transform: translateY(10px);
+                                transition: all 0.2s linear 0.2s;
+                            }
+    
+                            .sns {
+                                display: flex;
+                                transform: translateY(10px);
+                                opacity: 0;
+                                transition: all 0.2s linear 0.4s;
+
+                                a {
+                                    margin-right: 5px;
+
+                                    i {
+                                        color: #fff;
+                                        font-size: 24px;
+                                        transition: 0.5s;
+                                    }
+
+                                    &:hover {
+                                        i {
+                                            color: #d25d1e;
+                                        }
+                                    }
+                                }
                             }
                         }
+                    }
+
+
+                    &:hover {
+                        .pic{
+                            img {
+                                filter: grayscale(0);
+                            }
+
+                            .txt {
+                                opacity: 1;
+
+                                span {
+                                    opacity: 1;
+                                    transform: translateY(0px);
+                                }
+                                >p {
+                                    opacity: 1;
+                                    transform: translateY(0px);
+                                    color: #d25d1e;
+                                }
+                                .sns {
+                                    opacity: 1;
+                                    transform: translateY(0px);
+                                }
+                            }
+                        } 
+
                     }
                 }
             }
