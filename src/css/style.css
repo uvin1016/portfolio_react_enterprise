@@ -664,6 +664,9 @@ footer {
     .department .inner .members > .inner article .pic {
       height: 350px; } }
 @media screen and (max-width: 769px) {
+  .department .inner .awards ul li img {
+    width: 200px;
+    max-height: 400px; }
   .department .inner .members > .inner {
     grid-template-columns: repeat(2, 1fr); }
     .department .inner .members > .inner article .pic {
@@ -696,6 +699,9 @@ footer {
 @media screen and (max-width: 358px) {
   .department .inner .awards ul li h3 {
     font: 400 16px/1 'Spline Sans'; }
+  .department .inner .awards ul li img {
+    width: 100px;
+    max-height: 300px; }
   .department .inner .members > .inner article .pic {
     height: 300px; } }
 body {
