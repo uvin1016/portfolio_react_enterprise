@@ -560,12 +560,23 @@ footer {
         font: 400 16px/1 'Playfair Display';
         color: rgba(255, 255, 255, 0.7);
         transition: .5s; }
+      .department .inner .awards ul li img {
+        opacity: 0;
+        position: absolute;
+        transform: translate(10%, -50%);
+        width: 400px;
+        max-height: 500px;
+        object-fit: contain;
+        object-position: top;
+        transition: .2s; }
       .department .inner .awards ul li:hover h3 {
         color: #d25d1e;
         transform: translateX(10px); }
       .department .inner .awards ul li:hover span {
         color: #fff;
         transform: translateX(-10px); }
+      .department .inner .awards ul li:hover img {
+        opacity: 1; }
 .department .inner .members h2 {
   font: 400 14px/1 'Spline Sans';
   color: #fff;
@@ -687,6 +698,9 @@ footer {
     font: 400 16px/1 'Spline Sans'; }
   .department .inner .members > .inner article .pic {
     height: 300px; } }
+body {
+  overflow-x: hidden; }
+
 .gallery .inner {
   min-height: 600px;
   position: relative; }

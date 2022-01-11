@@ -2,8 +2,16 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 function Department(){
+    const [awards, setAwards] = useState([]);
+    const [position, setPosition] = useState({x:0,y:0});
     const [members, setMembers] = useState([]);
     const baseURL = process.env.PUBLIC_URL;
+
+    useEffect(()=>{
+        axios.get(`${baseURL}/dbs/awards.json`).then((data)=>{
+            setAwards(data.data.data);
+        });
+    },[])
 
     useEffect(()=>{
         axios.get(`${baseURL}/dbs/members.json`).then((data)=>{
@@ -22,11 +30,19 @@ function Department(){
                 <div className="awards">
                     <h2>awards</h2>
                     <ul>
-                        <li><h3>Be true to thyself</h3> <span>2022 winner</span></li>
-                        <li><h3>Attitude is everything</h3> <span>2021 winner</span></li>
-                        <li><h3>Love conquers all</h3> <span>2020 nominee</span></li>
-                        <li><h3>Be gentle first with yourself</h3> <span>2019 nominee</span></li>
-                        <li><h3>It’s never too late</h3> <span>2018 winner</span></li>
+                        {
+                            awards.map((award,index)=>{
+                                return (
+                                    <li key={index} onMouseMove={(e)=>{
+                                        setPosition({x: e.clientX, y: e.clientY});
+                                    }}>
+                                        <h3>{award.title}</h3>
+                                        <span>{award.year}</span>
+                                        <img src={`${baseURL}`+award.img} style={{left:`${position.x}px`, top:`${position.y}px`}}/>
+                                    </li>
+                                )
+                            })
+                        }
                     </ul>
                 </div>
 
@@ -55,11 +71,11 @@ function Department(){
                         }
                     </div>
                 </div>
-
-
             </div>
         </section>
     )
+    
+
 }
 
 export default Department;

@@ -13,11 +13,12 @@
             ul {
                 width: 100%;
                 border-top: 1px solid rgba(255,255,255,0.7);
-
+                
                 li {
                     padding: 20px 0px;
                     border-bottom: 1px solid rgba(255,255,255,0.7);
                     cursor: pointer;
+                    
 
                     &::after{
                         content: '';
@@ -39,6 +40,17 @@
                         transition: .5s;
                     }
 
+                    img {
+                        opacity: 0;
+                        position: absolute;
+                        transform: translate(10%,-50%);
+                        width: 400px;
+                        max-height: 500px;
+                        object-fit: contain;
+                        object-position: top;
+                        transition: .2s;
+                    }
+
                     &:hover {
                         h3 {
                             color: #d25d1e;
@@ -47,6 +59,9 @@
                         span {
                             color: #fff;
                             transform: translateX(-10px);
+                        }
+                        img{
+                            opacity: 1;
                         }
                     }
                 }
@@ -305,4 +320,8 @@
             }
         }
     }
+}
+
+body {
+    overflow-x: hidden;
 }
