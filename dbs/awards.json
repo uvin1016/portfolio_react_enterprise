@@ -1,0 +1,29 @@
+{
+    "data":[
+        {
+            "title": "Be true to thyself",
+            "year": "2022 winner",
+            "img":"/img/award1.jpg"
+        },
+        {
+            "title": "Attitude is everything",
+            "year": "2021 winner",
+            "img":"/img/award2.jpg"
+        },
+        {
+            "title": "Love conquers all",
+            "year": "2020 winner",
+            "img":"/img/award3.jpg"
+        },
+        {
+            "title": "Be gentle first with yourself",
+            "year": "2019 winner",
+            "img":"/img/award4.jpg"
+        },
+        {
+            "title": "It’s never too late",
+            "year": "2018 winner",
+            "img":"/img/award5.jpg"
+        }
+    ]
+}
