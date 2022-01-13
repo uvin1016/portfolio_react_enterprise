@@ -1,4 +1,4 @@
-import { useEffect} from "react";
+import { useEffect, useState} from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -18,8 +18,6 @@ SwiperCore.use([Pagination,Navigation]);
 function Main(){
     const baseURL = process.env.PUBLIC_URL;
     const album = ['Black','Earth','Forest','Future','Shoshanim','Snowy'];
-    
-    
 
     useEffect(()=>{
         window.addEventListener("scroll",()=>{
@@ -73,7 +71,7 @@ function Main(){
 
                     <Swiper slidesPerView={'auto'} spaceBetween={50} loop={true} loopedSlides={2} centeredSlides={true}  navigation={true} breakpoints={
                         {320: {slidesPerView: 1, spaceBetween: 0}},
-                        {1200: {slidesPerView: 'auto'}}
+                        {760: {slidesPerView: 'auto'}}
                         } className="mySwiper">
                         <SwiperSlide>
                             <div className="pic">
@@ -113,7 +111,6 @@ function Main(){
                     <div className="container">
                         {
                             album.map((music,index)=>{
-                                
                                 return (
                                     <article key={index}>
                                         <div className="pic">
@@ -159,9 +156,22 @@ function Main(){
             e.currentTarget.closest('article').querySelector('.btn').classList.remove('play');
             e.currentTarget.closest('article').querySelector('audio').pause();
         }else{
+            initMusic();
             e.currentTarget.closest('article').querySelector('.pic').classList.add('play');
             e.currentTarget.closest('article').querySelector('.btn').classList.add('play');
             e.currentTarget.closest('article').querySelector('audio').play();
+        }
+    }
+    
+
+    function initMusic(){
+        let playBtns = document.querySelectorAll(".music .container article .txt .btn");
+
+        for(let playBtn of playBtns){
+            playBtn.closest('.txt').querySelector('audio').pause();
+            playBtn.closest('.txt').querySelector('audio').load();
+            playBtn.closest('article').querySelector('.pic').classList.remove("play");
+            playBtn.classList.remove("play");
         }
     }
 

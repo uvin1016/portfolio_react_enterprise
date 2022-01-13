@@ -13,10 +13,11 @@ function Header(){
                     <li><NavLink activeStyle={active} to="/community">COMMUNITY</NavLink></li>
                     <li><NavLink activeStyle={active} to="/youtube">YOUTUBE</NavLink></li>
                     <li><NavLink activeStyle={active} to="/location">LOCATION</NavLink></li>
+                    <li><NavLink activeStyle={active} exact to="/join">JOIN</NavLink></li>
                 </ul>
                 <ul id="util">
                     <li><a href="#">Search</a></li>
-                    <li><NavLink activeStyle={active} exact to="/join">Join</NavLink></li>
+                    <li><a href="#">Login</a></li>
                 </ul>
                 <button className="menu"></button>
             </div>

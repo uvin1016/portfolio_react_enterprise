@@ -32,9 +32,10 @@ function Department(){
                     <ul>
                         {
                             awards.map((award,index)=>{
+                                let scrollY = document.documentElement.scrollTop;
                                 return (
                                     <li key={index} onMouseMove={(e)=>{
-                                        setPosition({x: e.clientX, y: e.clientY});
+                                        setPosition({x: e.clientX, y: e.clientY+scrollY});
                                     }}>
                                         <h3>{award.title}</h3>
                                         <span>{award.year}</span>
