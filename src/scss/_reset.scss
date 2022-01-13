@@ -2,3 +2,10 @@
 ul, ol, li {list-style: none;}
 a {text-decoration: none;}
 body {background: #111;}
+table {border-collapse: collapse; border: none;}
+fieldset {border: none;}
+.hidden {
+    position: absolute;
+    top: -999999px;
+    opacity: 0;
+}

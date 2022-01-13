@@ -16,6 +16,18 @@ a {
 body {
   background: #111; }
 
+table {
+  border-collapse: collapse;
+  border: none; }
+
+fieldset {
+  border: none; }
+
+.hidden {
+  position: absolute;
+  top: -999999px;
+  opacity: 0; }
+
 header {
   position: absolute;
   top: 0;
@@ -1343,5 +1355,179 @@ body {
     font: 400 14px/1 'Spline Sans';
     color: #fff;
     margin-bottom: 20px; }
+  .join .inner .joinWrap form fieldset table {
+    width: 100%;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff; }
+    .join .inner .joinWrap form fieldset table tbody tr th, .join .inner .joinWrap form fieldset table tbody tr td {
+      padding: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
+    .join .inner .joinWrap form fieldset table tbody tr th {
+      width: 20%;
+      font: 300 14px/1.6 'Noto Sans KR';
+      color: #fff;
+      text-align: left;
+      position: relative; }
+      .join .inner .joinWrap form fieldset table tbody tr th::after {
+        content: '';
+        display: block;
+        width: 1px;
+        height: calc(100% - 20px);
+        background-color: rgba(255, 255, 255, 0.5);
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        transform: translateY(-50%); }
+      .join .inner .joinWrap form fieldset table tbody tr th:last-child {
+        border-bottom: none; }
+        .join .inner .joinWrap form fieldset table tbody tr th:last-child::after {
+          display: none; }
+      .join .inner .joinWrap form fieldset table tbody tr th.joinBtns {
+        text-align: center; }
+        .join .inner .joinWrap form fieldset table tbody tr th.joinBtns input[type=reset], .join .inner .joinWrap form fieldset table tbody tr th.joinBtns input[type=submit] {
+          width: 120px;
+          height: 40px;
+          text-align: center;
+          font: 400 16px/30px 'Noto Sans KR';
+          color: rgba(255, 255, 255, 0.5);
+          border: 1px solid rgba(255, 255, 255, 0.5);
+          border-radius: 8px;
+          background: transparent;
+          margin: 0px 10px;
+          cursor: pointer;
+          transition: .5s; }
+          .join .inner .joinWrap form fieldset table tbody tr th.joinBtns input[type=reset]:hover, .join .inner .joinWrap form fieldset table tbody tr th.joinBtns input[type=submit]:hover {
+            border: 1px solid #fff;
+            color: #fff;
+            transform: translate(-3px, -3px); }
+    .join .inner .joinWrap form fieldset table tbody tr td {
+      width: 80%; }
+      .join .inner .joinWrap form fieldset table tbody tr td input[type=text], .join .inner .joinWrap form fieldset table tbody tr td input[type=password], .join .inner .joinWrap form fieldset table tbody tr td select {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        color: #fff;
+        background: transparent;
+        padding: 10px;
+        border-radius: 8px;
+        transition: .5s;
+        outline: none; }
+        .join .inner .joinWrap form fieldset table tbody tr td input[type=text]:hover, .join .inner .joinWrap form fieldset table tbody tr td input[type=password]:hover, .join .inner .joinWrap form fieldset table tbody tr td select:hover {
+          border: 1px solid rgba(255, 255, 255, 0.9); }
+      .join .inner .joinWrap form fieldset table tbody tr td select {
+        margin-left: 10px; }
+        .join .inner .joinWrap form fieldset table tbody tr td select option {
+          background-color: #111; }
+      .join .inner .joinWrap form fieldset table tbody tr td label, .join .inner .joinWrap form fieldset table tbody tr td input {
+        vertical-align: middle; }
+      .join .inner .joinWrap form fieldset table tbody tr td label {
+        font: 300 14px/1.2 'Noto Sans KR';
+        color: #fff;
+        margin-right: 15px; }
+      .join .inner .joinWrap form fieldset table tbody tr td input[type=radio], .join .inner .joinWrap form fieldset table tbody tr td input[type=checkbox] {
+        margin-right: 5px; }
+      .join .inner .joinWrap form fieldset table tbody tr td textarea {
+        width: 300px;
+        height: 100px;
+        resize: none;
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 8px;
+        padding: 10px;
+        font: 300 14px/1.4 'Noto Sans KR';
+        color: #fff;
+        outline: none;
+        transition: .5s; }
+        .join .inner .joinWrap form fieldset table tbody tr td textarea:hover {
+          border: 1px solid rgba(255, 255, 255, 0.9); }
+      .join .inner .joinWrap form fieldset table tbody tr td .err {
+        font: 300 12px/1.6 'Noto Sans KR';
+        color: rosybrown; }
+.join .pop {
+  width: 350px;
+  padding: 20px;
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ebf3f5;
+  text-align: center;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5); }
+  .join .pop h1 {
+    text-align: center;
+    font: 600 20px/1 'Noto Sans KR';
+    color: #111;
+    margin-bottom: 20px; }
+  .join .pop .close {
+    width: 80px;
+    padding: 8px 10px;
+    font: 400 16px/1 'Noto Sans KR';
+    color: #222;
+    border: 1px solid #222;
+    background: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .5s; }
+    .join .pop .close:hover {
+      color: #ebf3f5;
+      border: 1px solid #222;
+      background: #222; }
+
+@media screen and (max-width: 759px) {
+  .join .inner .joinWrap form fieldset table tbody tr th {
+    width: 25%; }
+  .join .inner .joinWrap form fieldset table tbody tr td {
+    width: 75%; } }
+@media screen and (max-width: 687px) {
+  .join .inner > h1 {
+    font: 400 80px/1 'Playfair Display'; }
+    .join .inner > h1 p:nth-of-type(2) {
+      margin-left: 50px; }
+  .join .inner .joinWrap form fieldset table tbody tr th {
+    width: 25%;
+    word-break: keep-all; }
+  .join .inner .joinWrap form fieldset table tbody tr td {
+    width: 75%; }
+    .join .inner .joinWrap form fieldset table tbody tr td input#email {
+      width: 202px; }
+    .join .inner .joinWrap form fieldset table tbody tr td select {
+      margin-left: 0px;
+      margin-right: 10px;
+      margin-top: 10px; }
+    .join .inner .joinWrap form fieldset table tbody tr td label {
+      word-break: keep-all; } }
+@media screen and (max-width: 524px) {
+  .join .inner > h1 {
+    font: 400 55px/1 'Playfair Display'; }
+    .join .inner > h1 p:nth-of-type(2) {
+      margin-left: 50px; }
+  .join .inner .joinWrap form fieldset table tbody tr th {
+    position: absolute;
+    top: -99999px;
+    opacity: 0; }
+    .join .inner .joinWrap form fieldset table tbody tr th.joinBtns {
+      position: unset;
+      opacity: 1; }
+    .join .inner .joinWrap form fieldset table tbody tr th.joinBtns input[type=reset], .join .inner .joinWrap form fieldset table tbody tr th.joinBtns input[type=submit] {
+      width: 80px;
+      margin: 5px 10px; }
+  .join .inner .joinWrap form fieldset table tbody tr td {
+    width: 100%; }
+    .join .inner .joinWrap form fieldset table tbody tr td input[type=text], .join .inner .joinWrap form fieldset table tbody tr td input[type=password], .join .inner .joinWrap form fieldset table tbody tr td select, .join .inner .joinWrap form fieldset table tbody tr td textarea {
+      width: 100%; }
+      .join .inner .joinWrap form fieldset table tbody tr td input[type=text]#email, .join .inner .joinWrap form fieldset table tbody tr td input[type=password]#email, .join .inner .joinWrap form fieldset table tbody tr td select#email, .join .inner .joinWrap form fieldset table tbody tr td textarea#email {
+        width: 100%; }
+  .join .pop {
+    width: calc(100% - 80px); }
+    .join .pop h1 {
+      font: 600 16px/1 'Noto Sans KR'; }
+    .join .pop .close {
+      width: 60px;
+      padding: 8px;
+      font: 400 14px/1 'Noto Sans KR'; } }
+@media screen and (max-width: 368px) {
+  .join .inner > h1 {
+    font: 400 45px/1 'Playfair Display'; }
+    .join .inner > h1 p:nth-of-type(2) {
+      margin-left: 50px; } }
 
 /*# sourceMappingURL=style.css.map */

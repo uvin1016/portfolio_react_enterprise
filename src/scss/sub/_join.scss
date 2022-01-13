@@ -8,6 +8,338 @@
                 color: #fff;
                 margin-bottom: 20px;
             }
+
+            form {
+                fieldset {
+                    table {
+                        width: 100%;
+                        border-top: 1px solid #fff;
+                        border-bottom: 1px solid #fff;
+
+                        tbody {
+                            tr {
+                                th,td {
+                                    padding: 20px;
+                                    border-bottom: 1px solid rgba(255,255,255,0.5);
+                                }
+
+                                th {
+                                    width: 20%;
+                                    font: 300 14px/1.6 'Noto Sans KR';
+                                    color: #fff;
+                                    text-align: left;
+                                    position: relative;
+
+                                    &::after {
+                                        content: '';
+                                        display: block;
+                                        width: 1px;
+                                        height: calc(100% - 20px);
+                                        background-color: rgba(255,255,255,0.5);
+                                        position: absolute;
+                                        right: 0px;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                    }
+
+                                    &:last-child {
+                                        border-bottom: none;
+
+                                        &::after {
+                                            display: none;
+                                        }
+                                    }
+
+                                    &.joinBtns {
+                                        text-align: center;
+
+                                        input[type=reset],input[type=submit] {
+                                            width: 120px;
+                                            height: 40px;
+                                            text-align: center;
+                                            font: 400 16px/30px 'Noto Sans KR';
+                                            color: rgba(255,255,255,0.5);
+                                            border: 1px solid rgba(255,255,255,0.5);
+                                            border-radius: 8px;
+                                            background: transparent;
+                                            margin: 0px 10px;
+                                            cursor: pointer;
+                                            transition: .5s;
+
+                                            &:hover {
+                                                border: 1px solid #fff;
+                                                color: #fff;
+                                                transform: translate(-3px, -3px);
+                                            }
+                                        }
+                                    }
+
+                                }
+
+                                td {
+                                    width: 80%;
+
+                                    input[type=text],input[type=password],select {
+                                        border: 1px solid rgba(255,255,255,0.5);
+                                        color: #fff;
+                                        background: transparent;
+                                        padding: 10px;
+                                        border-radius: 8px;
+                                        transition: .5s;
+                                        outline: none;
+
+                                        &:hover {
+                                            border: 1px solid rgba(255,255,255,0.9);
+                                        }
+                                    }
+
+                                    select {
+                                        margin-left: 10px;
+
+                                        option {
+                                            background-color: #111;
+                                        }
+                                    }
+
+                                    label, input {
+                                        vertical-align: middle;
+                                    }
+
+                                    label {
+                                        font: 300 14px/1.2 'Noto Sans KR';
+                                        color: #fff;
+                                        margin-right: 15px;
+                                    }
+
+                                    input[type=radio],input[type=checkbox] {
+                                        margin-right: 5px;
+                                    }
+
+                                    textarea {
+                                        width: 300px;
+                                        height: 100px;
+                                        resize: none;
+                                        background: transparent;
+                                        border: 1px solid rgba(255,255,255,0.5);
+                                        border-radius: 8px;
+                                        padding: 10px;
+                                        font: 300 14px/1.4 'Noto Sans KR';
+                                        color: #fff;
+                                        outline: none;
+                                        transition: .5s;
+
+                                        &:hover {
+                                            border: 1px solid rgba(255,255,255,0.9);
+                                        }
+                                    }
+
+                                    .err {
+                                        font: 300 12px/1.6 'Noto Sans KR';
+                                        color: rosybrown;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .pop {
+        width: 350px;
+        padding: 20px;
+        border-radius: 10px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: #ebf3f5;
+        text-align: center;
+        box-shadow: 0px 0px 20px rgba(255,255,255,0.5);
+
+        h1 {
+            text-align: center;
+            font: 600 20px/1 'Noto Sans KR';
+            color: #111;
+            margin-bottom: 20px;
+        }
+
+        .close {
+            width: 80px;
+            padding: 8px 10px;
+            font: 400 16px/1 'Noto Sans KR';
+            color: #222;
+            border: 1px solid #222;
+            background: transparent;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: .5s;
+
+            &:hover {
+                color: #ebf3f5;
+                border: 1px solid #222;
+                background: #222;
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 759px) {
+    .join {
+        .inner {
+            .joinWrap {
+                form {
+                    fieldset {
+                        table {
+                            tbody {
+                                tr {
+                                    th {
+                                        width: 25%;
+    
+                                    }
+    
+                                    td {
+                                        width: 75%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 687px) {
+    .join {
+        .inner {
+            >h1 {
+                font: 400 80px/1 'Playfair Display';
+    
+                p:nth-of-type(2){
+                    margin-left: 50px;
+                }
+            }
+            .joinWrap {
+                form {
+                    fieldset {
+                        table {
+                            tbody {
+                                tr {
+                                    th {
+                                        width: 25%;
+                                        word-break: keep-all;
+                                    }
+    
+                                    td {
+                                        width: 75%;
+
+                                        input#email {
+                                            width: 202px;
+                                        }
+
+                                        select {
+                                            margin-left: 0px;
+                                            margin-right: 10px;
+                                            margin-top: 10px;
+                                        }
+
+                                        label {
+                                            word-break: keep-all;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 524px) {
+    .join {
+        .inner {
+            >h1 {
+                font: 400 55px/1 'Playfair Display';
+    
+                p:nth-of-type(2){
+                    margin-left: 50px;
+                }
+            }
+            .joinWrap {
+                form {
+                    fieldset {
+                        table {
+                            tbody {
+                                tr {
+                                    th {
+                                        position: absolute;
+                                        top: -99999px;
+                                        opacity: 0;
+
+                                        &.joinBtns {
+                                            position: unset;
+                                            opacity: 1;
+                                        }
+
+                                        &.joinBtns {
+                                            input[type=reset],input[type=submit] {
+                                                width: 80px;
+                                                margin: 5px 10px;
+                                            }
+                                        }
+                                    }
+    
+                                    td {
+                                        width: 100%;
+
+                                        input[type=text],input[type=password],select,textarea {
+                                            width: 100%;
+
+                                            &#email {
+                                                width: 100%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .pop {
+            width: calc(100% - 80px);
+    
+            h1 {
+                font: 600 16px/1 'Noto Sans KR';
+            }
+    
+            .close {
+                width: 60px;
+                padding: 8px;
+                font: 400 14px/1 'Noto Sans KR';
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 368px) {
+    .join {
+        .inner {
+            >h1 {
+                font: 400 45px/1 'Playfair Display';
+    
+                p:nth-of-type(2){
+                    margin-left: 50px;
+                }
+            }
         }
     }
 }

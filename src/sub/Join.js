@@ -29,7 +29,7 @@ function Join(){
 
     const handleSelect = e=>{
         const {name} = e.target;
-        const isSelected = e.target.options[e.target.selectIndex].value;
+        const isSelected = e.target.options[e.target.selectedIndex].value;
         setVal({...val, [name]: isSelected});
     }
 
@@ -74,16 +74,14 @@ function Join(){
                     <p>Together</p>
                 </h1>
 
-                {success ? <Pop /> : ""}
-
                 <div className="joinWrap">
                     <h2>join</h2>
                     <form onSubmit={handleSubmit}>
                         <fieldset>
-                            <legend>회원가입 입력 폼 양식</legend>
+                            <legend className="hidden">회원가입 입력 폼 양식</legend>
 
                             <table>
-                                <caption>회원가입 입력</caption>
+                                <caption className="hidden">회원가입 입력</caption>
                                 <tbody>
                                     <tr>
                                         <th scope="row">
@@ -91,7 +89,7 @@ function Join(){
                                         </th>
                                         <td>
                                             <input type="text" id="userid" name="userid" placeholder="아이디를 입력하세요." onChange={handleChange} />
-                                            <p>{err.userid}</p>
+                                            <p className="err">{err.userid}</p>
                                         </td>
                                     </tr>
                                     <tr>
@@ -100,7 +98,7 @@ function Join(){
                                         </th>
                                         <td>
                                             <input type="password" id="pwd1" name="pwd1" placeholder="비밀번호를 입력하세요." onChange={handleChange} />
-                                            <p>{err.pwd1}</p>
+                                            <p className="err">{err.pwd1}</p>
                                         </td>
                                     </tr>
                                     <tr>
@@ -109,7 +107,7 @@ function Join(){
                                         </th>
                                         <td>
                                             <input type="password" id="pwd2" name="pwd2" placeholder="비밀번호 확인" onChange={handleChange} />
-                                            <p>{err.pwd2}</p>
+                                            <p className="err">{err.pwd2}</p>
                                         </td>
                                     </tr>
                                     <tr>
@@ -124,8 +122,8 @@ function Join(){
                                                 <option value="daum">@daum.net</option>
                                                 <option value="gmail">@gmail.com</option>
                                             </select>
-                                            <p>{err.email}</p>
-                                            <p>{err.emailhost}</p>
+                                            <p className="err">{err.email}</p>
+                                            <p className="err">{err.emailhost}</p>
                                         </td>
                                     </tr>
                                     <tr>
@@ -136,7 +134,7 @@ function Join(){
 
                                             <input type="radio" name="news" id="disagree" onChange={handleCheck} />
                                             <label htmlFor="disagree">수신비동의</label>
-                                            <p>{err.news}</p>
+                                            <p className="err">{err.news}</p>
                                         </td>
                                     </tr>
                                     <tr>
@@ -160,7 +158,7 @@ function Join(){
                                             <input type="checkbox" name="interest" id="nature" onChange={handleCheck} />
                                             <label htmlFor="nature">자연</label>
                                             
-                                            <p>{err.interest}</p>
+                                            <p className="err">{err.interest}</p>
                                         </td>
                                     </tr>
                                     <tr>
@@ -168,12 +166,12 @@ function Join(){
                                             <label htmlFor="comments">문의사항</label>
                                         </th>
                                         <td>
-                                            <textarea name="comments" id="comments" onChange={handleChange}></textarea>
-                                            <p>{err.comments}</p>
+                                            <textarea name="comments" id="comments" placeholder="문의사항을 입력해주세요." onChange={handleChange}></textarea>
+                                            <p className="err">{err.comments}</p>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th colSpan={2}>
+                                        <th colSpan={2} className="joinBtns">
                                             <input type="reset" value="취소" />
                                             <input type="submit" value="가입하기" />
                                         </th>
@@ -184,6 +182,7 @@ function Join(){
                     </form>
                 </div>
             </div>
+            {success ? <Pop /> : ""}
         </section>
     )
 
