@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -382,13 +383,6 @@ footer {
     font: 400 70px/1 'Playfair Display';
     color: #fff;
     margin-bottom: 50px; }
-  .main .inner .project .swiper .swiper-wrapper {
-    width: 100%;
-    align-items: center; }
-    .main .inner .project .swiper .swiper-wrapper .swiper-slide {
-      width: 100%; }
-      .main .inner .project .swiper .swiper-wrapper .swiper-slide.swiper-slide-active {
-        width: 100%; }
   .main .inner .music > .container {
     justify-content: space-around; } }
 @media screen and (max-width: 760px) {
@@ -417,6 +411,13 @@ footer {
           margin-left: auto; }
         .main .inner .about .imgWrap .pic img {
           object-position: left bottom; }
+  .main .inner .project .swiper .swiper-wrapper {
+    width: 100%;
+    align-items: center; }
+    .main .inner .project .swiper .swiper-wrapper .swiper-slide {
+      width: 100%; }
+      .main .inner .project .swiper .swiper-wrapper .swiper-slide.swiper-slide-active {
+        width: 100%; }
   .main .inner .music > .container {
     justify-content: space-between; } }
 @media screen and (max-width: 696px) {
@@ -1336,5 +1337,11 @@ body {
 @media screen and (max-width: 389px) {
   .community .inner h1 {
     font: 400 40px/1 'Playfair Display'; } }
+.join .inner .joinWrap {
+  width: 100%; }
+  .join .inner .joinWrap h2 {
+    font: 400 14px/1 'Spline Sans';
+    color: #fff;
+    margin-bottom: 20px; }
 
 /*# sourceMappingURL=style.css.map */

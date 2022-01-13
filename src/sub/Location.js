@@ -3,8 +3,8 @@ function Location(){
         <section className="content location">
             <div className="inner">
                 <h1>
-                    <p>Let's Be</p>
-                    <p>Together</p>
+                    <p>Way</p>
+                    <p>To Come</p>
                 </h1>
             </div>
         </section>
