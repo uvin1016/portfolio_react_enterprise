@@ -1349,6 +1349,68 @@ body {
 @media screen and (max-width: 389px) {
   .community .inner h1 {
     font: 400 40px/1 'Playfair Display'; } }
+.location .inner .mapWrap {
+  width: 100%; }
+  .location .inner .mapWrap h2 {
+    font: 400 14px/1 'Spline Sans';
+    color: #fff;
+    margin-bottom: 20px; }
+  .location .inner .mapWrap > .inner {
+    padding: 30px 0;
+    border-top: 1px solid #888;
+    border-bottom: 1px solid #888; }
+    .location .inner .mapWrap > .inner #map {
+      width: 100%;
+      height: 600px;
+      filter: grayscale(100%);
+      transition: .5s; }
+      .location .inner .mapWrap > .inner #map.on {
+        filter: grayscale(0%); }
+    .location .inner .mapWrap > .inner .traffic {
+      margin-bottom: 10px; }
+      .location .inner .mapWrap > .inner .traffic li {
+        display: inline-block;
+        vertical-align: middle; }
+        .location .inner .mapWrap > .inner .traffic li:first-of-type {
+          font: 300 14px/1 'Spline Sans';
+          color: #fff;
+          margin-right: 10px; }
+        .location .inner .mapWrap > .inner .traffic li button {
+          border: 1px solid #fff;
+          padding: 3px 5px;
+          background: transparent;
+          color: #fff;
+          font: 300 14px/1 'Spline Sans';
+          border-radius: 8px;
+          cursor: pointer;
+          transition: .3s; }
+        .location .inner .mapWrap > .inner .traffic li:hover button {
+          transform: translate(-3px, -3px); }
+    .location .inner .mapWrap > .inner .branch {
+      display: flex;
+      margin-top: 20px; }
+      .location .inner .mapWrap > .inner .branch li {
+        width: calc(100%/3);
+        padding: 10px 20px;
+        cursor: pointer; }
+        .location .inner .mapWrap > .inner .branch li h3 {
+          font: 400 16px/1 'Noto Sans KR';
+          color: #888;
+          margin-bottom: 10px;
+          transition: .5s; }
+        .location .inner .mapWrap > .inner .branch li p {
+          width: 260px;
+          font: 400 14px/1.4 'Spline Sans';
+          color: #888;
+          margin-bottom: 10px;
+          transition: .5s; }
+          .location .inner .mapWrap > .inner .branch li p:last-of-type {
+            margin-bottom: 0; }
+        .location .inner .mapWrap > .inner .branch li.on h3 {
+          color: #fff; }
+        .location .inner .mapWrap > .inner .branch li.on p {
+          color: #fff; }
+
 .join .inner .joinWrap {
   width: 100%; }
   .join .inner .joinWrap h2 {

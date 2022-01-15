@@ -16,7 +16,7 @@ function Community(){
     });
 
     return (
-        <section className="content community">
+        <main className="content community">
             <div className="inner">
                 <h1>
                     <p>Notice</p>
@@ -108,7 +108,7 @@ function Community(){
                     </div>
                 </div>
             </div>
-        </section>
+        </main>
     )
 }
 

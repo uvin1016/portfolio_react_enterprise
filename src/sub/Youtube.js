@@ -22,7 +22,7 @@ function Youtube(){
     },[]);
 
     return (
-        <section className="content youtube">
+        <main className="content youtube">
             <div className="inner">
                 <h1>
                     <p>Creatures</p>
@@ -63,7 +63,7 @@ function Youtube(){
             </div>
 
             {isPop ? <Pop /> : null}
-        </section>
+        </main>
     )
 
     function Pop(){

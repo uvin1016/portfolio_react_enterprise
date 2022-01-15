@@ -33,7 +33,7 @@ function Gallery(){
     },[]);
 
     return (
-        <section className="content gallery">
+        <main className="content gallery">
             <div className="inner">
                 <h1>
                     <p>Make</p>
@@ -168,7 +168,7 @@ function Gallery(){
                 </div>
             </div>
             { isPop ? <Pop /> : "" }
-        </section>
+        </main>
     )
 
     async function getFlickr(opt){

@@ -20,7 +20,7 @@ function Department(){
     },[])
 
     return (
-        <section className="content department">
+        <main className="content department">
             <div className="inner">
                 <h1>
                     <p>Who</p>
@@ -73,7 +73,7 @@ function Department(){
                     </div>
                 </div>
             </div>
-        </section>
+        </main>
     )
     
 

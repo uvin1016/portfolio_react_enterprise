@@ -67,7 +67,7 @@ function Join(){
     },[err])
 
     return (
-        <section className="content join">
+        <main className="content join">
             <div className="inner">
                 <h1>
                     <p>Let's Be</p>
@@ -183,7 +183,7 @@ function Join(){
                 </div>
             </div>
             {success ? <Pop /> : ""}
-        </section>
+        </main>
     )
 
     function Pop(){
