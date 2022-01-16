@@ -4,7 +4,6 @@ header {
     left: 0;
     width: 100%;
     z-index: 1;
-    // border-bottom: 1px solid rgba(255,255,255,0.15);
     
     .inner {
         width: 1180px;
@@ -61,6 +60,10 @@ header {
         .menu {
             display: none;
         }
+    }
+
+    .pop {
+        display: none;
     }
 }
 
@@ -122,5 +125,132 @@ header {
                 }
             }
         }
+
+        .pop {
+            display: block;
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            padding: 20px 40px;
+
+            h1 {
+                line-height: 2;
+    
+                a {
+                    font: 400 28px/1 "Spline Sans";
+                    color: #fff;
+                }
+            }
+
+            .close {
+                position: absolute;
+                top: 29px;
+                right: 55px;
+                display: block;
+                width: fit-content;
+                height: 30px;
+                font: 300 16px/30px 'Spline Sans';
+                color: #fff;
+                cursor: pointer;
+                background: transparent;
+                border: none;
+                outline: none;
+
+                &::before, &::after {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 1px;
+                    background: #fff;
+                    position: absolute;
+                }
+
+                &::before {
+                    top: 0;
+                    left: 0;
+                }
+
+                &::after {
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+
+            >#gnb {
+                position: absolute;
+                left: 40px;
+                top: 50%;
+                transform: translateY(-50%);
+
+                li {
+                    margin-bottom: 20px;
+
+                    a{
+                        font: 400 60px/1 'Spline Sans';
+                        color: #fff;
+                        position: relative;
+                        transition: .5;
+
+                        &::after {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            width: 0%;
+                            height: 1px;
+                            background-color: #d25d1e;
+                        }
+                    }
+
+                    &:hover, &.on {
+                        transform: translateX(10px);
+
+                        a {
+                            color: #d25d1e;
+
+                            &::after {
+                                animation: moveLine 0.5s linear forwards;
+                            }
+                        }
+                    }
+                }
+            }
+
+            >#util {
+                position: absolute;
+                bottom: 30px;
+                left: 40px;
+
+                li {
+                    a {
+                        font: 300 14px/1 'Spline Sans';
+                        color: #fff;
+                    }
+                }
+            }
+        }
     }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        .pop {
+            >#gnb {
+                li {
+                    a{
+                        font: 400 35px/1 'Spline Sans';
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes moveLine {
+    0%{width: 0%}
+    100%{width: 100%}
 }

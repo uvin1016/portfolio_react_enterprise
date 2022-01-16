@@ -186,9 +186,14 @@
             position: absolute;
             top: 30px;
             right: 40px;
-            font: 400 20px/1 'Spline Sans';
-            color: #fff;
             cursor: pointer;
+            font: 400 28px/1 'Spline Sans';
+            color: #888;
+            transition: .5s;
+
+            &:hover {
+                color: #fff;
+            }
         }
     }
 }

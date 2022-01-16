@@ -71,6 +71,8 @@ header {
           color: #888; }
     header .inner .menu {
       display: none; }
+  header .pop {
+    display: none; }
 
 @media screen and (max-width: 1200px) {
   header .inner {
@@ -108,7 +110,89 @@ header {
       left: 0; }
     header .inner .menu::after {
       bottom: 0;
-      left: 0; } }
+      left: 0; }
+  header .pop {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    padding: 20px 40px; }
+    header .pop h1 {
+      line-height: 2; }
+      header .pop h1 a {
+        font: 400 28px/1 "Spline Sans";
+        color: #fff; }
+    header .pop .close {
+      position: absolute;
+      top: 29px;
+      right: 55px;
+      display: block;
+      width: fit-content;
+      height: 30px;
+      font: 300 16px/30px 'Spline Sans';
+      color: #fff;
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      outline: none; }
+      header .pop .close::before, header .pop .close::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: #fff;
+        position: absolute; }
+      header .pop .close::before {
+        top: 0;
+        left: 0; }
+      header .pop .close::after {
+        bottom: 0;
+        left: 0; }
+    header .pop > #gnb {
+      position: absolute;
+      left: 40px;
+      top: 50%;
+      transform: translateY(-50%); }
+      header .pop > #gnb li {
+        margin-bottom: 20px; }
+        header .pop > #gnb li a {
+          font: 400 60px/1 'Spline Sans';
+          color: #fff;
+          position: relative;
+          transition: .5; }
+          header .pop > #gnb li a::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0%;
+            height: 1px;
+            background-color: #d25d1e; }
+        header .pop > #gnb li:hover, header .pop > #gnb li.on {
+          transform: translateX(10px); }
+          header .pop > #gnb li:hover a, header .pop > #gnb li.on a {
+            color: #d25d1e; }
+            header .pop > #gnb li:hover a::after, header .pop > #gnb li.on a::after {
+              animation: moveLine 0.5s linear forwards; }
+    header .pop > #util {
+      position: absolute;
+      bottom: 30px;
+      left: 40px; }
+      header .pop > #util li a {
+        font: 300 14px/1 'Spline Sans';
+        color: #fff; } }
+@media screen and (max-width: 480px) {
+  header .pop > #gnb li a {
+    font: 400 35px/1 'Spline Sans'; } }
+@keyframes moveLine {
+  0% {
+    width: 0%; }
+  100% {
+    width: 100%; } }
 footer {
   width: 100%; }
   footer .inner {
@@ -854,9 +938,12 @@ body {
     position: absolute;
     top: 30px;
     right: 40px;
-    font: 400 20px/1 'Spline Sans';
-    color: #fff;
-    cursor: pointer; }
+    cursor: pointer;
+    font: 400 28px/1 'Spline Sans';
+    color: #888;
+    transition: .5s; }
+    .gallery .pop .close:hover {
+      color: #fff; }
 
 @media screen and (max-width: 1200px) {
   .gallery .inner .btns {
@@ -1012,7 +1099,7 @@ body {
       outline: none;
       border: none; }
   .youtube .pop .close {
-    font: 400 24px/1 "Spline Sans";
+    font: 400 28px/1 "Spline Sans";
     color: #888;
     position: absolute;
     top: 27vw;

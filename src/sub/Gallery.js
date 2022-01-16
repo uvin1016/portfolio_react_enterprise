@@ -241,7 +241,7 @@ function Gallery(){
                 </div>
                 <span className="close" onClick={()=>{
                     setIsPop(false);
-                }}>Close</span>
+                }}><i className="las la-times"></i></span>
             </aside>
         )
     }
