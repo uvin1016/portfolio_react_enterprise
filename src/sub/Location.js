@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { init, send } from "emailjs-com";
 
 function Location(){
     const {kakao} = window;
@@ -31,6 +32,9 @@ function Location(){
         }
     ]
     const [mapInfo] = useState(info);
+    const onSubmitForm = e => {
+        send('service_f9eg1s9', 'template_9nbf24m', '#contactForm')
+    }
 
     useEffect(()=>{
         const mapOption = { 
@@ -50,6 +54,8 @@ function Location(){
 
         for(let btn of branch.current.children) btn.classList.remove('on');
         branch.current.children[index].classList.add('on');
+
+        init("user_1pwSWMQVajjnRc7m8XrUh");
 
         const mapSet = ()=> map.setCenter(mapInfo[index].latlng);
         window.addEventListener('resize',mapSet);
@@ -111,6 +117,25 @@ function Location(){
                                 <p>+8210.1234.5678</p>
                             </li>
                         </ul>
+                    </div>
+                </div>
+
+                <div className="contactWrap">
+                    <h2>contact us</h2>
+                    <div className="inner">
+                        <h3>Would you like to work with us?</h3>
+                        <form id="contactForm">
+                            <div className="left">
+                                <input type="hidden" name="contact_number" />
+                                <input type="text" required name="to_name" placeholder="성함을 입력하세요." />
+                                <input type="text" required name="contact" placeholder="연락처를 입력하세요." />
+                                <input type="email" required name="from_email" placeholder="이메일을 입력하세요." />
+                            </div>
+                            <div className="right">
+                                <textarea required name="message_email" placeholder="문의내용을 입력하세요." />
+                            </div>
+                            <input type="submit" value="문의하기" />
+                        </form>
                     </div>
                 </div>
             </div>
