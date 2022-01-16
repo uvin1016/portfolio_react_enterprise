@@ -120,7 +120,7 @@
                 border-bottom: 1px solid #888;
 
                 h3 {
-                    font: 400 18px/1 'Spline Sans';
+                    font: 400 18px/1.2 'Spline Sans';
                     color: #fff;
                     margin-bottom: 20px;
                 }
@@ -188,6 +188,71 @@
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .location {
+        .inner {
+            h1 {
+                font: 400 70px/1 'Playfair Display';
+
+                p:nth-of-type(2) {
+                    margin-left: 50px;
+                }
+            }
+
+            .mapWrap {
+                >.inner {
+                    #map {
+                        height: 500px;
+                    }
+    
+                    .branch {
+                        flex-direction: column;
+    
+                        li {
+                            width: 100%;
+                        }
+                    }
+                } 
+            }
+    
+            .contactWrap {
+                >.inner {
+                    #contactForm {
+                        flex-direction: column;
+    
+                        >div {
+                            width: 100%;
+                            margin-bottom: 20px;
+                            
+                            &.left {
+                                padding-right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 436px) {
+    .location {
+        .inner {
+            h1 {
+                font: 400 43px/1 'Playfair Display';
+            }
+
+            .mapWrap {
+                >.inner {
+                    #map {
+                        height: 400px;
+                    }
+                } 
             }
         }
     }

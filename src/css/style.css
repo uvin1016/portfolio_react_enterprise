@@ -1426,7 +1426,7 @@ body {
     border-top: 1px solid #888;
     border-bottom: 1px solid #888; }
     .location .inner .contactWrap > .inner h3 {
-      font: 400 18px/1 'Spline Sans';
+      font: 400 18px/1.2 'Spline Sans';
       color: #fff;
       margin-bottom: 20px; }
     .location .inner .contactWrap > .inner #contactForm {
@@ -1476,6 +1476,29 @@ body {
           border: 1px solid white;
           transform: translate(-3px, -3px); }
 
+@media screen and (max-width: 620px) {
+  .location .inner h1 {
+    font: 400 70px/1 'Playfair Display'; }
+    .location .inner h1 p:nth-of-type(2) {
+      margin-left: 50px; }
+  .location .inner .mapWrap > .inner #map {
+    height: 500px; }
+  .location .inner .mapWrap > .inner .branch {
+    flex-direction: column; }
+    .location .inner .mapWrap > .inner .branch li {
+      width: 100%; }
+  .location .inner .contactWrap > .inner #contactForm {
+    flex-direction: column; }
+    .location .inner .contactWrap > .inner #contactForm > div {
+      width: 100%;
+      margin-bottom: 20px; }
+      .location .inner .contactWrap > .inner #contactForm > div.left {
+        padding-right: 0; } }
+@media screen and (max-width: 436px) {
+  .location .inner h1 {
+    font: 400 43px/1 'Playfair Display'; }
+  .location .inner .mapWrap > .inner #map {
+    height: 400px; } }
 .join .inner .joinWrap {
   width: 100%; }
   .join .inner .joinWrap h2 {
