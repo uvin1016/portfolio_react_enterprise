@@ -58,7 +58,10 @@ header {
           display: inline-block;
           padding: 10px 20px;
           font: 16px/1 "Spline Sans";
-          color: #888; }
+          color: #888;
+          transition: .5s; }
+        header .inner #gnb li:hover a {
+          color: #fff; }
     header .inner #util {
       float: right;
       margin-top: 20px; }
@@ -194,20 +197,78 @@ header {
   100% {
     width: 100%; } }
 footer {
-  width: 100%; }
-  footer .inner {
-    width: 1180px;
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 50px; }
+  footer .top {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 30px 0; }
+    footer .top > .inner {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 1180px;
+      margin: 0 auto; }
+      footer .top > .inner #footerUtil li {
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
+        padding: 5px; }
+        footer .top > .inner #footerUtil li i {
+          font-size: 20px;
+          color: #fff; }
+      footer .top > .inner h1 {
+        line-height: 32px; }
+        footer .top > .inner h1 a {
+          font: 400 28px/1 "Spline Sans";
+          color: #fff; }
+      footer .top > .inner .subscribe {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        font: 400 14px/33px "Spline Sans";
+        color: #fff;
+        letter-spacing: 1px;
+        transition: .5s; }
+        footer .top > .inner .subscribe:hover {
+          color: #d25d1e; }
+  footer #footerGnb {
+    width: fit-content;
+    padding: 50px 0 20px;
     margin: 0 auto; }
-    footer .inner p {
-      padding: 15px 0;
-      font: 500 12px/1 'Spline Sans';
-      color: #888;
-      text-align: center; }
+    footer #footerGnb li {
+      display: inline-block;
+      vertical-align: middle;
+      padding: 5px 10px; }
+      footer #footerGnb li a {
+        font: 300 16px/1 "Spline Sans";
+        color: #888;
+        transition: .5s; }
+      footer #footerGnb li:hover a {
+        color: #fff; }
+  footer p {
+    padding: 15px 0;
+    font: 300 14px/1.4 'Spline Sans';
+    color: #888;
+    text-align: center; }
 
 @media screen and (max-width: 1200px) {
-  footer .inner {
-    width: 100%;
-    padding: 0 40px; } }
+  footer .top > .inner {
+    padding: 0 40px;
+    width: 100%; }
+  footer #footerGnb {
+    padding: 50px 40px 20px; }
+  footer p {
+    padding: 15px 50px; } }
+@media screen and (max-width: 655px) {
+  footer p {
+    text-align: left; } }
+@media screen and (max-width: 400px) {
+  footer .top > .inner #footerUtil {
+    position: absolute;
+    top: -99999px;
+    opacity: 0; } }
 .content {
   padding: 150px 0;
   min-height: 500px; }
@@ -1475,7 +1536,7 @@ body {
           transform: translate(-3px, -3px); }
     .location .inner .mapWrap > .inner .branch {
       display: flex;
-      margin-top: 20px; }
+      margin-top: 30px; }
       .location .inner .mapWrap > .inner .branch li {
         width: calc(100%/3);
         padding: 20px 40px;
@@ -1495,8 +1556,7 @@ body {
             margin-bottom: 0; }
         .location .inner .mapWrap > .inner .branch li.on {
           border: 1px solid rgba(255, 255, 255, 0.5);
-          box-shadow: 3px 3px 20px rgba(255, 255, 255, 0.1);
-          border-radius: 10px; }
+          box-shadow: 3px 3px 20px rgba(255, 255, 255, 0.1); }
           .location .inner .mapWrap > .inner .branch li.on h3 {
             color: #fff; }
           .location .inner .mapWrap > .inner .branch li.on p {
@@ -1531,7 +1591,6 @@ body {
             padding: 10px;
             margin-bottom: 10px;
             border: 1px solid rgba(255, 255, 255, 0.6);
-            border-radius: 8px;
             background: transparent;
             font: 300 14px/1 'arial';
             color: #fff; }
@@ -1543,7 +1602,6 @@ body {
           padding: 10px;
           border: 1px solid rgba(255, 255, 255, 0.6);
           background: transparent;
-          border-radius: 8px;
           resize: none;
           font: 300 14px/1 'arial';
           color: #fff; }
@@ -1554,7 +1612,6 @@ body {
         color: rgba(255, 255, 255, 0.6);
         border: 1px solid rgba(255, 255, 255, 0.6);
         background: transparent;
-        border-radius: 8px;
         cursor: pointer;
         margin-left: auto;
         transition: .5s; }
@@ -1628,7 +1685,6 @@ body {
           font: 400 16px/30px 'Noto Sans KR';
           color: rgba(255, 255, 255, 0.5);
           border: 1px solid rgba(255, 255, 255, 0.5);
-          border-radius: 8px;
           background: transparent;
           margin: 0px 10px;
           cursor: pointer;
@@ -1644,7 +1700,6 @@ body {
         color: #fff;
         background: transparent;
         padding: 10px;
-        border-radius: 8px;
         transition: .5s;
         outline: none; }
         .join .inner .joinWrap form fieldset table tbody tr td input[type=text]:hover, .join .inner .joinWrap form fieldset table tbody tr td input[type=password]:hover, .join .inner .joinWrap form fieldset table tbody tr td select:hover {
@@ -1667,7 +1722,6 @@ body {
         resize: none;
         background: transparent;
         border: 1px solid rgba(255, 255, 255, 0.5);
-        border-radius: 8px;
         padding: 10px;
         font: 300 14px/1.4 'Noto Sans KR';
         color: #fff;

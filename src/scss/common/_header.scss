@@ -37,6 +37,11 @@ header {
                     padding: 10px 20px;
                     font: 16px/1 "Spline Sans";
                     color: #888;
+                    transition: .5s;
+                }
+
+                &:hover a {
+                    color: #fff;
                 }
             }
         }

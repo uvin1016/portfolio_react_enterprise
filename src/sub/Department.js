@@ -8,15 +8,12 @@ function Department(){
     const baseURL = process.env.PUBLIC_URL;
 
     useEffect(()=>{
+        axios.get(`${baseURL}/dbs/members.json`).then((data)=>{
+            setMembers(data.data.data);
+        });
         axios.get(`${baseURL}/dbs/awards.json`).then((data)=>{
             setAwards(data.data.data);
         });
-    },[])
-
-    useEffect(()=>{
-        axios.get(`${baseURL}/dbs/members.json`).then((data)=>{
-            setMembers(data.data.data);
-        })
     },[])
 
     return (

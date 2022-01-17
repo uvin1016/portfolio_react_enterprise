@@ -60,7 +60,7 @@
 
                 .branch {
                     display: flex;
-                    margin-top: 20px;
+                    margin-top: 30px;
 
                     li {
                         width: calc(100%/3);
@@ -89,7 +89,6 @@
                         &.on {
                             border: 1px solid rgba(255,255,255,0.5);
                             box-shadow: 3px 3px 20px rgba(255,255,255,0.1);
-                            border-radius: 10px;
 
                             h3 {
                                 color: #fff;
@@ -143,7 +142,6 @@
                                 padding: 10px;
                                 margin-bottom: 10px;
                                 border: 1px solid rgba(255,255,255,0.6);
-                                border-radius: 8px;
                                 background: transparent;
                                 font: 300 14px/1 'arial';
                                 color: #fff;
@@ -161,7 +159,6 @@
                                 padding: 10px;
                                 border: 1px solid rgba(255,255,255,0.6);
                                 background: transparent;
-                                border-radius: 8px;
                                 resize: none;
                                 font: 300 14px/1 'arial';
                                 color: #fff;
@@ -176,7 +173,6 @@
                         color: rgba(255,255,255,0.6);
                         border: 1px solid rgba(255,255,255,0.6);
                         background: transparent;
-                        border-radius: 8px;
                         cursor: pointer;
                         margin-left: auto;
                         transition: .5s;

@@ -37,6 +37,7 @@ function Location(){
     }
 
     useEffect(()=>{
+        mapContainer.current.innerHTML = "";
         const mapOption = { 
             center: mapInfo[0].latlng,
             level: 3
@@ -59,7 +60,9 @@ function Location(){
 
         const mapSet = ()=> map.setCenter(mapInfo[index].latlng);
         window.addEventListener('resize',mapSet);
-        return ()=> window.removeEventListener('resize',mapSet);
+        return ()=> {
+            window.removeEventListener('resize',mapSet);
+        }
     },[index])
 
     return (
@@ -95,27 +98,17 @@ function Location(){
                         <div id="map" ref={mapContainer}></div>
 
                         <ul className="branch" ref={branch}>
-                            <li onClick={()=>{
-                                setIndex(0);
-                            }}>
-                                <h3>수원점</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                                <p>+8210.1234.5678</p>
-                            </li>
-                            <li onClick={()=>{
-                                setIndex(1);
-                            }}>
-                                <h3>서울점</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                                <p>+8210.1234.5678</p>
-                            </li>
-                            <li onClick={()=>{
-                                setIndex(2);
-                            }}>
-                                <h3>대전점</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                                <p>+8210.1234.5678</p>
-                            </li>
+                            {
+                                mapInfo.map((data,index)=>{
+                                    return(
+                                        <li key={index} onClick={()=>setIndex(index)}>
+                                            <h3>{data.title}</h3>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                                            <p>+8210.1234.5678</p>
+                                        </li>
+                                    )
+                                })
+                            }
                         </ul>
                     </div>
                 </div>

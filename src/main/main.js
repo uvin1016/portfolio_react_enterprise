@@ -1,4 +1,4 @@
-import { useEffect, useState} from "react";
+import { useEffect, useRef} from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -18,6 +18,7 @@ SwiperCore.use([Pagination,Navigation]);
 function Main(){
     const baseURL = process.env.PUBLIC_URL;
     const album = ['Black','Earth','Forest','Future','Shoshanim','Snowy'];
+    const frame = useRef(null);
 
     useEffect(()=>{
         window.addEventListener("scroll",()=>{
@@ -32,16 +33,16 @@ function Main(){
     },[]);
 
     return (
-        <section className="content main">
+        <main className="content main">
             <div className="inner">
-                <div className="visual">
+                <section className="visual">
                     <h1>Investment<br />Group <span>CHRISTY<br />MONRAY</span></h1>
-                    <figure>
+                    <figure ref={frame}>
                         <video src={`${baseURL}/vid/Waves.mp4`} autoPlay muted loop></video>
                     </figure>
-                </div>
+                </section>
 
-                <div className="about">
+                <section className="about">
                     <h1>About Us</h1>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor, facilis voluptate. Voluptates vitae veniam voluptatibus dicta corrupti, totam quaerat illo.</p>
 
@@ -64,9 +65,9 @@ function Main(){
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <div className="project">
+                <section className="project">
                     <h1>Project</h1>
 
                     <Swiper slidesPerView={'auto'} spaceBetween={50} loop={true} loopedSlides={2} centeredSlides={true}  navigation={true} breakpoints={
@@ -103,9 +104,9 @@ function Main(){
                             </div>
                         </SwiperSlide>
                     </Swiper>
-                </div>
+                </section>
 
-                <div className="music">
+                <section className="music">
                     <h1>music</h1>
 
                     <div className="container">
@@ -131,19 +132,18 @@ function Main(){
                             })
                         }
                     </div>
-                </div>
+                </section>
             </div>
-        </section>
+        </main>
     )
 
     function vidMove (){
-        const frame = document.querySelector('.visual figure');
         const scrollValue = window.scrollY || window.pageYOffset;
         
         if(scrollValue > 0){
-            frame.classList.add("on");
+            frame.current.classList.add("on");
         }else{
-            frame.classList.remove("on");
+            frame.current.classList.remove("on");
         }
     }
 
