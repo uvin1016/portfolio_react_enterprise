@@ -11,6 +11,7 @@ function Department(){
         axios.get(`${baseURL}/dbs/members.json`).then((data)=>{
             setMembers(data.data.data);
         });
+        
         axios.get(`${baseURL}/dbs/awards.json`).then((data)=>{
             setAwards(data.data.data);
         });
