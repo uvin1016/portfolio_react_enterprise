@@ -1411,45 +1411,12 @@ body {
   .community .inner .boardWrap {
     position: relative;
     padding-top: 37px; }
-    .community .inner .boardWrap .btns {
-      position: absolute;
-      top: 7px;
-      left: 0px; }
-      .community .inner .boardWrap .btns button {
-        border: none;
-        background: transparent;
-        margin-right: 15px;
-        font: 300 14px/1 'Spline Sans';
-        color: #888;
-        cursor: pointer;
-        transition: .5s; }
-        .community .inner .boardWrap .btns button.on, .community .inner .boardWrap .btns button:hover {
-          color: #fff; }
-    .community .inner .boardWrap .searchBox {
-      position: absolute;
-      top: 0;
-      right: 0;
-      border-bottom: 1px solid #888; }
-      .community .inner .boardWrap .searchBox > input[type=text] {
-        border: none;
-        padding: 5px;
-        background: transparent;
-        outline: transparent;
-        font: 300 14px/1 'Spline Sans';
-        color: #fff; }
-      .community .inner .boardWrap .searchBox > button {
-        font: 300 14px/1 'Spline Sans';
-        color: #888;
-        border: none;
-        background: transparent;
-        padding: 5px;
-        cursor: pointer;
-        transition: .5s; }
-        .community .inner .boardWrap .searchBox > button:hover {
-          color: #fff; }
+    .community .inner .boardWrap h2 {
+      font: 400 14px/1 'Spline Sans';
+      color: #fff;
+      margin-bottom: 20px; }
     .community .inner .boardWrap .notice {
-      width: 100%;
-      padding-top: 10px; }
+      width: 100%; }
       .community .inner .boardWrap .notice article {
         width: 100%;
         padding: 25px 15px;

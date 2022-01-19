@@ -74,59 +74,14 @@
             position: relative;
             padding-top: 37px;
 
-            .btns {
-                position: absolute;
-                top: 7px;
-                left: 0px;
-    
-                button {
-                    border: none;
-                    background: transparent;
-                    margin-right: 15px;
-                    font: 300 14px/1 'Spline Sans';
-                    color: #888;
-                    cursor: pointer;
-                    transition: .5s;
-    
-                    &.on, &:hover {
-                        color: #fff;
-                    }
-                }
-            }
-    
-            .searchBox {
-                position: absolute;
-                top: 0;
-                right: 0;
-                border-bottom: 1px solid #888;
-    
-                >input[type=text]{
-                    border: none;
-                    padding: 5px;
-                    background: transparent;
-                    outline: transparent;
-                    font: 300 14px/1 'Spline Sans';
-                    color: #fff;
-                }
-    
-                >button {
-                    font: 300 14px/1 'Spline Sans';
-                    color: #888;
-                    border: none;
-                    background: transparent;
-                    padding: 5px;
-                    cursor: pointer;
-                    transition: .5s;
-    
-                    &:hover {
-                        color: #fff;
-                    }
-                }
+            h2 {
+                font: 400 14px/1 'Spline Sans';
+                color: #fff;
+                margin-bottom: 20px;
             }
     
             .notice {
                 width: 100%;
-                padding-top: 10px;
         
                 article {
                     width: 100%;
