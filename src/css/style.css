@@ -648,7 +648,7 @@ footer {
       .main .inner #project .swiper .swiper-wrapper .swiper-slide.swiper-slide-active {
         width: 100%; }
   .main .inner #music > .container {
-    justify-content: space-between; } }
+    justify-content: center; } }
 @media screen and (max-width: 696px) {
   .main .inner #about > h1 {
     width: 100%; }
@@ -782,6 +782,9 @@ footer {
       height: 80px;
       background-color: #d25d1e; }
 
+@media screen and (max-width: 1200px) {
+  #btns {
+    right: 20px; } }
 .department .inner .awards {
   width: 100%;
   margin-bottom: 100px; }
