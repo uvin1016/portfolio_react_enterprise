@@ -186,10 +186,31 @@
                                 >p {
                                     display: inline-block;
                                     vertical-align: middle;
-                                    font: 300 15px/1 'Spline Sans';
+                                    font: 300 15px/1.4 'Spline Sans';
                                     color: rgba(255,255,255,0.7);
                                     margin-right: 10px;
                                     transition: .3s;
+                                }
+
+                                >input[type=text] {
+                                    width: 300px;
+                                    padding: 10px;
+                                    border: 1px solid #888;
+                                    margin-bottom: 10px;
+                                    background-color: transparent;
+                                    font: 300 14px/1 'Spline Sans';
+                                    color: #fff;
+                                }
+
+                                >textarea {
+                                    width: 300px;
+                                    height: 100px;
+                                    padding: 10px;
+                                    border: 1px solid #888;
+                                    background-color: transparent;
+                                    font: 300 14px/1 'Spline Sans';
+                                    color: #fff;
+                                    resize: none;
                                 }
                             }
     
@@ -274,13 +295,37 @@
         
                 
             }
-    
-            
         }
     }
 }
 
-@media screen and (max-width: 865px) {
+@media screen and (max-width: 1200px) {
+    .community {
+        .inner {
+            .boardWrap {
+                .notice {
+                    .inputBox {
+                        width: 300px;
+                    }
+    
+                    .showBox {
+                        width: calc(100% - 350px);
+
+                        .showWrap {
+                            article {
+                                .num {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 870px) {
     .community {
         .inner {
             .faqWrap {
@@ -295,9 +340,26 @@
     
             .boardWrap {
                 .notice {
-                    article {
-                        .num {
-                            margin-right: 30px;
+                    flex-direction: column;
+
+                    .inputBox {
+                        width: 100%;
+                        margin-bottom: 50px;
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                    }
+    
+                    .showBox {
+                        width: 100%;
+
+                        .showWrap {
+                            article {
+                                .num {
+                                    display: inline-block;
+                                    margin-right: 20px;
+                                }
+                            }
                         }
                     }
                 }
@@ -311,16 +373,6 @@
         .inner {
             h1 {
                 font: 400 80px/1 'Playfair Display';
-            }
-
-            .boardWrap {
-                .notice {
-                    article {
-                        .num {
-                            display: none;
-                        }
-                    }
-                }
             }
         }
     }
@@ -370,6 +422,32 @@
         
                         p {
                             font: 300 14px/1.2 'Spline Sans';
+                        }
+                    }
+                }
+            }
+
+            .boardWrap {
+                .notice {
+                    .showBox {
+                        .showWrap {
+                            article {
+                                .num {
+                                    display: none;
+                                }
+
+                                .btnsUpdate {
+                                    width: 100%;
+                                    display: flex;
+                                    float: none;
+                                    margin-top: 15px;
+        
+                                    li {
+                                        margin-right: 10px;
+                                        margin-left: 0px;
+                                    }
+                                }
+                            }
                         }
                     }
                 }

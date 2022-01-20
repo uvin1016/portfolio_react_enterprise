@@ -150,7 +150,7 @@ function Community(){
                                                     ?
                                                     <>
                                                         <div className="post">
-                                                            <input type="text" placeholder="제목을 입력하세요" defaultValue={post.title} ref={updateInput} />
+                                                            <input type="text" placeholder="제목을 입력하세요" defaultValue={post.title} ref={updateInput} /><br />
                                                             <textarea placeholder="본문을 입력하세요." defaultValue={post.content} ref={updateTextarea}></textarea>
                                                         </div> 
 

@@ -765,6 +765,23 @@ footer {
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
+#btns {
+  position: fixed;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%); }
+  #btns li {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: .3s; }
+    #btns li.on {
+      height: 80px;
+      background-color: #d25d1e; }
+
 .department .inner .awards {
   width: 100%;
   margin-bottom: 100px; }
@@ -1498,10 +1515,27 @@ body {
               .community .inner .boardWrap .notice .showBox .showWrap article .post > p {
                 display: inline-block;
                 vertical-align: middle;
-                font: 300 15px/1 'Spline Sans';
+                font: 300 15px/1.4 'Spline Sans';
                 color: rgba(255, 255, 255, 0.7);
                 margin-right: 10px;
                 transition: .3s; }
+              .community .inner .boardWrap .notice .showBox .showWrap article .post > input[type=text] {
+                width: 300px;
+                padding: 10px;
+                border: 1px solid #888;
+                margin-bottom: 10px;
+                background-color: transparent;
+                font: 300 14px/1 'Spline Sans';
+                color: #fff; }
+              .community .inner .boardWrap .notice .showBox .showWrap article .post > textarea {
+                width: 300px;
+                height: 100px;
+                padding: 10px;
+                border: 1px solid #888;
+                background-color: transparent;
+                font: 300 14px/1 'Spline Sans';
+                color: #fff;
+                resize: none; }
             .community .inner .boardWrap .notice .showBox .showWrap article .btnsUpdate {
               display: inline-flex;
               float: right; }
@@ -1548,16 +1582,32 @@ body {
                 color: #fff;
                 border: 1px solid #fff; }
 
-@media screen and (max-width: 865px) {
+@media screen and (max-width: 1200px) {
+  .community .inner .boardWrap .notice .inputBox {
+    width: 300px; }
+  .community .inner .boardWrap .notice .showBox {
+    width: calc(100% - 350px); }
+    .community .inner .boardWrap .notice .showBox .showWrap article .num {
+      display: none; } }
+@media screen and (max-width: 870px) {
   .community .inner .faqWrap > .inner > article h3 {
     font: 500 70px/1 "Dancing Script"; }
-  .community .inner .boardWrap .notice article .num {
-    margin-right: 30px; } }
+  .community .inner .boardWrap .notice {
+    flex-direction: column; }
+    .community .inner .boardWrap .notice .inputBox {
+      width: 100%;
+      margin-bottom: 50px;
+      position: relative;
+      top: 0;
+      left: 0; }
+    .community .inner .boardWrap .notice .showBox {
+      width: 100%; }
+      .community .inner .boardWrap .notice .showBox .showWrap article .num {
+        display: inline-block;
+        margin-right: 20px; } }
 @media screen and (max-width: 845px) {
   .community .inner h1 {
-    font: 400 80px/1 'Playfair Display'; }
-  .community .inner .boardWrap .notice article .num {
-    display: none; } }
+    font: 400 80px/1 'Playfair Display'; } }
 @media screen and (max-width: 686px) {
   .community .inner h1 {
     font: 400 60px/1 'Playfair Display'; }
@@ -1575,7 +1625,17 @@ body {
     .community .inner .faqWrap > .inner > article h3 {
       font: 500 60px/1 "Dancing Script"; }
     .community .inner .faqWrap > .inner > article p {
-      font: 300 14px/1.2 'Spline Sans'; } }
+      font: 300 14px/1.2 'Spline Sans'; }
+  .community .inner .boardWrap .notice .showBox .showWrap article .num {
+    display: none; }
+  .community .inner .boardWrap .notice .showBox .showWrap article .btnsUpdate {
+    width: 100%;
+    display: flex;
+    float: none;
+    margin-top: 15px; }
+    .community .inner .boardWrap .notice .showBox .showWrap article .btnsUpdate li {
+      margin-right: 10px;
+      margin-left: 0px; } }
 @media screen and (max-width: 420px) {
   .community .inner .faqWrap > .inner {
     grid-template-columns: repeat(1, 1fr); }

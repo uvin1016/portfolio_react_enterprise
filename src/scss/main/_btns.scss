@@ -1,0 +1,21 @@
+#btns {
+    position: fixed;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+
+    li {
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        background-color: #fff;
+        margin-bottom: 20px;
+        cursor: pointer;
+        transition: .3s;
+
+        &.on {
+            height: 80px;
+            background-color: #d25d1e;
+        }
+    }
+}
