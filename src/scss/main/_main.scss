@@ -2,7 +2,7 @@
     padding: 0;
 
     .inner {
-        .visual {
+        #visual {
             width: 100%;
             height: 100vh;
             position: relative;
@@ -57,7 +57,7 @@
             }
         }
 
-        .about {
+        #about {
             width: 100%;
             padding: 180px 0;
             display: flex;
@@ -129,7 +129,7 @@
 
         }
 
-        .project {
+        #project {
             width: 100%;
             padding: 50px 0 180px;
             position: relative;
@@ -225,7 +225,7 @@
             }
         }
 
-        .music {
+        #music {
             width: 100%;
             padding: 50px 0 180px;
 
@@ -339,7 +339,7 @@
             }
         }
 
-        .news {
+        #news {
             width: 100%;
             padding: 50px 0 180px;
             position: relative;
@@ -422,7 +422,6 @@
                         >.text {
                             width: 100%;
                             padding: 30px;
-                            transition: 1s;
     
                             span {
                                 font: 300 12px/1 'Spline Sans';
@@ -457,7 +456,7 @@
 @media screen and (max-width: 1200px) {
     .main {
         .inner {
-            .visual {
+            #visual {
                 h1 {
                     font: 400 130px/1 'Playfair Display';
     
@@ -467,7 +466,7 @@
                 }
             }
     
-            .about {
+            #about {
                 >p {
                     font: 300 14px/1.6 'Spline Sans';
                 }
@@ -488,7 +487,7 @@
                 }
             }
 
-            .project {
+            #project {
                 h1 {
                     font: 400 70px/1 'Playfair Display';
                     color: #fff;
@@ -496,7 +495,7 @@
                 }
             }
     
-            .music {
+            #music {
                 >.container {
                     justify-content: space-around;
                 }
@@ -508,7 +507,7 @@
 @media screen and (max-width: 760px) {
     .main {
         .inner {
-            .visual {
+            #visual {
                 h1 {
                     font: 400 100px/1 'Playfair Display';
     
@@ -524,7 +523,7 @@
                 }
             }
     
-            .about {
+            #about {
                 flex-wrap: wrap;
 
                 >h1 {
@@ -555,7 +554,7 @@
                 }
             }
 
-            .project {
+            #project {
                 .swiper {
                     .swiper-wrapper {
                         width: 100%;
@@ -572,7 +571,7 @@
                 }
             }
     
-            .music {
+            #music {
                 >.container {
                     justify-content: space-between;
                 }
@@ -584,7 +583,7 @@
 @media screen and (max-width: 696px) {
     .main {
         .inner {
-            .about {
+            #about {
                 >h1 {
                     width: 100%;
                 }
@@ -596,7 +595,7 @@
                 }
             }
     
-            .music {
+            #project {
                 >.container {
                     article {
                         margin-bottom: 80px;
@@ -611,7 +610,7 @@
                 }
             }
             
-            .news {
+            #news {
                 .swiper {
                     .newsBtns {
                         left: 0;
@@ -626,7 +625,7 @@
 @media screen and (max-width: 590px) {
     .main {
         .inner {
-            .visual {
+            #visual {
                 h1 {
                     font: 400 80px/1 'Playfair Display';
                     left: 50%;
@@ -642,7 +641,7 @@
                 }
             }
 
-            .about {
+            #about {
                 >h1 {
                     width: 100%;
                 }
@@ -654,7 +653,7 @@
                 }
             }
 
-            .project {
+            #project {
                 .swiper {
                     .swiper-wrapper {
                         .swiper-slide {
@@ -668,7 +667,7 @@
                 }
             }
     
-            .music {
+            #music {
                 >.container {
                     justify-content: center;
                     
@@ -694,7 +693,7 @@
         .inner {
             overflow-x: hidden;
 
-            .visual {
+            #visual {
                 h1 {
                     font: 400 62px/1 'Playfair Display';
     
@@ -714,7 +713,7 @@
                 }
             }
 
-            .about {
+            #about {
                 padding-top: 180px;
     
                 .imgWrap {
@@ -740,7 +739,7 @@
                 }
             }
 
-            .project {
+            #project {
                 .swiper {
                     .swiper-wrapper {
                         .swiper-slide {
@@ -756,7 +755,7 @@
                 }
             }
     
-            .music {
+            #music {
                 >.container {
                     justify-content: center;
 
@@ -780,7 +779,7 @@
 @media screen and (max-width: 370px) {
     .main {
         .inner {
-            .visual {
+            #visual {
                 h1 {
                     font: 400 50px/1 'Playfair Display';
     
@@ -790,7 +789,7 @@
                 }
             }
 
-            .about {
+            #about {
                 h1 {
                     font: 400 50px/1 'Playfair Display';
                 }
@@ -811,7 +810,7 @@
                 }
             }
 
-            .project {
+            #project {
                 h1 {
                     font: 400 50px/1 'Playfair Display';
                 }
@@ -831,7 +830,7 @@
                 }
             }
     
-            .music {
+            #music {
                 h1 {
                     font: 400 50px/1 'Playfair Display';
                 }

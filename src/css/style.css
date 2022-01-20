@@ -289,21 +289,21 @@ footer {
     padding: 0 40px; } }
 .main {
   padding: 0; }
-  .main .inner .visual {
+  .main .inner #visual {
     width: 100%;
     height: 100vh;
     position: relative; }
-    .main .inner .visual h1 {
+    .main .inner #visual h1 {
       position: absolute;
       top: 50%;
       left: 0;
       transform: translateY(-50%);
       font: 400 200px/1 'Playfair Display';
       color: #fff; }
-      .main .inner .visual h1 span {
+      .main .inner #visual h1 span {
         display: inline-block;
         font: 300 55px/1 'Spline Sans'; }
-    .main .inner .visual figure {
+    .main .inner #visual figure {
       width: 600px;
       height: 1100px;
       border-radius: 300px;
@@ -313,7 +313,7 @@ footer {
       overflow: hidden;
       z-index: -1;
       transition: 1s; }
-      .main .inner .visual figure::after {
+      .main .inner #visual figure::after {
         content: '';
         display: block;
         width: 100%;
@@ -322,101 +322,101 @@ footer {
         position: absolute;
         top: 0;
         left: 0; }
-      .main .inner .visual figure.on {
+      .main .inner #visual figure.on {
         top: -180px; }
-      .main .inner .visual figure video {
+      .main .inner #visual figure video {
         width: 100%;
         height: 100%;
         object-fit: cover;
         position: relative; }
-  .main .inner .about {
+  .main .inner #about {
     width: 100%;
     padding: 180px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; }
-    .main .inner .about > h1 {
+    .main .inner #about > h1 {
       width: 50%;
       font: 400 70px/1 'Playfair Display';
       color: #fff;
       margin-bottom: 50px; }
-    .main .inner .about > p {
+    .main .inner #about > p {
       width: 50%;
       font: 300 16px/1.3 'Spline Sans';
       color: #fff;
       letter-spacing: 1px; }
-    .main .inner .about .imgWrap {
+    .main .inner #about .imgWrap {
       width: 100%;
       display: flex;
       justify-content: space-between; }
-      .main .inner .about .imgWrap .pic {
+      .main .inner #about .imgWrap .pic {
         width: 45%;
         height: 600px;
         position: relative;
         cursor: pointer; }
-        .main .inner .about .imgWrap .pic img {
+        .main .inner #about .imgWrap .pic img {
           height: 100%;
           object-fit: contain;
           position: absolute;
           top: 0;
           left: 0;
           z-index: 1; }
-        .main .inner .about .imgWrap .pic .text {
+        .main .inner #about .imgWrap .pic .text {
           width: 100%;
           padding: 20px 0;
           transform: translateY(560px);
           opacity: 0;
           transition: 0.5s ease-in; }
-          .main .inner .about .imgWrap .pic .text h2 {
+          .main .inner #about .imgWrap .pic .text h2 {
             font: 400 18px/1 'Spline Sans';
             color: #d25d1e;
             margin-bottom: 10px; }
-          .main .inner .about .imgWrap .pic .text span {
+          .main .inner #about .imgWrap .pic .text span {
             font: 300 14px/1 'Spline Sans';
             color: #888; }
-        .main .inner .about .imgWrap .pic:hover .text {
+        .main .inner #about .imgWrap .pic:hover .text {
           opacity: 1;
           transform: translateY(610px); }
-  .main .inner .project {
+  .main .inner #project {
     width: 100%;
     padding: 50px 0 180px;
     position: relative;
     overflow: hidden; }
-    .main .inner .project h1 {
+    .main .inner #project h1 {
       font: 400 70px/1 'Playfair Display';
       color: #fff;
       margin-bottom: 50px; }
-    .main .inner .project .swiper {
+    .main .inner #project .swiper {
       width: 100%;
       height: 100%;
       overflow: hidden; }
-      .main .inner .project .swiper .swiper-button-prev, .main .inner .project .swiper .swiper-button-next {
+      .main .inner #project .swiper .swiper-button-prev, .main .inner #project .swiper .swiper-button-next {
         color: rgba(255, 255, 255, 0.8);
         transition: .5s; }
-        .main .inner .project .swiper .swiper-button-prev:hover, .main .inner .project .swiper .swiper-button-next:hover {
+        .main .inner #project .swiper .swiper-button-prev:hover, .main .inner #project .swiper .swiper-button-next:hover {
           color: #d25d1e; }
-      .main .inner .project .swiper .swiper-wrapper {
+      .main .inner #project .swiper .swiper-wrapper {
         width: 100%;
         align-items: center; }
-        .main .inner .project .swiper .swiper-wrapper .swiper-slide {
+        .main .inner #project .swiper .swiper-wrapper .swiper-slide {
           width: 700px;
           height: 400px;
           border-radius: 200px;
           filter: blur(2px) opacity(0.5);
           transform: scale(0.7);
           overflow: hidden; }
-          .main .inner .project .swiper .swiper-wrapper .swiper-slide .pic {
+          .main .inner #project .swiper .swiper-wrapper .swiper-slide .pic {
             width: 100%;
             height: 100%;
             position: relative; }
-            .main .inner .project .swiper .swiper-wrapper .swiper-slide .pic img {
+            .main .inner #project .swiper .swiper-wrapper .swiper-slide .pic img {
               position: absolute;
               top: 0;
               left: 0;
               object-fit: cover;
               width: 100%;
               height: 100%; }
-          .main .inner .project .swiper .swiper-wrapper .swiper-slide > .text {
+          .main .inner #project .swiper .swiper-wrapper .swiper-slide > .text {
             position: absolute;
             top: 0;
             left: 0;
@@ -425,58 +425,58 @@ footer {
             background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
             opacity: 0;
             transition: 1s; }
-            .main .inner .project .swiper .swiper-wrapper .swiper-slide > .text h2 {
+            .main .inner #project .swiper .swiper-wrapper .swiper-slide > .text h2 {
               text-align: center;
               font: 400 24px/1 'Playfair Display';
               color: #fff;
               margin-top: 280px;
               margin-bottom: 20px; }
-            .main .inner .project .swiper .swiper-wrapper .swiper-slide > .text p {
+            .main .inner #project .swiper .swiper-wrapper .swiper-slide > .text p {
               width: fit-content;
               font: 300 14px/1.4 'Spline Sans';
               color: rgba(255, 255, 255, 0.8);
               letter-spacing: 1px;
               margin: 0 auto; }
-          .main .inner .project .swiper .swiper-wrapper .swiper-slide.swiper-slide-active {
+          .main .inner #project .swiper .swiper-wrapper .swiper-slide.swiper-slide-active {
             filter: blur(0) brightness(1.1) opacity(1);
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
             transform: scale(1); }
-            .main .inner .project .swiper .swiper-wrapper .swiper-slide.swiper-slide-active > .text {
+            .main .inner #project .swiper .swiper-wrapper .swiper-slide.swiper-slide-active > .text {
               opacity: 1; }
-  .main .inner .music {
+  .main .inner #music {
     width: 100%;
     padding: 50px 0 180px; }
-    .main .inner .music h1 {
+    .main .inner #music h1 {
       font: 400 70px/1 'Playfair Display';
       color: #fff;
       margin-bottom: 50px; }
-    .main .inner .music > .container {
+    .main .inner #music > .container {
       width: 100%;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap; }
-      .main .inner .music > .container article {
+      .main .inner #music > .container article {
         display: flex;
         position: relative;
         margin-bottom: 50px; }
-        .main .inner .music > .container article .pic {
+        .main .inner #music > .container article .pic {
           width: 300px;
           height: 300px;
           overflow: hidden;
           border-radius: 300px;
           position: relative;
           cursor: pointer; }
-          .main .inner .music > .container article .pic img {
+          .main .inner #music > .container article .pic img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             position: absolute;
             transition: 1s; }
-          .main .inner .music > .container article .pic.play {
+          .main .inner #music > .container article .pic.play {
             animation: play 10s linear infinite; }
-            .main .inner .music > .container article .pic.play img {
+            .main .inner #music > .container article .pic.play img {
               transform: scale(1.2); }
-        .main .inner .music > .container article > .txt {
+        .main .inner #music > .container article > .txt {
           width: 150px;
           height: 100%;
           background: #111;
@@ -484,18 +484,18 @@ footer {
           position: absolute;
           top: 0px;
           right: 0px; }
-          .main .inner .music > .container article > .txt h2 {
+          .main .inner #music > .container article > .txt h2 {
             font: 300 20px/1 'Spline Sans';
             color: rgba(255, 255, 255, 0.9); }
-          .main .inner .music > .container article > .txt h3 {
+          .main .inner #music > .container article > .txt h3 {
             font: 300 20px/1 'Spline Sans';
             color: rgba(255, 255, 255, 0.5);
             margin-bottom: 30px; }
-          .main .inner .music > .container article > .txt p {
+          .main .inner #music > .container article > .txt p {
             font: 300 14px/1 'Spline Sans';
             color: rgba(255, 255, 255, 0.9);
             margin-bottom: 10px; }
-          .main .inner .music > .container article > .txt > .btn {
+          .main .inner #music > .container article > .txt > .btn {
             position: absolute;
             left: 20px;
             bottom: 0;
@@ -504,7 +504,7 @@ footer {
             height: 50px;
             border-radius: 50px;
             cursor: pointer; }
-            .main .inner .music > .container article > .txt > .btn button {
+            .main .inner #music > .container article > .txt > .btn button {
               position: absolute;
               top: 50%;
               left: 50%;
@@ -517,7 +517,7 @@ footer {
               border-top: 10px solid transparent;
               border-bottom: 10px solid transparent;
               cursor: pointer; }
-            .main .inner .music > .container article > .txt > .btn.play button {
+            .main .inner #music > .container article > .txt > .btn.play button {
               transform: translate(-50%, -50%);
               width: 10px;
               height: 10px;
@@ -525,239 +525,238 @@ footer {
               border-left: 2px solid rgba(255, 255, 255, 0.9);
               border-top: 0px solid transparent;
               border-bottom: 0px solid transparent; }
-  .main .inner .news {
+  .main .inner #news {
     width: 100%;
     padding: 50px 0 180px;
     position: relative;
     overflow: hidden; }
-    .main .inner .news h1 {
+    .main .inner #news h1 {
       font: 400 70px/1 'Playfair Display';
       color: #fff; }
-    .main .inner .news .swiper {
+    .main .inner #news .swiper {
       width: 100%;
       height: 100%;
       padding-top: 50px; }
-      .main .inner .news .swiper .newsBtns {
+      .main .inner #news .swiper .newsBtns {
         position: absolute;
         top: 10px;
         right: 0; }
-        .main .inner .news .swiper .newsBtns button {
+        .main .inner #news .swiper .newsBtns button {
           padding: 5px;
           background: transparent;
           border: none;
           outline: none;
           cursor: pointer;
           transition: .5s; }
-          .main .inner .news .swiper .newsBtns button i {
+          .main .inner #news .swiper .newsBtns button i {
             font-size: 26px;
             color: #fff;
             transition: .5s; }
-          .main .inner .news .swiper .newsBtns button.newsPrev:hover {
+          .main .inner #news .swiper .newsBtns button.newsPrev:hover {
             transform: translateX(-5px); }
-            .main .inner .news .swiper .newsBtns button.newsPrev:hover i {
+            .main .inner #news .swiper .newsBtns button.newsPrev:hover i {
               color: #d25d1e; }
-          .main .inner .news .swiper .newsBtns button.newsNext:hover {
+          .main .inner #news .swiper .newsBtns button.newsNext:hover {
             transform: translateX(5px); }
-            .main .inner .news .swiper .newsBtns button.newsNext:hover i {
+            .main .inner #news .swiper .newsBtns button.newsNext:hover i {
               color: #d25d1e; }
-      .main .inner .news .swiper > .swiper-button-prev, .main .inner .news .swiper > .swiper-button-next {
+      .main .inner #news .swiper > .swiper-button-prev, .main .inner #news .swiper > .swiper-button-next {
         display: none; }
-      .main .inner .news .swiper .swiper-wrapper {
+      .main .inner #news .swiper .swiper-wrapper {
         width: 100%;
         align-items: center; }
-        .main .inner .news .swiper .swiper-wrapper .swiper-slide {
+        .main .inner #news .swiper .swiper-wrapper .swiper-slide {
           width: 100%;
           border-bottom: 1px solid rgba(255, 255, 255, 0.8); }
-          .main .inner .news .swiper .swiper-wrapper .swiper-slide .pic {
+          .main .inner #news .swiper .swiper-wrapper .swiper-slide .pic {
             width: 100%;
             height: 200px;
             position: relative; }
-            .main .inner .news .swiper .swiper-wrapper .swiper-slide .pic img {
+            .main .inner #news .swiper .swiper-wrapper .swiper-slide .pic img {
               position: absolute;
               top: 0;
               left: 0;
               object-fit: cover;
               width: 100%;
               height: 100%; }
-          .main .inner .news .swiper .swiper-wrapper .swiper-slide > .text {
+          .main .inner #news .swiper .swiper-wrapper .swiper-slide > .text {
             width: 100%;
-            padding: 30px;
-            transition: 1s; }
-            .main .inner .news .swiper .swiper-wrapper .swiper-slide > .text span {
+            padding: 30px; }
+            .main .inner #news .swiper .swiper-wrapper .swiper-slide > .text span {
               font: 300 12px/1 'Spline Sans';
               letter-spacing: 1px;
               color: #fff; }
-            .main .inner .news .swiper .swiper-wrapper .swiper-slide > .text p {
+            .main .inner #news .swiper .swiper-wrapper .swiper-slide > .text p {
               font: 300 18px/1.4 'Playfair Display';
               color: rgba(255, 255, 255, 0.8);
               margin-bottom: 30px; }
-          .main .inner .news .swiper .swiper-wrapper .swiper-slide.swiper-slide-active {
+          .main .inner #news .swiper .swiper-wrapper .swiper-slide.swiper-slide-active {
             border-bottom: 1px solid #d25d1e; }
-            .main .inner .news .swiper .swiper-wrapper .swiper-slide.swiper-slide-active > .text {
+            .main .inner #news .swiper .swiper-wrapper .swiper-slide.swiper-slide-active > .text {
               background-color: #d25d1e;
               color: #fff; }
 
 @media screen and (max-width: 1200px) {
-  .main .inner .visual h1 {
+  .main .inner #visual h1 {
     font: 400 130px/1 'Playfair Display'; }
-    .main .inner .visual h1 span {
+    .main .inner #visual h1 span {
       font: 300 35px/1 'Spline Sans'; }
-  .main .inner .about > p {
+  .main .inner #about > p {
     font: 300 14px/1.6 'Spline Sans'; }
-  .main .inner .about .imgWrap .pic img {
+  .main .inner #about .imgWrap .pic img {
     width: 100%;
     object-position: bottom; }
-  .main .inner .about .imgWrap .pic:hover .text {
+  .main .inner #about .imgWrap .pic:hover .text {
     transform: translateY(600px); }
-  .main .inner .project h1 {
+  .main .inner #project h1 {
     font: 400 70px/1 'Playfair Display';
     color: #fff;
     margin-bottom: 50px; }
-  .main .inner .music > .container {
+  .main .inner #music > .container {
     justify-content: space-around; } }
 @media screen and (max-width: 760px) {
-  .main .inner .visual h1 {
+  .main .inner #visual h1 {
     font: 400 100px/1 'Playfair Display'; }
-    .main .inner .visual h1 span {
+    .main .inner #visual h1 span {
       font: 300 30px/1 'Spline Sans'; }
-  .main .inner .visual figure {
+  .main .inner #visual figure {
     width: calc(100% - 80px);
     right: 50%;
     transform: translateX(50%); }
-  .main .inner .about {
+  .main .inner #about {
     flex-wrap: wrap; }
-    .main .inner .about > h1 {
+    .main .inner #about > h1 {
       margin-bottom: 30px; }
-    .main .inner .about > p {
+    .main .inner #about > p {
       width: 100%;
       font: 300 14px/1.4 'Spline Sans';
       margin-bottom: 50px; }
-    .main .inner .about .imgWrap {
+    .main .inner #about .imgWrap {
       flex-wrap: wrap-reverse;
       justify-content: space-between; }
-      .main .inner .about .imgWrap .pic {
+      .main .inner #about .imgWrap .pic {
         width: 65%; }
-        .main .inner .about .imgWrap .pic:nth-of-type(1) {
+        .main .inner #about .imgWrap .pic:nth-of-type(1) {
           margin-left: auto; }
-        .main .inner .about .imgWrap .pic img {
+        .main .inner #about .imgWrap .pic img {
           object-position: left bottom; }
-  .main .inner .project .swiper .swiper-wrapper {
+  .main .inner #project .swiper .swiper-wrapper {
     width: 100%;
     align-items: center; }
-    .main .inner .project .swiper .swiper-wrapper .swiper-slide {
+    .main .inner #project .swiper .swiper-wrapper .swiper-slide {
       width: 100%; }
-      .main .inner .project .swiper .swiper-wrapper .swiper-slide.swiper-slide-active {
+      .main .inner #project .swiper .swiper-wrapper .swiper-slide.swiper-slide-active {
         width: 100%; }
-  .main .inner .music > .container {
+  .main .inner #music > .container {
     justify-content: space-between; } }
 @media screen and (max-width: 696px) {
-  .main .inner .about > h1 {
+  .main .inner #about > h1 {
     width: 100%; }
-  .main .inner .about .imgWrap .pic {
+  .main .inner #about .imgWrap .pic {
     width: 400px; }
-  .main .inner .music > .container article {
+  .main .inner #project > .container article {
     margin-bottom: 80px; }
-    .main .inner .music > .container article .pic {
+    .main .inner #project > .container article .pic {
       width: 200px;
       height: 200px; }
-    .main .inner .music > .container article .txt {
+    .main .inner #project > .container article .txt {
       width: 100px; }
-  .main .inner .news .swiper .newsBtns {
+  .main .inner #news .swiper .newsBtns {
     left: 0;
     right: unset; } }
 @media screen and (max-width: 590px) {
-  .main .inner .visual h1 {
+  .main .inner #visual h1 {
     font: 400 80px/1 'Playfair Display';
     left: 50%;
     transform: translateX(-50%); }
-    .main .inner .visual h1 span {
+    .main .inner #visual h1 span {
       font: 300 25px/1 'Spline Sans'; }
-  .main .inner .visual figure {
+  .main .inner #visual figure {
     width: 100%; }
-  .main .inner .about > h1 {
+  .main .inner #about > h1 {
     width: 100%; }
-  .main .inner .about .imgWrap .pic {
+  .main .inner #about .imgWrap .pic {
     width: 400px; }
-  .main .inner .project .swiper .swiper-wrapper .swiper-slide .txt h2 {
+  .main .inner #project .swiper .swiper-wrapper .swiper-slide .txt h2 {
     margin-top: 255px; }
-  .main .inner .music > .container {
+  .main .inner #music > .container {
     justify-content: center; }
-    .main .inner .music > .container article {
+    .main .inner #music > .container article {
       margin-bottom: 80px; }
-      .main .inner .music > .container article .pic {
+      .main .inner #music > .container article .pic {
         width: 300px;
         height: 300px; }
-      .main .inner .music > .container article .txt {
+      .main .inner #music > .container article .txt {
         width: 150px; } }
 @media screen and (max-width: 476px) {
   .main .inner {
     overflow-x: hidden; }
-    .main .inner .visual h1 {
+    .main .inner #visual h1 {
       font: 400 62px/1 'Playfair Display'; }
-      .main .inner .visual h1 span {
+      .main .inner #visual h1 span {
         font: 300 22px/1 'Spline Sans'; }
-    .main .inner .visual figure {
+    .main .inner #visual figure {
       width: 100vw;
       height: calc(100vh - 100px);
       border-radius: 300px 300px 0 0; }
-      .main .inner .visual figure.on {
+      .main .inner #visual figure.on {
         top: 100px; }
-    .main .inner .about {
+    .main .inner #about {
       padding-top: 180px; }
-      .main .inner .about .imgWrap .pic {
+      .main .inner #about .imgWrap .pic {
         width: 100%;
         height: 500px;
         margin-bottom: 100px; }
-        .main .inner .about .imgWrap .pic img {
+        .main .inner #about .imgWrap .pic img {
           object-fit: cover;
           object-position: center center; }
-        .main .inner .about .imgWrap .pic .text {
+        .main .inner #about .imgWrap .pic .text {
           transform: translateY(400px); }
-        .main .inner .about .imgWrap .pic:hover .text {
+        .main .inner #about .imgWrap .pic:hover .text {
           transform: translateY(500px); }
-    .main .inner .project .swiper .swiper-wrapper .swiper-slide {
+    .main .inner #project .swiper .swiper-wrapper .swiper-slide {
       height: 500px; }
-      .main .inner .project .swiper .swiper-wrapper .swiper-slide .text h2 {
+      .main .inner #project .swiper .swiper-wrapper .swiper-slide .text h2 {
         margin-top: 325px; }
-    .main .inner .music > .container {
+    .main .inner #music > .container {
       justify-content: center; }
-      .main .inner .music > .container article {
+      .main .inner #music > .container article {
         margin-bottom: 80px; }
-        .main .inner .music > .container article .pic {
+        .main .inner #music > .container article .pic {
           width: 300px;
           height: 300px; }
-        .main .inner .music > .container article .txt {
+        .main .inner #music > .container article .txt {
           width: 150px; } }
 @media screen and (max-width: 370px) {
-  .main .inner .visual h1 {
+  .main .inner #visual h1 {
     font: 400 50px/1 'Playfair Display'; }
-    .main .inner .visual h1 span {
+    .main .inner #visual h1 span {
       font: 300 18px/1 'Spline Sans'; }
-  .main .inner .about h1 {
+  .main .inner #about h1 {
     font: 400 50px/1 'Playfair Display'; }
-  .main .inner .about .imgWrap .pic {
+  .main .inner #about .imgWrap .pic {
     height: 400px; }
-    .main .inner .about .imgWrap .pic .text {
+    .main .inner #about .imgWrap .pic .text {
       transform: translateY(300px); }
-    .main .inner .about .imgWrap .pic:hover .text {
+    .main .inner #about .imgWrap .pic:hover .text {
       transform: translateY(400px); }
-  .main .inner .project h1 {
+  .main .inner #project h1 {
     font: 400 50px/1 'Playfair Display'; }
-  .main .inner .project .swiper .swiper-wrapper .swiper-slide {
+  .main .inner #project .swiper .swiper-wrapper .swiper-slide {
     height: 400px; }
-    .main .inner .project .swiper .swiper-wrapper .swiper-slide .text h2 {
+    .main .inner #project .swiper .swiper-wrapper .swiper-slide .text h2 {
       margin-top: 250px; }
-  .main .inner .music h1 {
+  .main .inner #music h1 {
     font: 400 50px/1 'Playfair Display'; }
-  .main .inner .music > .container article .pic {
+  .main .inner #music > .container article .pic {
     width: 200px;
     height: 200px; }
-  .main .inner .music > .container article .txt {
+  .main .inner #music > .container article .txt {
     width: 100px; }
-    .main .inner .music > .container article .txt .btn {
+    .main .inner #music > .container article .txt .btn {
       width: 30px;
       height: 30px; }
-      .main .inner .music > .container article .txt .btn button {
+      .main .inner #music > .container article .txt .btn button {
         border-left: 7px solid rgba(255, 255, 255, 0.9);
         border-top: 7px solid transparent;
         border-bottom: 7px solid transparent; } }
@@ -1416,74 +1415,138 @@ body {
       color: #fff;
       margin-bottom: 20px; }
     .community .inner .boardWrap .notice {
-      width: 100%; }
-      .community .inner .boardWrap .notice article {
-        width: 100%;
-        padding: 25px 15px;
-        border-top: 1px solid #888;
-        cursor: pointer;
-        transition: .3s; }
-        .community .inner .boardWrap .notice article:last-child {
-          border-bottom: 1px solid #888; }
-        .community .inner .boardWrap .notice article .num {
-          display: inline-block;
-          width: 50px;
-          margin-right: 50px;
-          vertical-align: middle;
-          text-align: center;
-          font: 400 28px/45px 'Dancing Script';
-          color: #888;
-          transition: .3s; }
-        .community .inner .boardWrap .notice article .wrap {
-          display: inline-block;
-          vertical-align: middle; }
-          .community .inner .boardWrap .notice article .wrap h2 {
-            font: 400 20px/1.3 'Spline Sans';
-            color: #fff;
-            letter-spacing: 1px;
-            transition: .3s; }
-          .community .inner .boardWrap .notice article .wrap .txtWrap {
-            margin-top: 5px; }
-            .community .inner .boardWrap .notice article .wrap .txtWrap > span {
-              display: inline-block;
-              vertical-align: middle;
-              font: 300 15px/1 'Spline Sans';
-              color: rgba(255, 255, 255, 0.7);
-              margin-right: 10px;
-              transition: .3s; }
-        .community .inner .boardWrap .notice article:hover .num {
-          color: #fff; }
-        .community .inner .boardWrap .notice article:hover .wrap h2 {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: relative; }
+      .community .inner .boardWrap .notice .inputBox {
+        width: 400px;
+        height: fit-content;
+        padding: 20px;
+        position: sticky;
+        top: 50px;
+        left: 0px;
+        border: 1px solid #888; }
+        .community .inner .boardWrap .notice .inputBox > input {
+          width: 100%;
+          padding: 10px;
+          border: none;
+          border-bottom: 1px solid #888;
+          font: 300 14px/1 'Spline Sans';
           color: #fff;
-          transform: translateX(10px); }
-        .community .inner .boardWrap .notice article:hover .wrap .txtWrap span {
-          transform: translateX(10px);
-          transition-delay: .2s; }
-    .community .inner .boardWrap .pagination {
-      width: fit-content;
-      margin: 30px auto; }
-      .community .inner .boardWrap .pagination > a {
-        display: inline-block;
-        vertical-align: center;
-        padding: 3px 10px; }
-        .community .inner .boardWrap .pagination > a i {
-          font-size: 20px;
-          color: #fff; }
-      .community .inner .boardWrap .pagination .num {
-        display: inline-block;
-        vertical-align: center; }
-        .community .inner .boardWrap .pagination .num > a {
-          display: inline-block;
-          vertical-align: center;
-          font: 300 18px/24px 'Spline Sans';
-          color: #888;
-          padding: 0px 9px;
-          margin: 0 10px;
-          border: 1px solid #888;
-          transition: .5s; }
-          .community .inner .boardWrap .pagination .num > a:hover, .community .inner .boardWrap .pagination .num > a.on {
-            color: #fff;
-            border: 1px solid #fff; }
+          outline: none;
+          background: transparent;
+          margin-bottom: 15px; }
+        .community .inner .boardWrap .notice .inputBox > textarea {
+          width: 100%;
+          height: 100px;
+          resize: none;
+          padding: 10px;
+          border: none;
+          border-bottom: 1px solid #888;
+          font: 300 14px/1 'Spline Sans';
+          color: #fff;
+          outline: none;
+          background: transparent;
+          margin-bottom: 8px; }
+        .community .inner .boardWrap .notice .inputBox .btns {
+          width: 100%;
+          display: flex;
+          justify-content: center; }
+          .community .inner .boardWrap .notice .inputBox .btns li {
+            width: 120px;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            font: 300 14px/1 'Spline Sans';
+            color: #888;
+            border: 1px solid #888;
+            cursor: pointer;
+            transition: .3s; }
+            .community .inner .boardWrap .notice .inputBox .btns li:hover {
+              color: #fff;
+              border: 1px solid #fff; }
+      .community .inner .boardWrap .notice .showBox {
+        width: calc(100% - 450px); }
+        .community .inner .boardWrap .notice .showBox .showWrap {
+          width: 100%;
+          border-bottom: 1px solid #888; }
+          .community .inner .boardWrap .notice .showBox .showWrap article {
+            width: 100%;
+            padding: 25px 15px;
+            border-top: 1px solid #888;
+            cursor: pointer;
+            transition: .3s; }
+            .community .inner .boardWrap .notice .showBox .showWrap article .num {
+              display: inline-block;
+              width: 50px;
+              margin-right: 50px;
+              vertical-align: middle;
+              text-align: center;
+              font: 400 28px/45px 'Dancing Script';
+              color: #888;
+              transition: .3s; }
+            .community .inner .boardWrap .notice .showBox .showWrap article .post {
+              display: inline-block;
+              vertical-align: middle; }
+              .community .inner .boardWrap .notice .showBox .showWrap article .post h3 {
+                font: 400 20px/1.3 'Spline Sans';
+                color: #fff;
+                letter-spacing: 1px;
+                transition: .3s; }
+              .community .inner .boardWrap .notice .showBox .showWrap article .post > p {
+                display: inline-block;
+                vertical-align: middle;
+                font: 300 15px/1 'Spline Sans';
+                color: rgba(255, 255, 255, 0.7);
+                margin-right: 10px;
+                transition: .3s; }
+            .community .inner .boardWrap .notice .showBox .showWrap article .btnsUpdate {
+              display: inline-flex;
+              float: right; }
+              .community .inner .boardWrap .notice .showBox .showWrap article .btnsUpdate li {
+                font: 300 12px/1 'Spline Sans';
+                color: rgba(255, 255, 255, 0.5);
+                margin-left: 10px;
+                transition: .5s; }
+                .community .inner .boardWrap .notice .showBox .showWrap article .btnsUpdate li:nth-of-type(1):hover {
+                  color: #fff; }
+                .community .inner .boardWrap .notice .showBox .showWrap article .btnsUpdate li:nth-of-type(2):hover {
+                  color: #d25d1e; }
+            .community .inner .boardWrap .notice .showBox .showWrap article:hover .num {
+              color: #fff; }
+            .community .inner .boardWrap .notice .showBox .showWrap article:hover .post h3 {
+              color: #fff;
+              transform: translateX(10px); }
+            .community .inner .boardWrap .notice .showBox .showWrap article:hover .post p {
+              transform: translateX(10px);
+              transition-delay: .2s; }
+        .community .inner .boardWrap .notice .showBox .pagination {
+          width: fit-content;
+          margin: 30px auto; }
+          .community .inner .boardWrap .notice .showBox .pagination > a {
+            display: inline-block;
+            vertical-align: center;
+            padding: 3px 10px; }
+            .community .inner .boardWrap .notice .showBox .pagination > a i {
+              font-size: 20px;
+              color: #fff; }
+          .community .inner .boardWrap .notice .showBox .pagination .num {
+            display: inline-block;
+            vertical-align: center; }
+            .community .inner .boardWrap .notice .showBox .pagination .num > a {
+              display: inline-block;
+              vertical-align: center;
+              font: 300 18px/24px 'Spline Sans';
+              color: #888;
+              padding: 0px 9px;
+              margin: 0 10px;
+              border: 1px solid #888;
+              transition: .5s; }
+              .community .inner .boardWrap .notice .showBox .pagination .num > a:hover, .community .inner .boardWrap .notice .showBox .pagination .num > a.on {
+                color: #fff;
+                border: 1px solid #fff; }
 
 @media screen and (max-width: 865px) {
   .community .inner .faqWrap > .inner > article h3 {
@@ -1518,23 +1581,13 @@ body {
     grid-template-columns: repeat(1, 1fr); }
     .community .inner .faqWrap > .inner > article:hover {
       height: 300px; }
-  .community .inner .boardWrap .btns {
-    position: unset;
-    margin-bottom: 10px; }
-  .community .inner .boardWrap .searchBox {
-    position: unset;
-    margin-bottom: 20px; }
-    .community .inner .boardWrap .searchBox > input[type=text] {
-      width: calc(100% - 54px); }
-    .community .inner .boardWrap .searchBox > button {
-      width: 54px; }
-  .community .inner .boardWrap .pagination > a {
+  .community .inner .boardWrap .notice .showBox .pagination > a {
     padding: 3px 5px; }
-    .community .inner .boardWrap .pagination > a i {
+    .community .inner .boardWrap .notice .showBox .pagination > a i {
       font-size: 18px; }
-  .community .inner .boardWrap .pagination .num {
+  .community .inner .boardWrap .notice .showBox .pagination .num {
     vertical-align: top; }
-    .community .inner .boardWrap .pagination .num > a {
+    .community .inner .boardWrap .notice .showBox .pagination .num > a {
       padding: 0px 6px;
       margin: 0 5px; } }
 @media screen and (max-width: 389px) {

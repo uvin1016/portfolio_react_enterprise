@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function Community(){
     const baseURL = process.env.PUBLIC_URL;
@@ -7,15 +7,30 @@ function Community(){
     const updateInput = useRef(null);
     const updateTextarea = useRef(null);
     const showBox = useRef(null);
-    const [posts, setPosts] = useState([
-        {title: 'Hello0', content: 'Here comes description in detail.'},
-        {title: 'Hello1', content: 'Here comes description in detail.'},  
-        {title: 'Hello2', content: 'Here comes description in detail.'},  
-        {title: 'Hello3', content: 'Here comes description in detail.'}    
-    ]);
+    
+    const getLocalItems = ()=>{
+        let data = localStorage.getItem('posts');
+        if(data){
+            return JSON.parse(data);
+        }else{
+            return [
+                {title: 'HELLO', content: 'Here comes description in detail'},
+                {title: 'HELLO', content: 'Here comes description in detail'},
+                {title: 'HELLO', content: 'Here comes description in detail'},
+                {title: 'HELLO', content: 'Here comes description in detail'},
+                {title: 'HELLO', content: 'Here comes description in detail'},
+            ];
+        }
+    }
+    const [posts, setPosts] = useState(getLocalItems);
     const len = posts.length;
 
     const createPost = ()=>{
+        if(!input.current.value || !textarea.current.value){
+            alert('제목과 본문을 모두 입력하세요.');
+            return;
+        }
+
         setPosts([
             {title : input.current.value, content: textarea.current.value},...posts
         ]);
@@ -23,13 +38,13 @@ function Community(){
         textarea.current.value = '';
     }
 
-    const deletePost= index=>{
+    const deletePost = index=>{
         setPosts(
             posts.filter((_, postIndex)=> postIndex !== index)
         )  
     }
 
-    const enableUpdate= index=>{
+    const enableUpdate = index=>{
         setPosts(
             posts.map((post, postIndex)=>{
                 if(postIndex === index) post.enableUpdate = true;
@@ -39,7 +54,7 @@ function Community(){
         console.log(posts);
     }
 
-    const disableUpdate=index=>{
+    const disableUpdate = index=>{
         setPosts(
             posts.map((post, postIndex)=>{
                 if(postIndex === index) post.enableUpdate = false;
@@ -49,7 +64,7 @@ function Community(){
         console.log(posts);
     }
 
-    const updatePost=index=>{
+    const updatePost = index=>{
         if(!updateInput.current.value || !updateTextarea.current.value){
             alert('수정할 제목과 본문을 모두 입력하세요.');
             return;
@@ -66,8 +81,10 @@ function Community(){
             })
         )
     }
-    
 
+    useEffect(() => {
+        localStorage.setItem('posts', JSON.stringify(posts));
+    }, [posts]);
 
     return (
         <main className="content community">
@@ -110,67 +127,69 @@ function Community(){
 
                     <div className="notice">
                         <section className="inputBox">
-                            <input type="text" placeholder="제목을 입력하세요." ref={input} />
+                            <input type="text" placeholder="제목을 입력하세요." ref={input} /><br />
                             <textarea placeholder="본문을 입력하세요." ref={textarea}></textarea>
 
                             <ul className="btns">
-                                <li><button onClick={createPost}>생성</button></li>
-                                <li><button onClick={()=>{
+                                <li onClick={createPost}>생성</li>
+                                <li onClick={()=>{
                                     input.current.value = '';
                                     textarea.current.value = '';
-                                }}>취소</button></li>
+                                }}>취소</li>
                             </ul>
                         </section>
                         <section className="showBox" ref={showBox}>
-                            {
-                                posts.map((post, index)=>{
-                                    return (
-                                        <article key={index}>
-                                            <p className="num">{((len - index) < 10) ? '0' + (len - index) + '.' : (len - index) + '.'}</p>
-                                            {
-                                                post.enableUpdate
-                                                ?
-                                                <>
-                                                    <div className="post">
-                                                        <input type="text" placeholder="제목을 입력하세요" defaultValue={post.title} ref={updateInput} />
-                                                        <textarea placeholder="본문을 입력하세요." defaultValue={post.content} ref={updateTextarea}></textarea>
-                                                    </div> 
+                            <div className="showWrap">
+                                {
+                                    posts.map((post, index)=>{
+                                        return (
+                                            <article key={index}>
+                                                <p className="num">{((len - index) < 10) ? '0' + (len - index) + '.' : (len - index) + '.'}</p>
+                                                {
+                                                    post.enableUpdate
+                                                    ?
+                                                    <>
+                                                        <div className="post">
+                                                            <input type="text" placeholder="제목을 입력하세요" defaultValue={post.title} ref={updateInput} />
+                                                            <textarea placeholder="본문을 입력하세요." defaultValue={post.content} ref={updateTextarea}></textarea>
+                                                        </div> 
 
-                                                    <ul className="btnsUpdate">
-                                                        <li onClick={()=>updatePost(index)}>입력</li>
-                                                        <li onClick={()=>disableUpdate(index)}>취소</li>
-                                                    </ul>
-                                                </>
-                                                :
-                                                <>
-                                                    <div className="post">
-                                                        <h3>{post.title}</h3>
-                                                        <p>{post.content}</p>
-                                                    </div> 
+                                                        <ul className="btnsUpdate">
+                                                            <li onClick={()=>updatePost(index)}>입력</li>
+                                                            <li onClick={()=>disableUpdate(index)}>취소</li>
+                                                        </ul>
+                                                    </>
+                                                    :
+                                                    <>
+                                                        <div className="post">
+                                                            <h3>{post.title}</h3>
+                                                            <p>{post.content}</p>
+                                                        </div> 
 
-                                                    <ul className="btnsUpdate">
-                                                        <li onClick={()=>enableUpdate(index)}>수정</li>
-                                                        <li onClick={()=>deletePost(index)}>삭제</li>
-                                                    </ul>
-                                                </>
-                                            }
-                                        </article>
-                                    )
-                                })
-                            }
+                                                        <ul className="btnsUpdate">
+                                                            <li onClick={()=>enableUpdate(index)}>수정</li>
+                                                            <li onClick={()=>deletePost(index)}>삭제</li>
+                                                        </ul>
+                                                    </>
+                                                }
+                                            </article>
+                                        )
+                                    })
+                                }
+                            </div>
+
+                            <div className="pagination">
+                                <a href="#" className="prev" onClick={e=>e.preventDefault()}><i className="las la-angle-double-left"></i></a>
+                                <p className="num">
+                                    <a href="#" className="on" onClick={e=>e.preventDefault()}>1</a>
+                                    <a href="#" onClick={e=>e.preventDefault()}>2</a>
+                                    <a href="#" onClick={e=>e.preventDefault()}>3</a>
+                                    <a href="#" onClick={e=>e.preventDefault()}>4</a>
+                                    <a href="#" onClick={e=>e.preventDefault()}>5</a>
+                                </p>
+                                <a href="#" className="next" onClick={e=>e.preventDefault()}><i className="las la-angle-double-right"></i></a>
+                            </div>
                         </section>
-                    </div>
-
-                    <div className="pagination">
-                        <a href="#" className="prev" onClick={e=>e.preventDefault()}><i className="las la-angle-double-left"></i></a>
-                        <p className="num">
-                            <a href="#" className="on" onClick={e=>e.preventDefault()}>1</a>
-                            <a href="#" onClick={e=>e.preventDefault()}>2</a>
-                            <a href="#" onClick={e=>e.preventDefault()}>3</a>
-                            <a href="#" onClick={e=>e.preventDefault()}>4</a>
-                            <a href="#" onClick={e=>e.preventDefault()}>5</a>
-                        </p>
-                        <a href="#" className="next" onClick={e=>e.preventDefault()}><i className="las la-angle-double-right"></i></a>
                     </div>
                 </div>
             </div>
