@@ -4,7 +4,7 @@ function Music (){
 
     return (
         <section id="music">
-            <h1>Music</h1>
+            <h2>Music</h2>
 
             <div className="container">
                 {
@@ -15,8 +15,8 @@ function Music (){
                                     <img src={`${baseURL}/img/${music}.jpg`} alt={`${music}이미지`} />
                                 </div>
                                 <div className="txt">
-                                    <h2>{music}</h2>
-                                    <h3>Artist</h3>
+                                    <h3>{music}</h3>
+                                    <h4>Artist</h4>
                                     <p>music jenre</p>
                                     <p>music jenre</p>
                                     <div className="btn" onClick={e=>{

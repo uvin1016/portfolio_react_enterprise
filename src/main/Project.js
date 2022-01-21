@@ -15,7 +15,7 @@ function Project (){
     
     return (
         <section id="project">
-            <h1>Project</h1>
+            <h2>Project</h2>
 
             <Swiper slidesPerView={'auto'} spaceBetween={0} loop={true} loopedSlides={2} centeredSlides={true}  navigation={true} breakpoints={
                 {"320": {"slidesPerView": 1, "spaceBetween": 0},
@@ -26,7 +26,7 @@ function Project (){
                         <img src={`${baseURL}/img/project.jpg`} alt="프로젝트이미지1" />
                     </div>
                     <div className="text">
-                        <h2>artist</h2>
+                        <h3>artist</h3>
                         <p>Lorem ipsum dolor sit amet<br/> consectetur adipisicing elit.</p>
                     </div>
                 </SwiperSlide>
@@ -36,7 +36,7 @@ function Project (){
                         <img src={`${baseURL}/img/project2.jpg`} alt="프로젝트이미지2" />
                     </div>
                     <div className="text">
-                        <h2>artist</h2>
+                        <h3>artist</h3>
                         <p>Lorem ipsum dolor sit amet<br/> consectetur adipisicing elit.</p>
                     </div>
                 </SwiperSlide>
@@ -46,7 +46,7 @@ function Project (){
                         <img src={`${baseURL}/img/project3.jpg`} alt="프로젝트이미지3" />
                     </div>
                     <div className="text">
-                        <h2>artist</h2>
+                        <h3>artist</h3>
                         <p>Lorem ipsum dolor sit amet<br/> consectetur adipisicing elit.</p>
                     </div>
                 </SwiperSlide>

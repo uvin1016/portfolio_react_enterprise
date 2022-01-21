@@ -7,7 +7,7 @@
             height: 100vh;
             position: relative;
 
-            h1 {
+            h2 {
                 position: absolute;
                 top: 50%;
                 left: 0;
@@ -64,7 +64,7 @@
             flex-wrap: wrap;
             justify-content: space-between;
 
-            >h1 {
+            >h2 {
                 width: 50%;
                 font: 400 70px/1 'Playfair Display';
                 color: #fff;
@@ -106,7 +106,7 @@
                         transition: 0.5s ease-in;
                         
 
-                        h2 {
+                        h3 {
                             font: 400 18px/1 'Spline Sans';
                             color: #d25d1e;
                             margin-bottom: 10px;
@@ -135,7 +135,7 @@
             position: relative;
             overflow: hidden;
 
-            h1 {
+            h2 {
                 font: 400 70px/1 'Playfair Display';
                 color: #fff;
                 margin-bottom: 50px;
@@ -192,7 +192,7 @@
                             opacity: 0;
                             transition: 1s;
     
-                            h2 {
+                            h3 {
                                 text-align: center;
                                 font: 400 24px/1 'Playfair Display';
                                 color: #fff;
@@ -229,7 +229,7 @@
             width: 100%;
             padding: 50px 0 180px;
 
-            h1 {
+            h2 {
                 font: 400 70px/1 'Playfair Display';
                 color: #fff;
                 margin-bottom: 50px;
@@ -280,12 +280,12 @@
                         top: 0px;
                         right: 0px;
 
-                        h2 {
+                        h3 {
                             font: 300 20px/1 'Spline Sans';
                             color: rgba(255,255,255,0.9);
                         }
 
-                        h3 {
+                        h4 {
                             font: 300 20px/1 'Spline Sans';
                             color: rgba(255,255,255,0.5);
                             margin-bottom: 30px;
@@ -345,7 +345,7 @@
             position: relative;
             overflow: hidden;
 
-            h1 {
+            h2 {
                 font: 400 70px/1 'Playfair Display';
                 color: #fff;
             }
@@ -450,6 +450,64 @@
                 
             }
         }
+
+        #notice {
+            width: 100%;
+            padding: 50px 0 180px;
+
+            h2 {
+                font: 400 70px/1 'Playfair Display';
+                color: #fff;
+                margin-bottom: 50px;
+            }
+
+            .noticeList {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                li {
+                    width: 30%;
+                    padding: 30px;
+                    margin-bottom: 30px;
+                    border: 1px solid #888;
+                    cursor: pointer;
+                    transition: .3s;
+
+                    >h3 {
+                        font: 400 22px/1 'Spline Sans';
+                        color: #888;
+                        margin-bottom: 10px;
+                        transition: .3s;
+                    }
+
+                    >p {
+                        font: 300 14px/1.2 'Spline Sans';
+                        color: #888;
+                        transition: .3s;
+                    }
+
+                    &:hover {
+                        border: 1px solid #d25d1e;
+                        background-color: #d25d1e;
+                        transform: translate(-3px,-3px);
+
+                        h3 { color: #fff; }
+                        p { color: #fff; }
+                    }
+                }
+            }
+
+            >p {
+                width: 30%;
+                font: 300 14px/1.6 'Spline Sans';
+                color: rgba(255,255,255,0.6);
+                margin-left: auto;
+                margin-top: 10px;
+            }
+
+        }
     }
 }
 
@@ -457,7 +515,7 @@
     .main {
         .inner {
             #visual {
-                h1 {
+                h2 {
                     font: 400 130px/1 'Playfair Display';
     
                     span {
@@ -488,7 +546,7 @@
             }
 
             #project {
-                h1 {
+                h2 {
                     font: 400 70px/1 'Playfair Display';
                     color: #fff;
                     margin-bottom: 50px;
@@ -508,7 +566,7 @@
     .main {
         .inner {
             #visual {
-                h1 {
+                h2 {
                     font: 400 100px/1 'Playfair Display';
     
                     span {
@@ -526,7 +584,7 @@
             #about {
                 flex-wrap: wrap;
 
-                >h1 {
+                >h2 {
                     margin-bottom: 30px;
                 }
 
@@ -584,7 +642,7 @@
     .main {
         .inner {
             #about {
-                >h1 {
+                >h2 {
                     width: 100%;
                 }
     
@@ -626,7 +684,7 @@
     .main {
         .inner {
             #visual {
-                h1 {
+                h2 {
                     font: 400 80px/1 'Playfair Display';
                     left: 50%;
                     transform: translateX(-50%);
@@ -642,7 +700,7 @@
             }
 
             #about {
-                >h1 {
+                >h2 {
                     width: 100%;
                 }
     
@@ -658,7 +716,7 @@
                     .swiper-wrapper {
                         .swiper-slide {
                             .txt {
-                                h2 {
+                                h3 {
                                     margin-top: 255px;
                                 }
                             }
@@ -694,7 +752,7 @@
             overflow-x: hidden;
 
             #visual {
-                h1 {
+                h2 {
                     font: 400 62px/1 'Playfair Display';
     
                     span {
@@ -746,7 +804,7 @@
                             height: 500px;
 
                             .text {
-                                h2 {
+                                h3 {
                                     margin-top: 325px;
                                 }
                             }
@@ -780,7 +838,7 @@
     .main {
         .inner {
             #visual {
-                h1 {
+                h2 {
                     font: 400 50px/1 'Playfair Display';
     
                     span {
@@ -790,7 +848,7 @@
             }
 
             #about {
-                h1 {
+                h2 {
                     font: 400 50px/1 'Playfair Display';
                 }
 
@@ -811,7 +869,7 @@
             }
 
             #project {
-                h1 {
+                h2 {
                     font: 400 50px/1 'Playfair Display';
                 }
 
@@ -821,7 +879,7 @@
                             height: 400px;
 
                             .text {
-                                h2 {
+                                h3 {
                                     margin-top: 250px;
                                 }
                             }
@@ -831,7 +889,7 @@
             }
     
             #music {
-                h1 {
+                h2 {
                     font: 400 50px/1 'Playfair Display';
                 }
 

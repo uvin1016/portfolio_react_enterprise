@@ -18,7 +18,7 @@ function News (){
     
     return (
         <section id="news">
-            <h1>News</h1>
+            <h2>News</h2>
 
             <Swiper 
                 slidesPerView={4} 

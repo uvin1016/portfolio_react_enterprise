@@ -18,7 +18,7 @@ function Visual (){
 
     return (
         <section id="visual">
-            <h1>Investment<br />Group <span>CHRISTY<br />MONRAY</span></h1>
+            <h2>Investment<br />Group <span>CHRISTY<br />MONRAY</span></h2>
             <figure ref={frame}>
                 <video src={`${baseURL}/vid/alena.mp4`} autoPlay muted loop></video>
             </figure>

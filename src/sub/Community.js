@@ -19,6 +19,7 @@ function Community(){
                 {title: 'HELLO', content: 'Here comes description in detail'},
                 {title: 'HELLO', content: 'Here comes description in detail'},
                 {title: 'HELLO', content: 'Here comes description in detail'},
+                {title: 'HELLO', content: 'Here comes description in detail'}
             ];
         }
     }

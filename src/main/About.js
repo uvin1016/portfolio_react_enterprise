@@ -3,7 +3,7 @@ function About (){
 
     return(
         <section id="about">
-            <h1>About Us</h1>
+            <h2>About Us</h2>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor, facilis voluptate. Voluptates vitae veniam voluptatibus dicta corrupti, totam quaerat illo.</p>
 
             <div className="imgWrap">
@@ -11,7 +11,7 @@ function About (){
                     <img src={`${baseURL}/img/about.jpg`} alt="아트이미지1" />
 
                     <div className="text">
-                        <h2>Be true to thyself</h2>
+                        <h3>Be true to thyself</h3>
                         <span>Kylen</span>
                     </div>
                 </div>
@@ -20,7 +20,7 @@ function About (){
                     <img src={`${baseURL}/img/about2.jpg`} alt="아트이미지2" />
 
                     <div className="text">
-                        <h2>Love conquers all</h2>
+                        <h3>Love conquers all</h3>
                         <span>Rhoads</span>
                     </div>
                 </div>
