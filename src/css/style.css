@@ -331,7 +331,7 @@ footer {
         position: relative; }
   .main .inner #about {
     width: 100%;
-    padding: 180px 0;
+    padding: 150px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; }
@@ -379,7 +379,7 @@ footer {
           transform: translateY(610px); }
   .main .inner #project {
     width: 100%;
-    padding: 50px 0 180px;
+    padding: 150px 0;
     position: relative;
     overflow: hidden; }
     .main .inner #project h2 {
@@ -445,7 +445,7 @@ footer {
               opacity: 1; }
   .main .inner #music {
     width: 100%;
-    padding: 50px 0 180px; }
+    padding: 150px 0; }
     .main .inner #music h2 {
       font: 400 70px/1 'Playfair Display';
       color: #fff;
@@ -527,7 +527,7 @@ footer {
               border-bottom: 0px solid transparent; }
   .main .inner #news {
     width: 100%;
-    padding: 50px 0 180px;
+    padding: 150px 0;
     position: relative;
     overflow: hidden; }
     .main .inner #news h2 {
@@ -597,7 +597,7 @@ footer {
               color: #fff; }
   .main .inner #notice {
     width: 100%;
-    padding: 50px 0 180px; }
+    padding: 150px 0; }
     .main .inner #notice h2 {
       font: 400 70px/1 'Playfair Display';
       color: #fff;
@@ -631,6 +631,75 @@ footer {
             color: #fff; }
           .main .inner #notice .noticeList li:hover p {
             color: #fff; }
+  .main .inner #promotion {
+    width: 100%;
+    padding: 100px 0 180px; }
+    .main .inner #promotion h2 {
+      font: 400 70px/1 'Playfair Display';
+      color: #fff;
+      margin-bottom: 50px; }
+    .main .inner #promotion .vidList {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      .main .inner #promotion .vidList article {
+        width: 30%;
+        margin-bottom: 50px;
+        padding: 30px;
+        border-top: 1px solid #888;
+        border-bottom: 1px solid #888;
+        cursor: pointer;
+        transition: .3s; }
+        .main .inner #promotion .vidList article .pic {
+          width: 100%;
+          overflow: hidden; }
+          .main .inner #promotion .vidList article .pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; }
+        .main .inner #promotion .vidList article h3 {
+          margin: 15px 0;
+          font: 400 22px/1.2 'Spline Sans';
+          color: #888; }
+        .main .inner #promotion .vidList article p {
+          font: 300 14px/1.4 'Spline Sans';
+          color: #888; }
+        .main .inner #promotion .vidList article:hover {
+          border-top: 1px solid #d25d1e;
+          border-bottom: 1px solid #d25d1e;
+          background: #d25d1e; }
+          .main .inner #promotion .vidList article:hover h3 {
+            color: #fff; }
+          .main .inner #promotion .vidList article:hover p {
+            color: #fff; }
+    .main .inner #promotion .pop {
+      width: 100vw;
+      height: 100vh;
+      padding: 10vh 10vw;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      background-color: rgba(0, 0, 0, 0.9); }
+      .main .inner #promotion .pop .inner {
+        width: 100%;
+        height: 100%; }
+        .main .inner #promotion .pop .inner iframe {
+          width: 100%;
+          height: 100%;
+          border: none; }
+      .main .inner #promotion .pop span {
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        cursor: pointer; }
+        .main .inner #promotion .pop span i {
+          color: #888;
+          font-size: 26px;
+          transition: .3s; }
+        .main .inner #promotion .pop span:hover i {
+          color: #fff; }
 
 @media screen and (max-width: 1200px) {
   .main .inner #visual h2 {
@@ -650,6 +719,9 @@ footer {
     margin-bottom: 50px; }
   .main .inner #music > .container {
     justify-content: space-around; } }
+@media screen and (max-width: 950px) {
+  .main .inner #promotion .vidList article {
+    width: 45%; } }
 @media screen and (max-width: 760px) {
   .main .inner #visual h2 {
     font: 400 100px/1 'Playfair Display'; }
@@ -701,7 +773,11 @@ footer {
       width: 100px; }
   .main .inner #news .swiper .newsBtns {
     left: 0;
-    right: unset; } }
+    right: unset; }
+  .main .inner #promotion .vidList article {
+    width: 100%; }
+    .main .inner #promotion .vidList article h3 {
+      font: 400 20px/1.2 'Spline Sans'; } }
 @media screen and (max-width: 590px) {
   .main .inner #visual h2 {
     font: 400 80px/1 'Playfair Display';

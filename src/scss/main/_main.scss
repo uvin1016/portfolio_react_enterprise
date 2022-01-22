@@ -59,7 +59,7 @@
 
         #about {
             width: 100%;
-            padding: 180px 0;
+            padding: 150px 0;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -131,7 +131,7 @@
 
         #project {
             width: 100%;
-            padding: 50px 0 180px;
+            padding: 150px 0;
             position: relative;
             overflow: hidden;
 
@@ -227,7 +227,7 @@
 
         #music {
             width: 100%;
-            padding: 50px 0 180px;
+            padding: 150px 0;
 
             h2 {
                 font: 400 70px/1 'Playfair Display';
@@ -341,7 +341,7 @@
 
         #news {
             width: 100%;
-            padding: 50px 0 180px;
+            padding: 150px 0;
             position: relative;
             overflow: hidden;
 
@@ -453,7 +453,7 @@
 
         #notice {
             width: 100%;
-            padding: 50px 0 180px;
+            padding: 150px 0;
 
             h2 {
                 font: 400 70px/1 'Playfair Display';
@@ -495,6 +495,109 @@
 
                         h3 { color: #fff; }
                         p { color: #fff; }
+                    }
+                }
+            }
+        }
+
+        #promotion {
+            width: 100%;
+            padding: 100px 0 180px;
+
+            h2 {
+                font: 400 70px/1 'Playfair Display';
+                color: #fff;
+                margin-bottom: 50px;
+            }
+
+            .vidList {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                article {
+                    width: 30%;
+                    margin-bottom: 50px;
+                    padding: 30px;
+                    border-top: 1px solid #888;
+                    border-bottom: 1px solid #888;
+                    cursor: pointer;
+                    transition: .3s;
+
+                    .pic {
+                        width: 100%;
+                        overflow: hidden;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                        }
+                    }
+
+                    h3 {
+                        margin: 15px 0;
+                        font: 400 22px/1.2 'Spline Sans';
+                        color: #888;
+                    }
+
+                    p {
+                        font: 300 14px/1.4 'Spline Sans';
+                        color: #888;
+                    }
+
+                    &:hover {
+                        border-top: 1px solid #d25d1e;
+                        border-bottom: 1px solid #d25d1e;
+                        background: #d25d1e;
+
+                        h3 {
+                            color: #fff;
+                        }
+    
+                        p {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+
+            .pop {
+                width: 100vw;
+                height: 100vh;
+                padding: 10vh 10vw;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 10;
+                background-color: rgba(0,0,0,0.9);
+
+                .inner {
+                    width: 100%;
+                    height: 100%;
+
+                    iframe {
+                        width: 100%;
+                        height: 100%;
+                        border: none;
+                    }
+                }
+
+                span {
+                    position: absolute;
+                    top: 50px;
+                    right: 50px;
+                    cursor: pointer;
+
+                    i {
+                        color: #888;
+                        font-size: 26px;
+                        transition: .3s;
+                    }
+
+                    &:hover {
+                        i { color: #fff;}
                     }
                 }
             }
@@ -547,6 +650,20 @@
             #music {
                 >.container {
                     justify-content: space-around;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .main {
+        .inner {
+            #promotion {
+                .vidList {
+                    article {
+                        width: 45%;
+                    }
                 }
             }
         }
@@ -672,6 +789,18 @@
                     .newsBtns {
                         left: 0;
                         right: unset;
+                    }
+                }
+            }
+
+            #promotion {
+                .vidList {
+                    article {
+                        width: 100%;
+
+                        h3 {
+                            font: 400 20px/1.2 'Spline Sans';
+                        }
                     }
                 }
             }
@@ -837,6 +966,8 @@
                     }
                 }
             }
+
+            
         }
     }
 }
