@@ -498,15 +498,6 @@
                     }
                 }
             }
-
-            >p {
-                width: 30%;
-                font: 300 14px/1.6 'Spline Sans';
-                color: rgba(255,255,255,0.6);
-                margin-left: auto;
-                margin-top: 10px;
-            }
-
         }
     }
 }
@@ -634,6 +625,14 @@
                     justify-content: center;
                 }
             }
+
+            #notice {
+                .noticeList {
+                    li {
+                        width: 45%;
+                    }
+                }
+            }
         }
     }
 }
@@ -739,6 +738,14 @@
                         .txt {
                             width: 150px;
                         }
+                    }
+                }
+            }
+
+            #notice {
+                .noticeList {
+                    li {
+                        width: 100%;
                     }
                 }
             }

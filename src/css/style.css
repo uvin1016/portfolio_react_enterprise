@@ -631,12 +631,6 @@ footer {
             color: #fff; }
           .main .inner #notice .noticeList li:hover p {
             color: #fff; }
-    .main .inner #notice > p {
-      width: 30%;
-      font: 300 14px/1.6 'Spline Sans';
-      color: rgba(255, 255, 255, 0.6);
-      margin-left: auto;
-      margin-top: 10px; }
 
 @media screen and (max-width: 1200px) {
   .main .inner #visual h2 {
@@ -690,7 +684,9 @@ footer {
       .main .inner #project .swiper .swiper-wrapper .swiper-slide.swiper-slide-active {
         width: 100%; }
   .main .inner #music > .container {
-    justify-content: center; } }
+    justify-content: center; }
+  .main .inner #notice .noticeList li {
+    width: 45%; } }
 @media screen and (max-width: 696px) {
   .main .inner #about > h2 {
     width: 100%; }
@@ -729,7 +725,9 @@ footer {
         width: 300px;
         height: 300px; }
       .main .inner #music > .container article .txt {
-        width: 150px; } }
+        width: 150px; }
+  .main .inner #notice .noticeList li {
+    width: 100%; } }
 @media screen and (max-width: 476px) {
   .main .inner {
     overflow-x: hidden; }
