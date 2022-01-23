@@ -607,29 +607,29 @@ footer {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap; }
-      .main .inner #notice .noticeList li {
+      .main .inner #notice .noticeList article {
         width: 30%;
         padding: 30px;
         margin-bottom: 30px;
         border: 1px solid #888;
         cursor: pointer;
         transition: .3s; }
-        .main .inner #notice .noticeList li > h3 {
+        .main .inner #notice .noticeList article > h3 {
           font: 400 22px/1 'Spline Sans';
           color: #888;
           margin-bottom: 10px;
           transition: .3s; }
-        .main .inner #notice .noticeList li > p {
+        .main .inner #notice .noticeList article > p {
           font: 300 14px/1.2 'Spline Sans';
           color: #888;
           transition: .3s; }
-        .main .inner #notice .noticeList li:hover {
+        .main .inner #notice .noticeList article:hover {
           border: 1px solid #d25d1e;
           background-color: #d25d1e;
           transform: translate(-3px, -3px); }
-          .main .inner #notice .noticeList li:hover h3 {
+          .main .inner #notice .noticeList article:hover h3 {
             color: #fff; }
-          .main .inner #notice .noticeList li:hover p {
+          .main .inner #notice .noticeList article:hover p {
             color: #fff; }
   .main .inner #promotion {
     width: 100%;
@@ -757,7 +757,7 @@ footer {
         width: 100%; }
   .main .inner #music > .container {
     justify-content: center; }
-  .main .inner #notice .noticeList li {
+  .main .inner #notice .noticeList article {
     width: 45%; } }
 @media screen and (max-width: 696px) {
   .main .inner #about > h2 {
@@ -802,7 +802,7 @@ footer {
         height: 300px; }
       .main .inner #music > .container article .txt {
         width: 150px; }
-  .main .inner #notice .noticeList li {
+  .main .inner #notice .noticeList article {
     width: 100%; } }
 @media screen and (max-width: 476px) {
   .main .inner {

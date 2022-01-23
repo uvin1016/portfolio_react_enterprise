@@ -467,7 +467,7 @@
                 justify-content: space-between;
                 flex-wrap: wrap;
 
-                li {
+                article {
                     width: 30%;
                     padding: 30px;
                     margin-bottom: 30px;
@@ -745,7 +745,7 @@
 
             #notice {
                 .noticeList {
-                    li {
+                    article {
                         width: 45%;
                     }
                 }
@@ -873,7 +873,7 @@
 
             #notice {
                 .noticeList {
-                    li {
+                    article {
                         width: 100%;
                     }
                 }

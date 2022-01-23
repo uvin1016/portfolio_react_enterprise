@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from 'react';
 
 function Community(){
     const baseURL = process.env.PUBLIC_URL;
@@ -13,21 +13,32 @@ function Community(){
         if(data){
             return JSON.parse(data);
         }else{
-            return [];
+            return [
+                {title: 'Hello', content: 'Here comes description in detail.'},
+                {title: 'Hello', content: 'Here comes description in detail.'},  
+                {title: 'Hello', content: 'Here comes description in detail.'},  
+                {title: 'Hello', content: 'Here comes description in detail.'}, 
+                {title: 'Hello', content: 'Here comes description in detail.'},  
+                {title: 'Hello', content: 'Here comes description in detail.'}  
+            ];
         }
     }
     const [posts, setPosts] = useState(getLocalItems);
     const len = posts.length;
 
-    const createPost = ()=>{
-        if(!input.current.value || !textarea.current.value){
-            alert('제목과 본문을 모두 입력하세요.');
+    const createPost = () => {
+        if (!input.current.value || !textarea.current.value) {
+            alert('제목과 본문을 입력하세요');
             return;
         }
-
         setPosts([
-            {title : input.current.value, content: textarea.current.value},...posts
+            {
+                title: input.current.value,
+                content: textarea.current.value
+            }
+            , ...posts
         ]);
+
         input.current.value = '';
         textarea.current.value = '';
     }
