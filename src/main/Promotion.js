@@ -39,7 +39,7 @@ function Promotion (){
                             let con = vid.snippet.description;
                             let con_len = con.length;
 
-                            if(index < 6) {
+                            if(index < 3) {
                                 return (
                                     <article key={index} onClick={()=>{
                                         setIsPop(true);

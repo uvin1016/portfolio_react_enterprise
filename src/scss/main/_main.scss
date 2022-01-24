@@ -520,8 +520,8 @@
                     width: 30%;
                     margin-bottom: 50px;
                     padding: 30px;
-                    border-top: 1px solid #888;
-                    border-bottom: 1px solid #888;
+                    background: #0c0c0c;
+                    box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
                     cursor: pointer;
                     transition: .3s;
 
@@ -548,8 +548,6 @@
                     }
 
                     &:hover {
-                        border-top: 1px solid #d25d1e;
-                        border-bottom: 1px solid #d25d1e;
                         background: #d25d1e;
 
                         h3 {

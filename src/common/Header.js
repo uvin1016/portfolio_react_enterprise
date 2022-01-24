@@ -44,12 +44,12 @@ function Header(){
             <aside className='pop'>
                 <h1><NavLink exact to="/">UFOLIO</NavLink></h1>
                 <ul id="gnb">
-                    <li><NavLink to="/department">DEPARTMENT</NavLink></li>
-                    <li><NavLink to="/gallery">GALLERY</NavLink></li>
-                    <li><NavLink to="/community">COMMUNITY</NavLink></li>
-                    <li><NavLink to="/youtube">YOUTUBE</NavLink></li>
-                    <li><NavLink to="/location">LOCATION</NavLink></li>
-                    <li><NavLink exact to="/join">JOIN</NavLink></li>
+                    <li onClick={()=>setGnbMb(false)}><NavLink to="/department">DEPARTMENT</NavLink></li>
+                    <li onClick={()=>setGnbMb(false)}><NavLink to="/gallery">GALLERY</NavLink></li>
+                    <li onClick={()=>setGnbMb(false)}><NavLink to="/community">COMMUNITY</NavLink></li>
+                    <li onClick={()=>setGnbMb(false)}><NavLink to="/youtube">YOUTUBE</NavLink></li>
+                    <li onClick={()=>setGnbMb(false)}><NavLink to="/location">LOCATION</NavLink></li>
+                    <li onClick={()=>setGnbMb(false)}><NavLink exact to="/join">JOIN</NavLink></li>
                 </ul>
                 <ul id="util">
                     <li><a href="#">Search</a></li>

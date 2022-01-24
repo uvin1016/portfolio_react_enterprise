@@ -83,7 +83,7 @@ header {
     padding: 0 40px; }
     header .inner h1 {
       left: 40px; } }
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 950px) {
   header .inner #gnb {
     display: none; }
   header .inner #util {
@@ -647,8 +647,8 @@ footer {
         width: 30%;
         margin-bottom: 50px;
         padding: 30px;
-        border-top: 1px solid #888;
-        border-bottom: 1px solid #888;
+        background: #0c0c0c;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
         cursor: pointer;
         transition: .3s; }
         .main .inner #promotion .vidList article .pic {
@@ -666,8 +666,6 @@ footer {
           font: 300 14px/1.4 'Spline Sans';
           color: #888; }
         .main .inner #promotion .vidList article:hover {
-          border-top: 1px solid #d25d1e;
-          border-bottom: 1px solid #d25d1e;
           background: #d25d1e; }
           .main .inner #promotion .vidList article:hover h3 {
             color: #fff; }
