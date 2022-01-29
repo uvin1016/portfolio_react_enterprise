@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { setYoutube } from "../redux/actions";
+import { setYoutube } from "../../redux/actions";
 
 const body = document.querySelector("body");
 

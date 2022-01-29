@@ -6,7 +6,7 @@ import News from "./News";
 import Notice from "./Notice";
 import Promotion from "./Promotion";
 import Btns from "./Btns";
-import Anime from "../class/anime";
+import Anime from "../../class/anime";
 import { useEffect, useRef, useState } from "react";
 
 function Main(){

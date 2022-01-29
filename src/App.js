@@ -1,14 +1,14 @@
 import {Route} from 'react-router-dom';
 import './css/style.css';
-import Header from './common/Header.js';
-import Footer from './common/Footer.js';
-import Main from './main/main.js';
-import Department from './sub/Department.js';
-import Community from './sub/Community.js';
-import Gallery from './sub/Gallery.js';
-import Youtube from './sub/Youtube.js';
-import Location from './sub/Location.js';
-import Join from './sub/Join.js';
+import Header from './components/common/Header.js';
+import Footer from './components/common/Footer.js';
+import Main from './components/main/main.js';
+import Department from './components/sub/Department.js';
+import Community from './components/sub/Community.js';
+import Gallery from './components/sub/Gallery.js';
+import Youtube from './components/sub/Youtube.js';
+import Location from './components/sub/Location.js';
+import Join from './components/sub/Join.js';
 
 function App() {
   return (
