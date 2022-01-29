@@ -9,8 +9,22 @@ import Gallery from './components/sub/Gallery.js';
 import Youtube from './components/sub/Youtube.js';
 import Location from './components/sub/Location.js';
 import Join from './components/sub/Join.js';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(()=>{
+    document.querySelector("body").classList.remove("first");
+    const mask = document.querySelector(".mask");
+    if(mask){
+      setTimeout(()=>{
+        mask.classList.add("off");
+        setTimeout(()=>{
+          mask.remove();
+        },1000)
+      },1000)
+    }
+  },[]);
+
   return (
     <div className="App">
       <Header />
