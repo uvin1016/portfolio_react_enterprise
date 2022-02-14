@@ -2,7 +2,7 @@ import {Route} from 'react-router-dom';
 import './css/style.css';
 import Header from './components/common/Header.js';
 import Footer from './components/common/Footer.js';
-import Main from './components/main/main.js';
+import Main from './components/main/Main.js';
 import Department from './components/sub/Department.js';
 import Community from './components/sub/Community.js';
 import Gallery from './components/sub/Gallery.js';

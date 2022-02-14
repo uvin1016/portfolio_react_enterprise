@@ -21,18 +21,23 @@ function Main(){
     const handleResize = ()=>{
         const secs = main.current.querySelectorAll('section');
         let arr = [];
-        for (let sec of secs) arr.push(sec.offsetTop);
+        for (let sec of secs) arr.push(sec.offsetTop - 100);
         pos.current = arr;
     }
 
     const handleScroll = ()=>{
         let scroll = window.scrollY;
         const btns = main.current.querySelectorAll('#btns li');
+        const secs = main.current.querySelectorAll('section');
 
         pos.current.map((pos, index)=>{
             if(scroll >= pos){
                 for(const btn of btns) btn.classList.remove('on');
                 btns[index].classList.add('on');
+
+                for(const sec of secs) sec.classList.remove('active');
+                secs[index].classList.add('active');
+                console.log(secs);
             }
         })
     }

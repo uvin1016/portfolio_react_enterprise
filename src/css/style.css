@@ -328,8 +328,11 @@ footer {
       .main .inner #about .imgWrap .pic {
         width: 45%;
         height: 600px;
+        opacity: 0;
+        transform: translateY(-200px);
         position: relative;
-        cursor: pointer; }
+        cursor: pointer;
+        transition: 1s; }
         .main .inner #about .imgWrap .pic img {
           height: 100%;
           object-fit: contain;
@@ -353,6 +356,14 @@ footer {
         .main .inner #about .imgWrap .pic:hover .text {
           opacity: 1;
           transform: translateY(610px); }
+    .main .inner #about.active .imgWrap .pic:nth-of-type(1) {
+      opacity: 1;
+      transform: translateY(0px);
+      transition-delay: 0s; }
+    .main .inner #about.active .imgWrap .pic:nth-of-type(2) {
+      opacity: 1;
+      transform: translateY(0px);
+      transition-delay: 0.3s; }
   .main .inner #project {
     width: 100%;
     padding: 150px 0;
@@ -434,7 +445,10 @@ footer {
       .main .inner #music > .container article {
         display: flex;
         position: relative;
-        margin-bottom: 50px; }
+        margin-bottom: 50px;
+        opacity: 0;
+        transform: translateY(200px);
+        transition: 1s; }
         .main .inner #music > .container article .pic {
           width: 300px;
           height: 300px;
@@ -501,6 +515,30 @@ footer {
               border-left: 2px solid rgba(255, 255, 255, 0.9);
               border-top: 0px solid transparent;
               border-bottom: 0px solid transparent; }
+    .main .inner #music.active .container article:nth-of-type(1) {
+      opacity: 1;
+      transform: translateY(0px);
+      transition-delay: 0s; }
+    .main .inner #music.active .container article:nth-of-type(2) {
+      opacity: 1;
+      transform: translateY(0px);
+      transition-delay: 0.3s; }
+    .main .inner #music.active .container article:nth-of-type(3) {
+      opacity: 1;
+      transform: translateY(0px);
+      transition-delay: 0.6s; }
+    .main .inner #music.active .container article:nth-of-type(4) {
+      opacity: 1;
+      transform: translateY(0px);
+      transition-delay: 0.9s; }
+    .main .inner #music.active .container article:nth-of-type(5) {
+      opacity: 1;
+      transform: translateY(0px);
+      transition-delay: 1.2s; }
+    .main .inner #music.active .container article:nth-of-type(6) {
+      opacity: 1;
+      transform: translateY(0px);
+      transition-delay: 1.5s; }
   .main .inner #news {
     width: 100%;
     padding: 150px 0;
@@ -589,7 +627,9 @@ footer {
         margin-bottom: 30px;
         border: 1px solid #888;
         cursor: pointer;
-        transition: .3s; }
+        opacity: 0;
+        transform: rotateY(180deg);
+        transition: opacity .3s, transform .3s; }
         .main .inner #notice .noticeList article > h3 {
           font: 400 22px/1 'Spline Sans';
           color: #888;
@@ -607,6 +647,30 @@ footer {
             color: #fff; }
           .main .inner #notice .noticeList article:hover p {
             color: #fff; }
+    .main .inner #notice.active .noticeList article:nth-of-type(1) {
+      opacity: 1;
+      transform: rotateY(0deg);
+      transition-delay: 0s; }
+    .main .inner #notice.active .noticeList article:nth-of-type(2) {
+      opacity: 1;
+      transform: rotateY(0deg);
+      transition-delay: 0.3s; }
+    .main .inner #notice.active .noticeList article:nth-of-type(3) {
+      opacity: 1;
+      transform: rotateY(0deg);
+      transition-delay: 0.6s; }
+    .main .inner #notice.active .noticeList article:nth-of-type(4) {
+      opacity: 1;
+      transform: rotateY(0deg);
+      transition-delay: 0.9s; }
+    .main .inner #notice.active .noticeList article:nth-of-type(5) {
+      opacity: 1;
+      transform: rotateY(0deg);
+      transition-delay: 1.2s; }
+    .main .inner #notice.active .noticeList article:nth-of-type(6) {
+      opacity: 1;
+      transform: rotateY(0deg);
+      transition-delay: 1.5s; }
   .main .inner #promotion {
     width: 100%;
     padding: 100px 0 180px; }
@@ -626,7 +690,9 @@ footer {
         background: #0c0c0c;
         box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
         cursor: pointer;
-        transition: .3s; }
+        opacity: 0;
+        transform: translateY(200px);
+        transition: opacity 1s, transform 1s, background .3s, color .3s; }
         .main .inner #promotion .vidList article .pic {
           width: 100%;
           overflow: hidden; }
@@ -647,6 +713,18 @@ footer {
             color: #fff; }
           .main .inner #promotion .vidList article:hover p {
             color: #fff; }
+    .main .inner #promotion.active .vidList article:nth-of-type(1) {
+      opacity: 1;
+      transform: translateY(0px);
+      transition-delay: 0s; }
+    .main .inner #promotion.active .vidList article:nth-of-type(2) {
+      opacity: 1;
+      transform: translateY(0px);
+      transition-delay: 0.3s; }
+    .main .inner #promotion.active .vidList article:nth-of-type(3) {
+      opacity: 1;
+      transform: translateY(0px);
+      transition-delay: 0.6s; }
     .main .inner #promotion .pop {
       width: 100vw;
       height: 100vh;

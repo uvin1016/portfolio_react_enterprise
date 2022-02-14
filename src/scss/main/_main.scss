@@ -1,6 +1,5 @@
 .main {
     padding: 0;
-
     .inner {
         #visual {
             width: 100%;
@@ -86,8 +85,11 @@
                 .pic {
                     width: 45%;
                     height: 600px;
+                    opacity: 0;
+                    transform: translateY(-200px);
                     position: relative;
                     cursor: pointer;
+                    transition: 1s;
 
                     img {
                         height: 100%;
@@ -127,6 +129,17 @@
                 }
             }
 
+            &.active {
+                .imgWrap .pic {
+                    @for $i from 1 through 2 {
+                        &:nth-of-type(#{$i}){
+                            opacity: 1;
+                            transform: translateY(0px);
+                            transition-delay: ((0.3s * $i) - 0.3s);
+                        }
+                    }
+                }
+            }
         }
 
         #project {
@@ -245,6 +258,9 @@
                     display: flex;
                     position: relative;
                     margin-bottom: 50px;
+                    opacity: 0;
+                    transform: translateY(200px);
+                    transition: 1s;
                     
                     .pic {
                         width: 300px;
@@ -333,6 +349,20 @@
                                     border-bottom: 0px solid transparent;
                                 }
                             }
+                        }
+                    }
+
+
+                }
+            }
+
+            &.active {
+                .container article {
+                    @for $i from 1 through 6 {
+                        &:nth-of-type(#{$i}){
+                            opacity: 1;
+                            transform: translateY(0px);
+                            transition-delay: ((0.3s * $i) - 0.3s);
                         }
                     }
                 }
@@ -473,7 +503,9 @@
                     margin-bottom: 30px;
                     border: 1px solid #888;
                     cursor: pointer;
-                    transition: .3s;
+                    opacity: 0;
+                    transform: rotateY(180deg);
+                    transition: opacity .3s, transform .3s;
 
                     >h3 {
                         font: 400 22px/1 'Spline Sans';
@@ -495,6 +527,18 @@
 
                         h3 { color: #fff; }
                         p { color: #fff; }
+                    }
+                }
+            }
+
+            &.active {
+                .noticeList article {
+                    @for $i from 1 through 6 {
+                        &:nth-of-type(#{$i}){
+                            opacity: 1;
+                            transform: rotateY(0deg);
+                            transition-delay: ((0.3s * $i) - 0.3s);
+                        }
                     }
                 }
             }
@@ -523,7 +567,9 @@
                     background: #0c0c0c;
                     box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
                     cursor: pointer;
-                    transition: .3s;
+                    opacity: 0;
+                    transform: translateY(200px);
+                    transition: opacity 1s, transform 1s, background .3s, color .3s;
 
                     .pic {
                         width: 100%;
@@ -556,6 +602,18 @@
     
                         p {
                             color: #fff;
+                        }
+                    }
+                }
+            }
+
+            &.active {
+                .vidList article {
+                    @for $i from 1 through 3 {
+                        &:nth-of-type(#{$i}){
+                            opacity: 1;
+                            transform: translateY(0px);
+                            transition-delay: ((0.3s * $i) - 0.3s);
                         }
                     }
                 }
